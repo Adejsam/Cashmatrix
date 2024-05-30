@@ -1,0 +1,51 @@
+.testimonialsBox {
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+  display: flex;
+  margin-bottom: 50px;
+
+  > .testimaonialListBox {
+    width: 300px;
+    height: 180px;
+    > .testimonialList {
+      width: 100%;
+      height: 100%;
+      > .content {
+        height: 70%;
+      }
+
+      > .testimonialsImage {
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+            > .imageBox {
+                width: 50px;
+                height: 50px;
+                position: relative;
+
+            > .image {
+                border-radius: 50%;
+                object-fit: cover;
+                object-position: center;
+                position: absolute;
+                
+            }
+            }
+            > .testimonialNames {
+                display: flex;
+            padding: 2px 5px;
+            font-size: 15px;
+            font-weight: bold;
+            width: 80%;
+            padding-inline: 10px;
+        }
+      }
+    }
+    > .testimonialList:last-child{
+        margin-top: auto;
+    }
+  }
+}
