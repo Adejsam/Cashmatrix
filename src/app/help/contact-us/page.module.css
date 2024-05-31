@@ -3,7 +3,7 @@
   color: var(--blue-color);
   > .section {
     width: 100%;
-    padding-inline: 50px;
+    padding-inline: 100px;
     > .intro {
       > .heading {
         font-size: 70px;
@@ -23,18 +23,18 @@
     }
     > .contactSection {
         display: flex;
-        gap: 20px;
+        gap: 50px;
         width: 100%;
         margin-top: 100px;
 
       > .otherContactBox {
-        width: 30%;
+        width: 35%;
         > .otherContact{
             display: flex;
             gap: 20px;
             background-color: white;
             margin-bottom: 30px;
-            padding: 20px;
+            padding: 10px 20px;
             align-items: center;
             height: 209px;
             box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
@@ -56,7 +56,8 @@
                     padding-top: 5px;
                 }
                 > .otherContactTime{
-                    padding-bottom: 5px;
+                    padding-bottom: 10px;
+                    width: 80%;
                 }
                 > .otherContactContact{
                     text-decoration: underline;
@@ -64,13 +65,18 @@
 
                     > .otherContactLink{
                         color: var(--blue-color);
+                        font-size: 15px;
+                    }
+                    > .otherContactLink:hover{
+                        transition: all ease-in-out 0.3s;
+                        font-weight: bold;
                     }
                 }
             }
         }
       }
       > .contactForm {
-        width: 70%;
+        width: 65%;
         > .formHeading{
             font-size: 30px;
             padding-bottom: 8px;
@@ -107,7 +113,7 @@
                 }
 
                 > .input::placeholder, .textArea::placeholder{
-                    font-size: 14px;
+                    font-size: 15px;
                     color: var(--blue-color);
                     font-family: "Hind Madurai", sans-serif;
                 }

@@ -52,12 +52,12 @@ export default function Header() {
             </ul>
           </div>
           <div className={styles.buttonBox}>
-            <Link href={"https://cashmatrix.app/"} className={styles.buttonLink}>
+            <Link href={"https://cashmatrix.app/"} target="_blank" className={styles.buttonLink}>
               <button className={styles.button} id={styles.signUp}>
                 Join Cashmatrix
               </button>
             </Link>
-            <Link href={"https://cashmatrix.app/"} className={styles.buttonLink}>
+            <Link href={"https://cashmatrix.app/"} target="_blank" className={styles.buttonLink}>
               <button className={styles.button} id={styles.signIn}>
                 Sign in
               </button>

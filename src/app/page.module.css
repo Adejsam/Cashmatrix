@@ -114,16 +114,17 @@
     > .testimonialHeading {
       text-align: center;
       font-size: 40px;
-      padding-block: 50px;
+      padding: 100px 0 100px;
     }
   }
 
   > .partnersSection {
     background-color: white;
+    margin-block: 50px;
     > .partnersHeading {
       text-align: center;
       font-size: 40px;
-      padding: 50px 0 0;
+      padding: 50px 0 50px;
     }
 
     > .partnersBoxDiv {
@@ -221,6 +222,32 @@
             width: 150px;
             object-fit: cover;
           }
+        }
+      }
+    }
+  }
+
+  > .actionSection{
+    padding-inline: 30px;
+    background-color: var(--orange-color);
+    color: white;
+
+    > .actionBox{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-block: 40px;
+
+      > .actionContentBox{
+        > .actionContent{
+          font-size: 30px;
+        }
+      }
+      > .actionIconBox{
+        display: flex;
+        gap: 10px;
+        > .actionLink{
+          cursor: pointer;
         }
       }
     }

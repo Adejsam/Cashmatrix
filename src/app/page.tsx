@@ -48,10 +48,10 @@ const Home = (): ReactNode => {
               options and earn interest on your saving with cashmatrix.
             </p>
             <div className={styles.download}>
-              <Link href="https://play.google.com/store/search?q=cashmatrix+app&c=apps">
+              <Link href="https://play.google.com/store/search?q=cashmatrix+app&c=apps" target="_blank">
                 <PlayStore />
               </Link>
-              <Link href="">
+              <Link href="https://apps.apple.com/us/app/cashmatrix/id6470770885" target="_blank">
                 <AppleStore />
               </Link>
             </div>
@@ -256,6 +256,19 @@ const Home = (): ReactNode => {
           </div>
         </div>
       </section>
+
+      {/* call to action section */}
+      <section className={styles.actionSection}>
+        <div className={styles.actionBox}>
+          <div className={styles.actionContentBox}>
+            <h2 className={styles.actionContent}>Start Your Financial Journey with Cashmatrix</h2>
+          </div>
+          <div className={styles.actionIconBox}>
+            <Link className={styles.actionLink} href="https://play.google.com/store/apps/details?id=com.assetcashmatrix.mfb" target="_blank"><PlayStore /></Link>
+            <Link className={styles.actionLink} href="https://apps.apple.com/us/app/cashmatrix/id6470770885" target="_blank"><AppleStore /></Link>
+          </div>
+        </div>
+      </section> 
     </main>
   );
 };

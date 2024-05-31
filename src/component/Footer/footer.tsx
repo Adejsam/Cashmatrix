@@ -74,7 +74,7 @@ export default function Footer() {
           <div className={styles.content}>
             <h4 className={styles.Heading}>Help</h4>
             <ul className={styles.listItems}>
-              <Link href="/help" className={styles.listLink}>
+              <Link href="/help/get-help" className={styles.listLink}>
                 <li className={styles.listItem}>Get Help</li>
               </Link>
               <Link href="/help/faqs" className={styles.listLink}>

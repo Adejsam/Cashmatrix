@@ -4,7 +4,7 @@
   border-radius: 5px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
   display: flex;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 
   > .testimaonialListBox {
     width: 300px;
@@ -43,9 +43,6 @@
             padding-inline: 10px;
         }
       }
-    }
-    > .testimonialList:last-child{
-        margin-top: auto;
     }
   }
 }

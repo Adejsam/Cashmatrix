@@ -1,0 +1,107 @@
+.main {
+  background-color: #eeeeee;
+  color: var(--blue-color);
+  > .section {
+    width: 100%;
+    padding: 100px 100px;
+    > .intro {
+      > .heading {
+        font-size: 70px;
+        width: 70%;
+        margin-inline: auto;
+        text-align: center;
+        line-height: 65px;
+      }
+      > .description {
+        font-size: 20px;
+        padding-top: 20px;
+        width: 90%;
+        margin-inline: auto;
+        text-align: center;
+      }
+    }
+
+    > .getHelpBoxes {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 100px;
+      padding-bottom: 50px;
+
+      > .getHelpBox {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+        padding: 20px;
+        background-color: white;
+        width: 30%;
+        border-radius: 5px;
+
+        > .getHelpHeading {
+          font-size: 24px;
+          line-height: 32px;
+          height: 20%;
+        }
+        > .getHelpContent {
+          padding-block: 20px;
+          font-size: 16px;
+          height: 60%;
+        }
+        > .getHelpLinkBox {
+          display: flex;
+          gap: 10px;
+          margin-bottom: 5px;
+          height: 10%;
+
+          > .icon {
+            color: var(--blue-color);
+            padding-right: 5px;
+            font-size: 20px;
+            > .image {
+              height: 22px;
+              width: 22px;
+            }
+          }
+          > .getHelpLink {
+            font-size: 16px;
+            text-decoration: underline;
+            color: var(--blue-color);
+          }
+          > .getHelpLink:hover {
+            color: var(--orange-color);
+            transition: all ease-in-out 0.3s;
+          }
+        }
+      }
+      > .getHelpBox:hover{
+        transform: scale(1.1);
+      }
+    }
+    > .otherHelpLink {
+
+      > .otherHelpBox {
+        display: flex;
+        width: 40%;
+        justify-content: space-between;
+        background-color: var(--blue-color);
+        align-items: center;
+        border-radius: 20px;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin-bottom: 20px;
+
+        > .otherHelpContent {
+          font-size: 20px;
+          color: white;
+        }
+        > .otherHelpIcon {
+          font-size: 20px;
+          color: white;
+        }
+      }
+      > .otherHelpBox:hover{
+        transition: all ease-in-out 0.5s;
+        background-color: var(--orange-color);
+        width: 100%;
+      }
+    }
+  }
+}

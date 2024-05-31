@@ -9,7 +9,7 @@
             display: flex;
             justify-content: space-between;
             margin-top: 50px;
-            margin-bottom: 10px;
+            margin-bottom: 25px;
 
             > .imageBox{
                 > .logo{
@@ -63,7 +63,7 @@
         }
         > .horizontal{
             border: 1px solid var(--blue-color);
-            margin-bottom: 10px;
+            margin-bottom: 25px;
         }
         > .paragraph{
             text-align: center;

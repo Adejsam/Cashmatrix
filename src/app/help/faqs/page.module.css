@@ -1,0 +1,92 @@
+.main {
+  background-color: #eeeeee;
+  color: var(--blue-color);
+  font-size: 16px;
+  > .section {
+    width: 100%;
+    padding: 100px 100px 50px;
+    > .intro {
+        padding-bottom: 50px;
+      > .heading {
+        font-size: 70px;
+        width: 90%;
+        margin-inline: auto;
+        text-align: center;
+        line-height: 75px;
+      }
+    }
+    > .search{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        > .searchField{
+            width: 50%;
+            height: 45px;
+            border-radius: 20px;
+            outline: none;
+            margin-inline: auto;
+            border: none;
+            padding: 20px 45px 20px 20px;
+            margin-inline: auto;
+            position: relative;
+            font-size: 16px;
+        }
+        > .searchField::placeholder{
+            color: var(--blue-color);
+            font-size: 16px;
+        }
+        > .icon{
+            position: relative;
+            font-size: 25px;
+            right: 27.5%;
+            padding-top: 3px;
+            color: var(--orange-color);
+            border: none;
+            background-color: transparent;
+            outline: none;
+        }
+    }
+    > .questionsBox {
+      background-color: white;
+      margin-block: 100px;
+      padding-inline: 40px;
+      border-radius: 10px;
+        > .details {
+            position: relative;
+            > .summary {
+            cursor: pointer;
+            border-bottom: 1px solid var(--blue-color);
+            font-weight: 500;
+            list-style: none;
+            padding: 20px 0 ;
+            }
+            > .summary::-webkit-details-marker {
+            display: none;
+            }
+            > .summary {
+            display: flex;
+            justify-content: space-between;
+            }
+            > .summary::after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            background: url("../../../../public/icons/angle-down-solid.svg");
+            background-size: cover;
+            margin-left: 0.75em;
+            transition: 0.2s;
+            }
+            > .contentBox {
+            border-radius: 5px;
+            padding: 20px 30px;
+            margin-top: 10px;
+            }
+        }
+        > .details[open] {
+            > .summary::after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+  }
+}
