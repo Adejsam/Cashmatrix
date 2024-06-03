@@ -114,7 +114,7 @@
     > .testimonialHeading {
       text-align: center;
       font-size: 40px;
-      padding: 100px 0 100px;
+      padding: 100px 0 50px;
     }
   }
 
@@ -124,14 +124,14 @@
     > .partnersHeading {
       text-align: center;
       font-size: 40px;
-      padding: 50px 0 50px;
+      padding: 50px 0 0;
     }
 
     > .partnersBoxDiv {
       display: flex;
       overflow-x: hidden;
       width: 100%;
-      
+
       > .partnersBox {
         display: flex;
         gap: 50px;
@@ -227,26 +227,26 @@
     }
   }
 
-  > .actionSection{
+  > .actionSection {
     padding-inline: 30px;
     background-color: var(--orange-color);
     color: white;
 
-    > .actionBox{
+    > .actionBox {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding-block: 40px;
 
-      > .actionContentBox{
-        > .actionContent{
+      > .actionContentBox {
+        > .actionContent {
           font-size: 30px;
         }
       }
-      > .actionIconBox{
+      > .actionIconBox {
         display: flex;
         gap: 10px;
-        > .actionLink{
+        > .actionLink {
           cursor: pointer;
         }
       }

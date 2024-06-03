@@ -1,0 +1,275 @@
+.main {
+    width: 100%;
+    color: var(--blue-color);
+  
+    > .heroSection {
+      > .hero {
+        display: flex;
+        padding: 20px 150px 0;
+  
+        > .content {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content:center;
+          padding-bottom: 40px;
+  
+          > .heading {
+            width: 85%;
+            font-size: 50px;
+            padding-bottom: 20px;
+            line-height: 50px;
+          }
+          > .description {
+            width: 85%;
+            font-size: 18px;
+            padding-bottom: 20px;
+            font-weight: 500;
+            color: black;
+          }
+          > .download {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+          }
+          > .licenses {
+            display: flex;
+            gap: 20px;
+            > .ndic {
+              padding-top: 2px;
+            }
+          }
+        }
+        > .imageBox {
+          width: 50%;
+          height: 100%;
+          > .image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding-bottom: 50px;
+            transition: all 1.3s ease-out;
+          }
+        }
+      }
+    }
+    > .featureSection {
+      background-color: #eeeeee;
+      > .featureBox {
+        display: flex;
+        padding: 50px 150px 20px;
+        align-items: center;
+        gap: 25px;
+  
+        > .features {
+          display: flex;
+          flex-direction: column;
+          flex-basis: 33.33%;
+  
+          > .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 5px;
+            margin-bottom: 30px;
+  
+            > .featureIcon {
+              width: 20%;
+              height: inherit;
+              filter: invert(100%) sepia(100%) saturate(10000%) hue-rotate(310deg) brightness(100%)
+                contrast(100%);
+              /* -webkit-filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(300%) hue-rotate(40deg); */
+            }
+            > .featureInfo {
+              width: 80%;
+              > .featureHeading {
+                padding-bottom: 20px;
+                font-size: 20px;
+              }
+            }
+          }
+        }
+  
+        > .featureImageBox {
+          width: 33.33%;
+          > .featureImage {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  
+    > .servicesSection {
+      background-color: white;
+      padding-inline: 150px;
+      padding-block: 50px;
+      > .servicesHeading {
+        font-size: 40px;
+        color: var(--blue-color);
+        padding-top: 25px;
+      }
+    }
+  
+    > .testimonialSection {
+      background-color: #eeeeee;
+      > .testimonialHeading {
+        text-align: center;
+        font-size: 40px;
+        padding: 100px 0 50px;
+      }
+    }
+  
+    > .partnersSection {
+      background-color: white;
+      margin-block: 50px;
+      > .partnersHeading {
+        text-align: center;
+        font-size: 40px;
+        padding: 50px 0 0px;
+      }
+  
+      > .partnersBoxDiv {
+        display: flex;
+        overflow-x: hidden;
+        width: 100%;
+  
+        > .partnersBox {
+          display: flex;
+          gap: 50px;
+          padding-block: 50px;
+          animation-name: scrollThrough;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+          animation-duration: 20s;
+  
+          > .partnersLogoBox1 {
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+            gap: 10px;
+            display: flex;
+            align-items: center;
+            padding: 15px 55px;
+            border-radius: 10px;
+  
+            > .partnersLogo1 {
+              height: 40px;
+              width: 40px;
+            }
+            > .partnersSpan {
+              font-size: 30px;
+            }
+          }
+          > .partnersOtherLogoBox {
+            background-color: white;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+            padding: 15px 30px;
+            border-radius: 10px;
+  
+            > .partnersOtherLogo {
+              height: 40px;
+              width: 150px;
+            }
+            > .partnersOtherLogoAsset {
+              height: 40px;
+              width: 150px;
+              object-fit: cover;
+            }
+          }
+        }
+  
+        > .partnersBox1 {
+          display: flex;
+          gap: 50px;
+          padding-block: 50px;
+          margin-left: 50px;
+          animation-name: scrollThrough1;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+          animation-duration: 20s;
+  
+          > .partnersLogoBox1 {
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+            gap: 10px;
+            display: flex;
+            align-items: center;
+            padding: 15px 55px;
+            border-radius: 10px;
+  
+            > .partnersLogo1 {
+              height: 40px;
+              width: 40px;
+            }
+            > .partnersSpan {
+              font-size: 30px;
+            }
+          }
+          > .partnersOtherLogoBox {
+            background-color: white;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+            padding: 15px 30px;
+            border-radius: 10px;
+  
+            > .partnersOtherLogo {
+              height: 40px;
+              width: 150px;
+            }
+            > .partnersOtherLogoAsset {
+              height: 40px;
+              width: 150px;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  
+    > .actionSection {
+      padding-inline: 30px;
+      background-color: var(--orange-color);
+      color: white;
+  
+      > .actionBox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: 40px;
+  
+        > .actionContentBox {
+          > .actionContent {
+            font-size: 30px;
+          }
+        }
+        > .actionIconBox {
+          display: flex;
+          gap: 10px;
+          > .actionLink {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  
+  @keyframes scrollThrough {
+    0% {
+      transform: translateX(100);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes scrollThrough1 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  

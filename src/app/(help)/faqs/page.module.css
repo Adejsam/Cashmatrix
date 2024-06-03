@@ -75,6 +75,7 @@
             background-size: cover;
             margin-left: 0.75em;
             transition: 0.2s;
+            color: var(--blue-color);
             }
             > .contentBox {
             border-radius: 5px;

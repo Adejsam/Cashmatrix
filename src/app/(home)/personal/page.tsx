@@ -2,27 +2,27 @@
 import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import ServicesCard from "@/component/ServicesCard/page";
-import PlayStore from "../../public/icons/PlayStore";
-import AppleStore from "../../public/icons/AppleStore";
-import Cbn from "../../public/icons/Cbn";
-import Ndic from "../../public/icons/Ndic";
-import HeroImage from "../../public/images/Hero Image.png";
-import FeatureImage from "../../public/images/Feature Image.png";
-import airtimeData from "../../public/icons/airtime-data.png";
-import cableTv from "../../public/icons/cable-tv.png";
-import transactHist from "../../public/icons/transact_history.png";
-import electricity from "../../public/icons/electricity.png";
-import savings from "../../public/icons/savings.png";
-import transfer from "../../public/icons/transfer.png";
-import createAccount from "../../public/images/create account.png";
-import saveMatrix from "../../public/images/saving.png";
-import customerService from "../../public/images/customer service.jpg";
-import cbnLogo from "../../public/icons/CBN logo.png";
-import wemaBank from "../../public/icons/wema bank.png";
-import ndicLogo from "../../public/icons/NDIC Logo.png";
-import assetMatrix from "../../public/icons/Asset Matrix Logo.png";
-import sterlingLogo from "../../public/icons/Sterling Logo.png";
+import ServicesCard from "@/component/ServiceCard/page";
+import PlayStore from "../../../../public/icons/PlayStore";
+import AppleStore from "../../../../public/icons/AppleStore";
+import Cbn from "../../../../public/icons/Cbn";
+import Ndic from "../../../../public/icons/Ndic";
+import HeroImage from "../../../../public/images/Hero Image.png";
+import FeatureImage from "../../../../public/images/Feature Image.png";
+import airtimeData from "../../../../public/icons/airtime-data.png";
+import cableTv from "../../../../public/icons/cable-tv.png";
+import transactHist from "../../../../public/icons/transact_history.png";
+import electricity from "../../../../public/icons/electricity.png";
+import savings from "../../../../public/icons/savings.png";
+import transfer from "../../../../public/icons/transfer.png";
+import createAccount from "../../../../public/images/create account.png";
+import saveMatrix from "../../../../public/images/saving.png";
+import customerService from "../../../../public/images/customer service.jpg";
+import cbnLogo from "../../../../public/icons/CBN logo.png";
+import wemaBank from "../../../../public/icons/wema bank.png";
+import ndicLogo from "../../../../public/icons/NDIC Logo.png";
+import assetMatrix from "../../../../public/icons/Asset Matrix Logo.png";
+import sterlingLogo from "../../../../public/icons/Sterling Logo.png";
 import TestimonialsCard from "@/component/Testimonial Card/page";
 import testimonials from "./page.data";
 import { ReactNode } from "react";
@@ -33,7 +33,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
-import security from "../../public/images/security.png";
+import security from "../../../../public/images/security.png";
 
 const Home = (): ReactNode => {
   return (
@@ -48,7 +48,9 @@ const Home = (): ReactNode => {
               options and earn interest on your saving with cashmatrix.
             </p>
             <div className={styles.download}>
-              <Link href="https://play.google.com/store/search?q=cashmatrix+app&c=apps" target="_blank">
+              <Link
+                href="https://play.google.com/store/search?q=cashmatrix+app&c=apps"
+                target="_blank">
                 <PlayStore />
               </Link>
               <Link href="https://apps.apple.com/us/app/cashmatrix/id6470770885" target="_blank">
@@ -164,7 +166,6 @@ const Home = (): ReactNode => {
           link="https://play.google.com/store/apps/details?id=com.assetcashmatrix.mfb"
           linkCont="Save with Savematrix"
           arrow="fa-solid fa-angle-right"
-
         />
         <ServicesCard
           title="We are always here to help you"
@@ -192,6 +193,7 @@ const Home = (): ReactNode => {
           slidesPerView={4}
           speed={2000}
           loop={true}
+          freeMode={true}
           className={styles.swiper}
           spaceBetween={50}
           centeredSlides={true}
@@ -264,11 +266,21 @@ const Home = (): ReactNode => {
             <h2 className={styles.actionContent}>Start Your Financial Journey with Cashmatrix</h2>
           </div>
           <div className={styles.actionIconBox}>
-            <Link className={styles.actionLink} href="https://play.google.com/store/apps/details?id=com.assetcashmatrix.mfb" target="_blank"><PlayStore /></Link>
-            <Link className={styles.actionLink} href="https://apps.apple.com/us/app/cashmatrix/id6470770885" target="_blank"><AppleStore /></Link>
+            <Link
+              className={styles.actionLink}
+              href="https://play.google.com/store/apps/details?id=com.assetcashmatrix.mfb"
+              target="_blank">
+              <PlayStore />
+            </Link>
+            <Link
+              className={styles.actionLink}
+              href="https://apps.apple.com/us/app/cashmatrix/id6470770885"
+              target="_blank">
+              <AppleStore />
+            </Link>
           </div>
         </div>
-      </section> 
+      </section>
     </main>
   );
 };

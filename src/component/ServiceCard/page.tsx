@@ -11,7 +11,14 @@ type ServiceCardProps = {
   arrow: string;
 };
 
-const ServicesCard: React.FC<ServiceCardProps> = ({ title, content, imagesrc, link, linkCont,arrow }) => {
+const ServicesCard: React.FC<ServiceCardProps> = ({
+  title,
+  content,
+  imagesrc,
+  link,
+  linkCont,
+  arrow,
+}) => {
   return (
     <div className={styles.serviceBox}>
       <div className={styles.serviceImage}>
@@ -22,7 +29,9 @@ const ServicesCard: React.FC<ServiceCardProps> = ({ title, content, imagesrc, li
         <p className={styles.content}>{content}</p>
         <Link href={link} className={styles.link}>
           <span className={styles.linkCont}>{linkCont}</span>
-          <span className={styles.arrow}><i className={arrow}></i></span>
+          <span className={styles.arrow}>
+            <i className={arrow}></i>
+          </span>
         </Link>
       </div>
     </div>
