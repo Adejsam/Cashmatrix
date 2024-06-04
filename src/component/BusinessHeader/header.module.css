@@ -35,6 +35,7 @@
                     > .navItem{
                         padding: 5px;
                         position: relative;
+                        color: var(--blue-color);
 
                         > .dropDown{
                             position: absolute;
@@ -103,14 +104,14 @@
                         color: white;
                     }
                     > #signUp{
-                        background-color: var(--orange-color);
+                        background-color: var(--blue-color);
                         color: #ffffff;
                         font-size: 16px;
                         padding: 10px;
                     }
                     > #signUp:hover{
                         color: white;
-                        background-color: var(--blue-color);
+                        background-color: var(--orange-color);
                     }
                 }
             }

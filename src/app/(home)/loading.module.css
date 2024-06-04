@@ -1,0 +1,16 @@
+.main {
+  width: 100%;
+  > .section {
+    > .loadingBox {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > .image {
+        height: 200px;
+        width: 200px;
+      }
+    }
+  }
+}

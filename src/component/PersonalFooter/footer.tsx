@@ -38,20 +38,20 @@ export default function PersonalFooter() {
                 <li className={styles.listItem}>Transfer</li>
               </Link>
               <Link href="/personal" className={styles.listLink}>
-                <li className={styles.listItem}>Save Matrix</li>
+                <li className={styles.listItem}>Matrix Save</li>
               </Link>
             </ul>
           </div>
           <div className={styles.content}>
             <h4 className={styles.Heading}>Business</h4>
             <ul className={styles.listItems}>
-              <Link href="/discover-business" className={styles.listLink}>
+              <Link href="/business/discover-business" className={styles.listLink}>
                 <li className={styles.listItem}>Discover Business</li>
               </Link>
-              <Link href="/pos" className={styles.listLink}>
+              <Link href="/business/pos" className={styles.listLink}>
                 <li className={styles.listItem}>POS</li>
               </Link>
-              <Link href="/payout-API" className={styles.listLink}>
+              <Link href="/business/payout-API" className={styles.listLink}>
                 <li className={styles.listItem}>Payout API</li>
               </Link>
             </ul>
@@ -59,13 +59,13 @@ export default function PersonalFooter() {
           <div className={styles.content}>
             <h4 className={styles.Heading}>Company</h4>
             <ul className={styles.listItems}>
-              <Link href="/blog" className={styles.listLink}>
+              <Link href="/company/blog" className={styles.listLink}>
                 <li className={styles.listItem}>Blog</li>
               </Link>
-              <Link href="/about-us" className={styles.listLink}>
+              <Link href="/company/about-us" className={styles.listLink}>
                 <li className={styles.listItem}>About Us</li>
               </Link>
-              <Link href="/join-our-team" className={styles.listLink}>
+              <Link href="/company/join-our-team" className={styles.listLink}>
                 <li className={styles.listItem}>Our Team</li>
               </Link>
             </ul>
@@ -73,13 +73,13 @@ export default function PersonalFooter() {
           <div className={styles.content}>
             <h4 className={styles.Heading}>Help</h4>
             <ul className={styles.listItems}>
-              <Link href="/get-help" className={styles.listLink}>
+              <Link href="/help/get-help" className={styles.listLink}>
                 <li className={styles.listItem}>Get Help</li>
               </Link>
-              <Link href="/faqs" className={styles.listLink}>
+              <Link href="/help/faqs" className={styles.listLink}>
                 <li className={styles.listItem}>FAQs</li>
               </Link>
-              <Link href="/contact-us" className={styles.listLink}>
+              <Link href="/help/contact-us" className={styles.listLink}>
                 <li className={styles.listItem}>Contact Us</li>
               </Link>
             </ul>

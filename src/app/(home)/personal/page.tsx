@@ -149,7 +149,7 @@ const Home = (): ReactNode => {
 
       {/* SERCVICES SECTION */}
       <section className={styles.servicesSection}>
-        <h2 className={styles.servicesHeading}>On Cashmatrix</h2>
+        {/* <h2 className={styles.servicesHeading}></h2> */}
         <ServicesCard
           title="Open an Account in Minutes"
           content="Account Opening has never been more seamless. With the Cashmatrix app you can open an account in minutes. All you need is your Bank Verification Number (BVN) or National Identification Number (NIN)"
@@ -159,8 +159,8 @@ const Home = (): ReactNode => {
           arrow="fa-solid fa-angle-right"
         />
         <ServicesCard
-          title="Save for the future with SaveMatrix"
-          content="The Cashmatrix app offer the savematrix feature that lets you save money automatically on a weekly, bi-weekly, monthly, quarterly, annually and bi-annually basis. 
+          title="Save for the future with Matrix Save"
+          content="The Cashmatrix app offer the Matrix Save feature that lets you save money automatically on a weekly, bi-weekly, monthly, quarterly, annually and bi-annually basis. 
           Get 16% annual interest on your savings and withdraw your money anytime with no penalty."
           imagesrc={saveMatrix}
           link="https://play.google.com/store/apps/details?id=com.assetcashmatrix.mfb"
@@ -197,7 +197,7 @@ const Home = (): ReactNode => {
           className={styles.swiper}
           spaceBetween={50}
           centeredSlides={true}
-          autoplay={{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }}>
+          autoplay={{ delay: 3000, disableOnInteraction: false }}>
           <div className={styles.testimonialBox}>
             {testimonials.map((val, i) => (
               <SwiperSlide key={i}>

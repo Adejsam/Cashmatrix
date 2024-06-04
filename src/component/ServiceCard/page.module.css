@@ -1,9 +1,9 @@
 .serviceBox{
     width: 100%;
     display: flex;
-    margin-block: 50px;
+    margin-block: 100px;
     align-items: center;
-    background-color: #f7f7fb;
+    background-color: white;
     height: 350px;
 
     > .serviceImage{

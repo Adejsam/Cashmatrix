@@ -31,6 +31,8 @@
                 object-fit: cover;
                 object-position: center;
                 position: absolute;
+                overflow-clip-margin: content-box;
+                overflow: clip;
                 
             }
             }

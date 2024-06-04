@@ -9,7 +9,7 @@ export default function BusinessHeader() {
       <section className={styles.section}>
         <div className={styles.container}>
           <div className={styles.content}>
-            <Link href="/discover-business"><Image src={logo} alt="cashmatrix logo" className={styles.logo} /></Link>
+            <Link href="business/discover-business"><Image src={logo} alt="cashmatrix logo" className={styles.logo} /></Link>
             <ul className={styles.navItems}>
               <li className={styles.navItem}>
                 <Link href="/personal" className={styles.navLink}>Personal</Link>
@@ -20,9 +20,9 @@ export default function BusinessHeader() {
                 </span>
                 {/* Business Drop Down Menu */}
                 <ul className={styles.dropDown}>
-                  <Link href="/discover-business" className={styles.dropDownLink}><li className={styles.dropDownItem}>Discover Business</li></Link>
-                  <Link href="/payout-API" className={styles.dropDownLink}><li className={styles.dropDownItem}>Payout API</li></Link>
-                  <Link href="/pos" className={styles.dropDownLink}><li className={styles.dropDownItem}>POS</li></Link>
+                  <Link href="/business/discover-business" className={styles.dropDownLink}><li className={styles.dropDownItem}>Discover Business</li></Link>
+                  <Link href="/business/payout-API" className={styles.dropDownLink}><li className={styles.dropDownItem}>Payout API</li></Link>
+                  <Link href="/business/pos" className={styles.dropDownLink}><li className={styles.dropDownItem}>POS</li></Link>
                 </ul> 
               </li>
               <li className={styles.navItem}>Company
@@ -31,9 +31,9 @@ export default function BusinessHeader() {
                 </span>
                 {/* Company Drop Down Menu */}
                 <ul className={styles.dropDown}>
-                  <Link href="/about-us" className={styles.dropDownLink}><li className={styles.dropDownItem}>About Us</li></Link>
-                  <Link href="/blog" className={styles.dropDownLink}><li className={styles.dropDownItem}>Blog</li></Link>
-                  <Link href="/join-our-team" className={styles.dropDownLink}><li className={styles.dropDownItem}>Join Our Team</li></Link>
+                  <Link href="/company/about-us" className={styles.dropDownLink}><li className={styles.dropDownItem}>About Us</li></Link>
+                  <Link href="/company/blog" className={styles.dropDownLink}><li className={styles.dropDownItem}>Blog</li></Link>
+                  <Link href="/company/join-our-team" className={styles.dropDownLink}><li className={styles.dropDownItem}>Join Our Team</li></Link>
                 </ul>
               </li>
               <li className={styles.navItem}>Help
@@ -42,9 +42,9 @@ export default function BusinessHeader() {
                 </span>
                 {/*Help Drop Down Menu */}
                 <ul className={styles.dropDown}>
-                  <Link href="/get-help" className={styles.dropDownLink}><li className={styles.dropDownItem}>Get Help</li></Link>
-                  <Link href="/faqs" className={styles.dropDownLink}><li className={styles.dropDownItem}>FAQs</li></Link>
-                  <Link href="/contact-us" className={styles.dropDownLink}><li className={styles.dropDownItem}>Contact Us</li></Link>
+                  <Link href="/help/get-help" className={styles.dropDownLink}><li className={styles.dropDownItem}>Get Help</li></Link>
+                  <Link href="/help/faqs" className={styles.dropDownLink}><li className={styles.dropDownItem}>FAQs</li></Link>
+                  <Link href="/help/contact-us" className={styles.dropDownLink}><li className={styles.dropDownItem}>Contact Us</li></Link>
                 </ul>
               </li>
             </ul>

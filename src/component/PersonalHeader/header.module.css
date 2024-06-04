@@ -35,6 +35,7 @@
                     > .navItem{
                         padding: 5px;
                         position: relative;
+                        color: var(--blue-color);
 
                         > .dropDown{
                             position: absolute;

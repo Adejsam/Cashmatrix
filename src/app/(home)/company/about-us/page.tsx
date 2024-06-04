@@ -1,8 +1,8 @@
 import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import PlayStore from "../../../../public/icons/PlayStore";
-import AppleStore from "../../../../public/icons/AppleStore";
+import PlayStore from "../../../../../public/icons/PlayStore";
+import AppleStore from "../../../../../public/icons/AppleStore";
 import ctaImage from "../../../../public/images/cta.png";
 
 const Page = () => {
