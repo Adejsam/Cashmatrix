@@ -1,0 +1,56 @@
+.main {
+    color: var(--blue-color);
+    background-color: #eeeeee;
+    > .section {
+      width: 100%;
+      > .hero {
+        width: 100%;
+        background-image: url("../../../../../public/images/personal\ backg\ image.png");
+        background-size: contain;
+        padding: 120px 100px 120px;
+        margin-bottom: 75px;
+        border-radius: 0 0 50% 50% / 50px;
+        > .heroHeading2 {
+          text-align: center;
+          margin: 0 auto;
+          font-size: 60px;
+          line-height: 65px;
+          width: 80%;
+          padding-block: 15px;
+        }
+        > .heroDesc {
+          font-size: 18px;
+          line-height: 23px;
+          text-align: center;
+          margin: 0 auto;
+          width: 80%;
+        }
+      }
+      > .lists{
+        padding-inline: 100px;
+        padding-bottom: 75px;
+        > .list{
+            padding-bottom: 10px;
+            > .listHeading{
+                padding-bottom: 10px;
+                font-size: 20px;
+            }
+            > .paragraph{
+                padding-bottom: 5px;
+            }
+            > .subLists{
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 5px;
+                > .subList{
+                  padding-bottom: 3px;
+                  > .span{
+                    color: #48d38a;
+                    padding-right: 5px;
+                  }
+                }
+            }
+        }
+      }
+    }
+}

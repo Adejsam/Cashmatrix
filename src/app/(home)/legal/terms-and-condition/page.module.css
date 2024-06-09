@@ -1,0 +1,44 @@
+.main {
+    color: var(--blue-color);
+    background-color: #eeeeee;
+    > .section {
+      width: 100%;
+      > .hero {
+        width: 100%;
+        background-image: url("../../../../../public/images/personal\ backg\ image.png");
+        background-size: contain;
+        padding: 120px 100px 120px;
+        margin-bottom: 75px;
+        border-radius: 0 0 50% 50% / 50px;
+        > .heroHeading2 {
+          text-align: center;
+          margin: 0 auto;
+          font-size: 60px;
+          line-height: 65px;
+          width: 80%;
+          padding-block: 15px;
+        }
+      }
+      > .tcLists{
+        padding: 50px 100px;
+        > .tcList{
+            padding-bottom: 20PX;
+            > .tcHeading{
+                padding-bottom: 15px;
+                font-size: 20px;
+            }
+            > .tcContent{
+                padding-bottom: 5PX;
+            }
+            > .tcSubLists{
+                padding-left: 20px;
+                padding-block: 10px;
+                > .tcSubList{
+                    list-style-type: square;
+                    padding-bottom: 3px;
+                }
+            }
+        }
+      }
+    }
+}

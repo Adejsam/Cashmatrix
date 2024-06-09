@@ -1,0 +1,91 @@
+import { StaticImageData } from "next/image";
+
+export interface feature1{
+    heading: string;
+    content: string;
+    link1: string;
+    link2: string
+    buttonName1 : string;
+    buttonName2: string;
+    src: StaticImageData | string;
+    checkIcon : string;
+    arrowIcon: string;
+    featureButton1: string;
+    featureButton2: string;
+    listData: string[],
+}
+
+const features1: feature1[] = [
+    {
+        heading: "Open a Cashmatrix Business account with no paperwork",
+        content: "Setup an account anytime and anywhere. All you need in your:",
+        link1: "",
+        link2: "",
+        buttonName1: "Open Cashmatrix Business Account",
+        buttonName2: "",
+        src: "",
+        listData: ["CAC (Customer acquisition cost)", "CAC (Customer acquisition cost)","CAC (Customer acquisition cost)"],
+        checkIcon: "fa-solid fa-check",
+        arrowIcon: "fa-solid fa-angle-right",
+        featureButton1: "button1",
+        featureButton2: ""
+    },
+    {
+        heading: "Manage all your business expenses conveniently in a single place.",
+        content: "Effortlessly handle bill payments and airtime purchases without switching platforms,ensuring seamless organization and smooth business operations.",
+        link1: "",
+        link2: "",
+        buttonName1: "Explore Bill Payment",
+        buttonName2: "",
+        src: "",
+        checkIcon: "",
+        arrowIcon: "fa-solid fa-angle-right",
+        featureButton1: "button1",
+        featureButton2: "",
+        listData: []
+    },
+    {
+        heading: "Boost your earnings with the Cashmatrix POS",
+        content: "Effortlessly accept card and transfers payment using a dependable point-of-saleterminal. Experience instant settlements, instant dispute resolution, and immediate payments every time.",
+        link1: "",
+        link2: "",
+        buttonName1: "Request for POS",
+        buttonName2: "Learn More",
+        src: "",
+        checkIcon: "",
+        arrowIcon: "fa-solid fa-angle-right",
+        featureButton1:"button1" ,
+        featureButton2: "button2",
+        listData: []
+    },
+    {
+        heading: "Protect your business form fraud",
+        content: "We protect your business againt fraud through User Authentication and Verification, Transaction Monitoring, Secure Payment Processing and Fraud Detection Algorithms. Benefit from round-the-clock anti-fraud vigilance, ensuring your operations staysecure at all times",
+        link1: "",
+        link2: "",
+        buttonName1: "",
+        buttonName2: "",
+        src: "",
+        checkIcon: "",
+        arrowIcon: "",
+        featureButton1: "button1",
+        featureButton2: "",
+        listData: []
+    },
+    {
+        heading: "We are always here to help you.",
+        content: "You can always count on our team of professional to assit you in ensuring smooth operation 24/7. Unlock valuable business insights and additional features with Cashmatrix business account.",
+        link1: "/help/get-help",
+        link2: "",
+        buttonName1: "Get Help",
+        buttonName2: "",
+        src: "",
+        checkIcon: "",
+        arrowIcon: "fa-solid fa-angle-right",
+        featureButton1: "button1",
+        featureButton2: "",
+        listData: []
+    },
+];
+
+export default features1;

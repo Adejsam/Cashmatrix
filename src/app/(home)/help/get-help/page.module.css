@@ -3,21 +3,38 @@
   color: var(--blue-color);
   > .section {
     width: 100%;
-    padding: 100px 100px;
-    > .intro {
-      > .heading {
-        font-size: 70px;
-        width: 70%;
-        margin-inline: auto;
+    padding: 0 0 100px;
+    > .hero{
+      width: 100%;
+      background-image: url("../../../../../public/images/personal\ backg\ image.png");
+      background-size: contain;
+      padding: 120px 100px 120px;
+      margin-bottom: 75px;
+      border-radius: 0 0 50% 50% / 50px; 
+      > .heroHeading{
         text-align: center;
-        line-height: 65px;
+        font-size: 18px;
+        width: fit-content;
+        background-color: var(--blue-color);
+        color: white;
+        padding: 10px 15px;
+        margin: 0 auto;
+        border-radius: 20px;
       }
-      > .description {
-        font-size: 20px;
-        padding-top: 20px;
-        width: 90%;
-        margin-inline: auto;
+      > .heroHeading2{
         text-align: center;
+        margin: 0 auto;
+        font-size: 60px;
+        line-height: 65px;
+        width: 90%;
+        padding-block: 15px;
+      }
+      > .heroDesc{
+        font-size: 18px;
+        line-height: 23px;
+        text-align: center;
+        margin: 0 auto;
+        width: 80%;
       }
     }
 
@@ -26,7 +43,7 @@
       justify-content: space-between;
       width: 100%;
       margin-top: 100px;
-      padding-bottom: 50px;
+      padding: 0 100px 50px;
 
       > .getHelpBox {
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
@@ -75,6 +92,7 @@
         transform: scale(1.1);
       }
     }
+
     > .otherHelpLink {
 
       > .otherHelpBox {
@@ -86,7 +104,7 @@
         border-radius: 20px;
         padding: 10px 20px;
         cursor: pointer;
-        margin-bottom: 20px;
+        margin:0 100px 20px;
 
         > .otherHelpContent {
           font-size: 20px;
@@ -100,7 +118,7 @@
       > .otherHelpBox:hover{
         transition: all ease-in-out 0.5s;
         background-color: var(--orange-color);
-        width: 100%;
+        width: 85%;
       }
     }
   }

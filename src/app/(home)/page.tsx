@@ -1,4 +1,5 @@
 "use client";
+
 import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
@@ -25,7 +26,7 @@ import assetMatrix from "../../../public/icons/Asset Matrix Logo.png";
 import sterlingLogo from "../../../public/icons/Sterling Logo.png";
 import TestimonialsCard from "@/component/Testimonial Card/page";
 import testimonials from "./page.data";
-import { ReactNode } from "react";
+import { ReactNode} from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import "swiper/css";
@@ -34,14 +35,18 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
 import security from "../../../public/images/security.png";
+import { motion} from "framer-motion"
+import Cta from "@/component/PersonalCallToAction/cta";
 
 
 const Home = (): ReactNode => {
+
   return (
     <main className={styles.main}>
+      
       {/* HERO SECTION */}
       <section className={styles.heroSection}>
-        <div className={styles.hero}>
+        <motion.div className={styles.hero} initial={{scale: 0.8}} whileInView={{scale: 1}} transition={{duration: 0.5,delay: 0, ease:"easeOut"}}>
           <div className={styles.content}>
             <h1 className={styles.heading}>Digital Banking At Ease</h1>
             <p className={styles.description}>
@@ -70,13 +75,13 @@ const Home = (): ReactNode => {
           <div className={styles.imageBox}>
             <Image src={HeroImage} alt="Hero Image" className={styles.image} />
           </div>
-        </div>
+        </motion.div >
       </section>
 
       {/* FEATURES SECTION */}
       <section className={styles.featureSection}>
-        <div className={styles.featureBox}>
-          <div className={styles.features}>
+        <motion.div className={styles.featureBox} initial={{scale: 0.8}} whileInView={{scale: 1}} transition={{duration: 1.5,delay: 0, ease:"easeOut"}} >
+          <motion.div className={styles.features} initial={{x: -100}} whileInView={{x:0}} transition={{duration: 1.5,delay: 0, ease:"easeOut"}}>
             <div className={styles.feature}>
               <Image src={transfer} alt="transfer icon" className={styles.featureIcon} />
               <div className={styles.featureInfo}>
@@ -104,7 +109,7 @@ const Home = (): ReactNode => {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
           <div className={styles.featureImageBox}>
             <Image
               src={FeatureImage}
@@ -112,7 +117,7 @@ const Home = (): ReactNode => {
               className={styles.featureImage}
             />
           </div>
-          <div className={styles.features}>
+          <motion.div className={styles.features}  initial={{x: 100}} whileInView={{x:0}} transition={{duration: 1.5,delay: 0, ease:"easeOut"}}>
             <div className={styles.feature}>
               <Image
                 src={transactHist}
@@ -144,76 +149,85 @@ const Home = (): ReactNode => {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* SERCVICES SECTION */}
       <section className={styles.servicesSection}>
-        {/* <h2 className={styles.servicesHeading}></h2> */}
-        <ServicesCard
-          title="Open an Account in Minutes"
-          content="Account Opening has never been more seamless. With the Cashmatrix app you can open an account in minutes. All you need is your Bank Verification Number (BVN) or National Identification Number (NIN)"
-          imagesrc={createAccount}
-          link="https://play.google.com/store/apps/details?id=com.assetcashmatrix.mfb"
-          linkCont="Open an Account"
-          arrow="fa-solid fa-angle-right"
-        />
-        <ServicesCard
-          title="Save for the future with Matrix Save"
-          content="The Cashmatrix app offer the matrix save feature that lets you save money automatically on a weekly, bi-weekly, monthly, quarterly, annually and bi-annually basis. 
-          Get 16% annual interest on your savings and withdraw your money anytime with no penalty."
-          imagesrc={saveMatrix}
-          link="https://play.google.com/store/apps/details?id=com.assetcashmatrix.mfb"
-          linkCont="Save with Savematrix"
-          arrow="fa-solid fa-angle-right"
-        />
-        <ServicesCard
-          title="Your privacy and security is our top priority"
-          content="Cashmatrix is fully licensed as a Mobile Money Operator by CBN, and insured by NDIC. We manage customers' funds in compliance with all application regulations. This means that all our users are protected "
-          imagesrc={security}
-          link=""
-          linkCont=""
-          arrow=""
-        />
-        <ServicesCard
-          title="We are always here to help you"
-          content="You can chat with us on the app, slide into our DMs, tweet, leave an Instagram, twitter or facebook comment, send an email or call. However you choose to reach out, we are always available to make your user expierience seamless"
-          imagesrc={customerService}
-          link="/get-help"
-          linkCont="Get Help"
-          arrow="fa-solid fa-angle-right"
-        />
+          <motion.div initial={{scale: 0.8}} whileInView={{scale: 1}} transition={{duration: 1,delay: 0, ease:"easeOut"}} >
+            <ServicesCard
+                title="Open an Account in Minutes"
+                content="Account Opening has never been more seamless. With the Cashmatrix app you can open an account in minutes. All you need is your Bank Verification Number (BVN) or National Identification Number (NIN)"
+                imagesrc={createAccount}
+                link="https://play.google.com/store/apps/details?id=com.assetcashmatrix.mfb"
+                linkCont="Open an Account"
+                arrow="fa-solid fa-angle-right"
+              />
+          </motion.div>
+          <motion.div initial={{scale: 0.8}} whileInView={{scale: 1}} transition={{duration: 1,delay: 0, ease:"easeOut"}} >
+            <ServicesCard
+              title="Save for the future with Matrix Save"
+              content="The Cashmatrix app offer the matrix save feature that lets you save money automatically on a weekly, bi-weekly, monthly, quarterly, annually and bi-annually basis. 
+              Get 16% annual interest on your savings and withdraw your money anytime with no penalty."
+              imagesrc={saveMatrix}
+              link="https://play.google.com/store/apps/details?id=com.assetcashmatrix.mfb"
+              linkCont="Save with Savematrix"
+              arrow="fa-solid fa-angle-right"
+            />
+          </motion.div>
+          <motion.div initial={{scale: 0.8}} whileInView={{scale: 1}} transition={{duration: 1,delay: 0, ease:"easeOut"}} >
+            <ServicesCard
+              title="Your privacy and security is our top priority"
+              content="Cashmatrix is fully licensed as a Mobile Money Operator by CBN, and insured by NDIC. We manage customers' funds in compliance with all application regulations. This means that all our users are protected "
+              imagesrc={security}
+              link=""
+              linkCont=""
+              arrow=""
+            />
+          </motion.div>
+          <motion.div initial={{scale: 0.8}} whileInView={{scale: 1}} transition={{duration: 1,delay: 0, ease:"easeOut"}} >
+            <ServicesCard
+              title="We are always here to help you"
+              content="You can chat with us on the app, slide into our DMs, tweet, leave an Instagram, twitter or facebook comment, send an email or call. However you choose to reach out, we are always available to make your user expierience seamless"
+              imagesrc={customerService}
+              link="/get-help"
+              linkCont="Get Help"
+              arrow="fa-solid fa-angle-right"
+            />
+          </motion.div>
       </section>
 
       {/* TESTIMONIAL SECTION */}
       <section className={styles.testimonialSection}>
-        <h2 className={styles.testimonialHeading}>Don{"'"}t just take our word for it</h2>
-        <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-          slidesPerView={4}
-          speed={2000}
-          loop={true}
-          freeMode={true}
-          className={styles.swiper}
-          spaceBetween={50}
-          centeredSlides={true}
-          autoplay={{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }}>
-          <div className={styles.testimonialBox}>
-            {testimonials.map((val, i) => (
-              <SwiperSlide key={i}>
-                <TestimonialsCard key={i} customers={val} />
-              </SwiperSlide>
-            ))}
-          </div>
-        </Swiper>
+        <motion.h2 className={styles.testimonialHeading}  initial={{scale: 0.8}} whileInView={{scale: 1}} transition={{duration: 2,delay: 0, ease:"easeOut"}}>Don{"'"}t just take our word for it</motion.h2>
+        <motion.div initial={{scale: 0.8}} whileInView={{scale: 1}} transition={{duration: 2,delay: 0, ease:"easeOut"}}>
+          <Swiper
+            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+            slidesPerView={4}
+            speed={2000}
+            loop={true}
+            freeMode={true}
+            className={styles.swiper}
+            spaceBetween={50}
+            centeredSlides={true}
+            autoplay={{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }}>
+            <div className={styles.testimonialBox}>
+              {testimonials.map((val, i) => (
+                <SwiperSlide key={i}>
+                  <TestimonialsCard key={i} customers={val} />
+                </SwiperSlide>
+              ))}
+            </div>
+          </Swiper>
+        </motion.div>
       </section>
 
       {/* PARTNERS SECTION */}
       <section className={styles.partnersSection}>
-        <h2 className={styles.partnersHeading}>Partners</h2>
+        <motion.h2 className={styles.partnersHeading}  initial={{scale: 0.8}} whileInView={{scale: 1}} transition={{duration: 2,delay: 0, ease:"easeOut"}}>Partners</motion.h2>
         <div className={styles.partnersBoxDiv}>
-          <div className={styles.partnersBox}>
+          <motion.div className={styles.partnersBox} initial={{scale: 0.8}} whileInView={{scale: 1}} transition={{duration: 2,delay: 0, ease:"easeOut"}}>
             <div className={styles.partnersLogoBox1}>
               <Image src={cbnLogo} alt="CBN logo" className={styles.partnersLogo1} />
               <span className={styles.partnersSpan}>CBN</span>
@@ -234,7 +248,7 @@ const Home = (): ReactNode => {
             <div className={styles.partnersOtherLogoBox}>
               <Image src={sterlingLogo} alt="Sterling Logo" className={styles.partnersOtherLogo} />
             </div>
-          </div>
+          </motion.div>
           <div className={styles.partnersBox1}>
             <div className={styles.partnersLogoBox1}>
               <Image src={cbnLogo} alt="CBN logo" className={styles.partnersLogo1} />
@@ -262,25 +276,9 @@ const Home = (): ReactNode => {
 
       {/* call to action section */}
       <section className={styles.actionSection}>
-        <div className={styles.actionBox}>
-          <div className={styles.actionContentBox}>
-            <h2 className={styles.actionContent}>Start Your Financial Journey with Cashmatrix</h2>
-          </div>
-          <div className={styles.actionIconBox}>
-            <Link
-              className={styles.actionLink}
-              href="https://play.google.com/store/apps/details?id=com.assetcashmatrix.mfb"
-              target="_blank">
-              <PlayStore />
-            </Link>
-            <Link
-              className={styles.actionLink}
-              href="https://apps.apple.com/us/app/cashmatrix/id6470770885"
-              target="_blank">
-              <AppleStore />
-            </Link>
-          </div>
-        </div>
+        <motion.div  initial={{scale: 0.8}} whileInView={{scale: 1}} transition={{duration: 1.5,delay: 0, ease:"easeOut"}}>
+          <Cta />
+        </motion.div>
       </section>
     </main>
   );

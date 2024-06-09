@@ -242,29 +242,7 @@
   }
 
   > .actionSection {
-    padding-inline: 30px;
-    background-color: var(--orange-color);
-    color: white;
-
-    > .actionBox {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-block: 40px;
-
-      > .actionContentBox {
-        > .actionContent {
-          font-size: 30px;
-        }
-      }
-      > .actionIconBox {
-        display: flex;
-        gap: 10px;
-        > .actionLink {
-          cursor: pointer;
-        }
-      }
-    }
+    padding: 0 30px 50px;
   }
 }
 

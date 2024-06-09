@@ -84,6 +84,17 @@ export default function BusinessFooter() {
               </Link>
             </ul>
           </div>
+          <div className={styles.content}>
+            <h4 className={styles.Heading}>Legal</h4>
+            <ul className={styles.listItems}>
+              <Link href="/legal/data-consent" className={styles.listLink}>
+                <li className={styles.listItem}>Data Consent Policy</li>
+              </Link>
+              <Link href="/legal/terms-and-condition" className={styles.listLink}>
+                <li className={styles.listItem}>Terms & Condition</li>
+              </Link>
+            </ul>
+          </div>
         </div>
         <hr className={styles.horizontal}/>
         <p className={styles.paragraph}>CashMatrix is the digital product of Asset Matrix Microfinance Bank Limited (RC 836197).</p>

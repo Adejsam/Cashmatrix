@@ -114,7 +114,11 @@
 
   > .servicesSection {
     background-color: white;
-    padding:25px 150px 25px;
+    padding: 25px 150px 25px;
+    > .servicesBox{
+      opacity: 1;
+      scale: 1;
+    }
     /* > .servicesHeading {
       font-size: 40px;
       color: var(--blue-color);
@@ -241,32 +245,9 @@
   }
 
   > .actionSection {
-    padding-inline: 30px;
-    background-color: var(--orange-color);
-    color: white;
-
-    > .actionBox {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-block: 40px;
-
-      > .actionContentBox {
-        > .actionContent {
-          font-size: 30px;
-        }
-      }
-      > .actionIconBox {
-        display: flex;
-        gap: 10px;
-        > .actionLink {
-          cursor: pointer;
-        }
-      }
-    }
+    padding: 0 50px 50px;
   }
 }
-
 
 /* scroll through animation */
 @keyframes scrollThrough {

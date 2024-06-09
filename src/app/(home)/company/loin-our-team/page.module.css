@@ -1,0 +1,76 @@
+.main {
+    width: 100%;
+    > .section {
+      background-color: white;
+      padding-inline: 100px;
+      > .hero {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+        height: calc(100vh - 60px);
+  
+        > .heroContent {
+          width: 50%;
+          padding: 20px;
+  
+          /* add animation */
+          animation-name: fadeInUp;
+          animation-duration: 1.5s;
+          animation-fill-mode: backwards;
+          animation-direction: normal;
+          animation-timing-function: ease;
+          > .heroHeading {
+            font-size: 48px;
+            line-height: 53px;
+            padding-block: 20px;
+          }
+          > .heroInfo{
+            font-size: 16px;
+            line-height: 23px;
+            padding-bottom: 20px;
+            width: 90%;
+          }
+        }
+
+        > .heroImageBox {
+            width: 50%;
+            height: 100%;
+            > .heroImage {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+    
+              /* add animation */
+              animation-name: fadeIn;
+              animation-duration: 3s;
+              animation-timing-function: ease;
+              animation-fill-mode: forwards;
+            }
+          }
+      }
+    }
+}
+
+/* animation fadeinUp */
+@keyframes fadeInUp {
+    0% {
+      transform: translate(0px, 100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0px, 0);
+      opacity: 1;
+    }
+  }
+  
+  /* animation fade in */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  

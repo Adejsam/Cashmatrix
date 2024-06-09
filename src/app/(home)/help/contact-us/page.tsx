@@ -39,13 +39,11 @@ export default function Page() {
   return (
     <main className={styles.main}>
       <section className={styles.section}>
-        <div className={styles.intro}>
-          <h1 className={styles.heading}>Get in touch with cashmatrix</h1>
-          <p className={styles.description}>
-            We love our customers and don{"'"}t like to leave them hanging. Tell us how we can help
-            you and we will be sure to get back to you in time.
-          </p>
-        </div>
+        <div className={styles.hero}>
+          <h1 className={styles.heroHeading2}>Get in touch with Cashmatrix</h1>
+          <p className={styles.heroDesc}>We love our customers and don{"'"}t like to leave them hanging. Tell us how we can help
+            you and we will be sure to get back to you in time.</p>
+        </div>  
         <div className={styles.contactSection}>
           <div className={styles.otherContactBox}>
             <div className={styles.otherContact}>
@@ -105,14 +103,6 @@ export default function Page() {
                   className={styles.input}
                   // onChange={handleChange}
                   // value={formData.email}
-                />
-                <input
-                  name="phone number"
-                  type="tel"
-                  placeholder="Phone"
-                  className={styles.input}
-                  // onChange={handleChange}
-                  // value={formData.phone}
                 />
                 <input
                   name="subject"

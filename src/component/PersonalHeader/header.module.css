@@ -1,5 +1,7 @@
 .header{
+    width: 100%;
     background-color: white;
+    padding-bottom: 60px;
 
     > .section{
         padding-inline: 30px;
@@ -8,6 +10,10 @@
         align-items: center;
         box-shadow: 0 4px 13px rgba(0, 0, 0, .05);
         width: 100%;
+        position: fixed;
+        background-color: white;
+        z-index: 999;
+        animation: slideDown 1s ease-in-out;
 
         > .container{
             width: inherit;
@@ -53,6 +59,29 @@
                                 > .dropDownItem{
                                     padding-block: 7px;
                                     padding-inline: 10px;
+                                    display: flex;
+                                    gap: 10px;
+                                    align-items: center;
+                                    > .listSpan{
+                                        gap: 5px;
+                                        color: black;
+                                        border-radius: 50%;
+                                        padding: 3px 6px;
+                                        font-size: 13px;
+                                        > .image{
+                                            width: 14px;
+                                            height: 14px;
+                                        }
+                                    }
+                                    > #icon1{
+                                        background-color: rgb(210, 255, 240);
+                                    }
+                                    > #icon2{
+                                        background-color: rgb(255, 241, 220);
+                                    }
+                                    > #icon3{
+                                        background-color: rgb(219, 238, 255);
+                                    }
                                 }
                                 > .dropDownItem:hover{
                                     color: var(--orange-color);

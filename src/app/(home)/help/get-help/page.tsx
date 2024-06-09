@@ -1,18 +1,17 @@
 import styles from "./page.module.css";
 import Link from "next/link";
-import liveChat from "../../../../public/icons/live-chat.png"
+import liveChat from "../../../../../public/icons/live-chat.png"
 import Image from "next/image";
 
 const Page = () => {
   return (
     <main className={styles.main}>
       <section className={styles.section}>
-        <div className={styles.intro}>
-          <h1 className={styles.heading}>We are here to help</h1>
-          <p className={styles.description}>
-            Find the solutions and answers you’re seeking for any issues or questions you might
-            have. Our Help Center is available to offer support and guidance. 😊
-          </p>
+        <div className={styles.hero}>
+          <h1 className={styles.heroHeading}>Cashmatrix Help</h1>
+          <h1 className={styles.heroHeading2}>We are always here to help</h1>
+          <p className={styles.heroDesc}>Find the solutions and answers you’re seeking for any issues or questions you might
+            have. Our Help Center is available to offer support and guidance. 😊</p>
         </div>
         <div className={styles.getHelpBoxes}>
           <div className={styles.getHelpBox}>
@@ -67,7 +66,7 @@ const Page = () => {
               </span>
               <Link
                 className={styles.getHelpLink}
-                href="https://play.google.com/store/apps/details?id=com.assetcashmatrix.mfb">
+                href="https://play.google.com/store/apps/details?id=com.assetcashmatrix.mfb" target="_blank">
                 live Chat with us
               </Link>
             </div>

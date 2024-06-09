@@ -3,16 +3,21 @@ import Link from "next/link";
 import Image from "next/image";
 import PlayStore from "../../../../../public/icons/PlayStore";
 import AppleStore from "../../../../../public/icons/AppleStore";
-import ctaImage from "../../../../public/images/cta.png";
+import Cta from "@/component/PersonalCallToAction/cta";
 
 const Page = () => {
   return (
     <main className={styles.main}>
       <section className={styles.section}>
         <div className={styles.hero}>
-          <div className={styles.heroContent}>
-            <h2 className={styles.heroHeading}>About Cashmatrix</h2>
-            <p className={styles.heroInfo}>
+          <h1 className={styles.heroHeading}> About Cashmatrix</h1>
+          <h1 className={styles.heroHeading2}>Financial Freedom For Everyone</h1>
+          <p className={styles.heroDesc}>Cashmatrix was created to give the everyone financial Freedom and the experience of seamless banking</p>
+        </div>
+        <div className={styles.intro}>
+          <div className={styles.introContent}>
+            <h2 className={styles.introHeading}>Who Are We?</h2>
+            <p className={styles.introInfo}>
               Welcome to Cashmatrix, the premier digital banking platform in Nigeria. Our goal is to
               revolutionize the banking experience by making it more accessible and convenient for
               everyone. We understand the challenges and frustrations that people go through to
@@ -25,8 +30,8 @@ const Page = () => {
               <button className={styles.joinButton}>Join Cashmatrix</button>
             </Link>
           </div>
-          <div className={styles.heroImage}>
-            <Image src="" alt="Hero Image" className={styles.heroImage} />
+          <div className={styles.introImage}>
+            <Image src="" alt="intro Image" className={styles.introImage} />
           </div>
         </div>
         <div className={styles.otherAbout}>
@@ -96,19 +101,8 @@ const Page = () => {
             </ul>
           </div>
         </div>
-        <div className={styles.cta} id="cta">
-          <div className={styles.ctaContent}>
-            <h3 className={styles.ctaHeading}>Banking At Ease</h3>
-            <p className={styles.ctaInfo}>Transfer, spend and save money seamlessly</p>
-            <div className={styles.iconBox}>
-              <Link href="https://play.google.com/store/search?q=cashmatrix+app&c=apps" target="_blank"></Link><PlayStore />
-              <Link href="https://apps.apple.com/us/app/cashmatrix/id6470770885" target="_blank"></Link><AppleStore />
-            </div>
-          </div>
-          <div className={styles.ctaImage}>
-            <Image src={ctaImage} alt="call to action image" className={styles.image} />
-          </div>
-        </div>
+        {/* call to action */}
+        <Cta />         
       </section>
     </main>
   );
