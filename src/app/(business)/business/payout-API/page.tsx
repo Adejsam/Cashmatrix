@@ -1,15 +1,25 @@
+"use client";
+
 import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import apiImage from "../../../../../public/images/payout api image.png";
-import Cta from "@/component/BlackCallToAction/cta";
+import Cta from "@/component/POS component/BlackCallToAction/cta";
+import { motion } from "framer-motion";
+import apiFeatures from "./page.data";
+import ApiFeatureCard from "@/component/Api component/ApiFeatureCard/page";
+import { ReactNode } from "react";
 
-const page = () => {
+const page = (): ReactNode => {
   return (
     <main className={styles.main}>
       {/* hero section */}
       <section className={styles.section}>
-        <div className={styles.hero}>
+        <motion.div
+          className={styles.hero}
+          initial={{ scale: 0.8 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 0.5, delay: 0, ease: "easeOut" }}>
           <div className={styles.heroContent}>
             <h1 className={styles.heroHeading}>
               Drive your business toward success using the Cashmatrix Payout API.
@@ -18,7 +28,7 @@ const page = () => {
               Access sub accounts, full Cashmatrix payment APIs, and enjoy instant settlement for
               agents, plus more!
             </p>
-            <Link href="" className={styles.heroLink}>
+            <Link href="/business/create-account" className={styles.heroLink}>
               <button type="button" className={styles.heroButton}>
                 Get Cashmatrix Business
                 <span className={styles.arrowRight}>
@@ -30,102 +40,25 @@ const page = () => {
           <div className={styles.heroImageBox}>
             <Image src={apiImage} alt="Payout api Image" className={styles.heroImage} />
           </div>
-        </div>
+        </motion.div>
       </section>
       {/* features section */}
       <section className={styles.featuresSection}>
         <div className={styles.featuresBox}>
-          <div className={styles.feature}>
-            <div className={styles.featureContent}>
-              <h2 className={styles.featureHeading}>
-                Explore, test and build with Casmatrix payout APIs.
-              </h2>
-              <p className={styles.featureInfo}>
-                Cashmatrix payout APIs empower developers to explore, test, and create innovative
-                solutions for seamless financial transactions
-              </p>
-              <div className={styles.buttonBox}>
-                <Link href="" className={styles.featureLink}>
-                  <button type="button" className={styles.featureButton}>
-                    Get Cashmatrix Business
-                    <span className={styles.arrowRight}>
-                      <i className="fa-solid fa-angle-right"></i>
-                    </span>
-                  </button>
-                </Link>
-              </div>
-            </div>
-            <div className={styles.featureImageBox}>
-              <Image
-                src=""
-                alt="Recieve card payment and transfer"
-                className={styles.featureImage}
-              />
-            </div>
-          </div>
-          <div className={styles.feature}>
-            <div className={styles.featureContent}>
-              <h2 className={styles.featureHeading}>
-                Accelerate development using Cashmatrix payment services.
-              </h2>
-              <p className={styles.featureInfo}>
-                By integrating with Cashmatrix payout APIs, businesses can enhance their transfer
-                processes and offer a more convenient experience to their users
-              </p>
-              <div className={styles.buttonBox}>
-                <Link href="" className={styles.featureLink}>
-                  <button type="button" className={styles.featureButton}>
-                    Get Cashmatrix Business
-                    <span className={styles.arrowRight}>
-                      <i className="fa-solid fa-angle-right"></i>
-                    </span>
-                  </button>
-                </Link>
-              </div>
-            </div>
-            <div className={styles.featureImageBox}>
-              <Image
-                src=""
-                alt="Recieve card payment and transfer"
-                className={styles.featureImage}
-              />
-            </div>
-          </div>
-          <div className={styles.feature}>
-            <div className={styles.featureContent}>
-              <h2 className={styles.featureHeading}>
-                Achieve instant settlement within your agent network.
-              </h2>
-              <p className={styles.featureInfo}>
-                Our payout API enables instant settlement for agency banking aggregators within
-                their agent network after every POS transaction therefore, eliminating delays and
-                enhancing cash flow.
-              </p>
-              <div className={styles.buttonBox}>
-                <Link href="" className={styles.featureLink}>
-                  <button type="button" className={styles.featureButton}>
-                    Get Cashmatrix Business
-                    <span className={styles.arrowRight}>
-                      <i className="fa-solid fa-angle-right"></i>
-                    </span>
-                  </button>
-                </Link>
-              </div>
-            </div>
-            <div className={styles.featureImageBox}>
-              <Image
-                src=""
-                alt="Recieve card payment and transfer"
-                className={styles.featureImage}
-              />
-            </div>
-          </div>
+          {apiFeatures.map((val, i) => (
+            <ApiFeatureCard key={i} apiFeat={val} />
+          ))}
         </div>
       </section>
 
       {/*call to action section */}
       <section className={styles.ctaSection}>
-        <Cta />
+        <motion.div
+          initial={{ scale: 0.8 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 1.5, delay: 0, ease: "easeOut" }}>
+          <Cta />
+        </motion.div>
       </section>
     </main>
   );

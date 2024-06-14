@@ -1,5 +1,5 @@
 .main {
-  width: 100%;
+  max-width: 100%;
   > .section {
     padding-inline: 100px;
     > .hero {
@@ -86,7 +86,8 @@
     > .testimonialHeading {
       text-align: center;
       font-size: 40px;
-      padding: 25px 0 75px;
+      line-height: 45px;
+      padding: 30px 0 75px;
     }
   }
 
@@ -115,5 +116,69 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  .main{
+    > .section{
+      padding-inline: 30px;
+      > .hero{
+        flex-direction: column;
+        > .heroContent{
+          text-align: center;
+          width: 100%;
+          margin: 30px 0 50px;
+          > .heroHeading{
+            width: 70%;
+            margin: 0 auto;
+          }
+          > .heroInfo{
+            margin: 0 auto;
+          }
+          > .heroLink{
+            > .heroButton{
+              margin: 0 auto;
+            }
+          }
+          > .licenses{
+            justify-content: center;
+            margin: 20px 0;
+          }
+        }
+        > .heroImageBox{
+          width: 100%;
+        }
+      }
+    }
+    > .featuresSection{
+      padding-inline: 30px;
+    }
+    > .ctaSection{
+      padding-inline: 30px;
+    }
+  }
+}
+
+@media screen and (max-width:700px) {
+  .main{
+    > .section{
+      > .hero{
+        > .heroContent{
+          > .heroHeading{
+            width: 100%;
+          }
+          > .heroInfo{
+            margin: 0 auto;
+          }
+          > .heroLink{
+            > .heroButton{
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
   }
 }

@@ -285,3 +285,71 @@
     opacity: 1;
   }
 }
+
+@media screen and (max-width:1000px) {
+  .main{
+    overflow-y: hidden;
+    > .heroSection{
+      > .hero{
+        padding-inline: 30px;
+      }
+    }
+    > .featureSection{
+      > .featureBox{
+        padding-inline: 30px;
+      }
+    }
+    > .servicesSection{
+      padding-inline: 30px;
+    }
+    > .testimonialSection{
+      padding-inline: 30px;
+    }
+    > .actionSection{
+      padding-inline: 30px;
+    }
+  }
+}
+@media screen and (max-width:700px) {
+  .main{
+    > .heroSection{
+      > .hero{
+        flex-direction: column;
+        > .content{
+          width: 100%;
+          align-items: center;
+          text-align: center;
+      }
+      > .imageBox{
+        margin: 0 auto;
+        width: 80%;
+      }
+    }
+  }
+    > .featureSection{
+      > .featureBox{
+        flex-direction: column;
+      }
+    }
+    > .partnersSection{
+      > .partnersBoxDiv{
+        > .partnersBox{
+          gap: 20px;
+          > .partnersLogoBox1{
+            > .partnersLogo1{
+
+            }
+            > .partnersOtherLogoBox{
+              > .partnersOtherLogo{
+
+              }
+            }
+          }
+        }
+        > .partnersBox1{
+          gap: 20px;
+        }
+      }
+    }
+}
+}

@@ -39,7 +39,7 @@ const testimonials: testimaonial[] = [
     },
     {
         content: "The user experience on this update is superb. The share receipt feature and the investment feature makes me feel super cool.",
-        name: "Prince Ayotunde Yusuf (Prince Tunde)",
+        name: "Prince Ayotunde",
         imgSrc: "/a-/ALV-UjW64IsMOnIJCD6yMZXedPzZY-pmPIXetXMDH8D_NxaznPQAVOQk=s32-rw",
     },
     {

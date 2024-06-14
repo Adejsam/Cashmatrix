@@ -14,24 +14,24 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
-import Cta from "@/component/BusinessCallToAction/cta";
+import Cta from "@/component/business component/BusinessCallToAction/cta";
 import features1 from "./page.data";
-import FeatureCard from "@/component/BusinessFeatureCard/page";
+import FeatureCard from "@/component/business component/BusinessFeatureCard/page";
 import { ReactNode } from "react";
-import features from "../pos/page.data";
+import { motion} from "framer-motion"
 
 const page = ():ReactNode => {
   return (
     <main className={styles.main}>
       <section className={styles.section}>
-        <div className={styles.hero}>
+        <motion.div className={styles.hero} initial={{scale: 0.8}} whileInView={{scale: 1}} transition={{duration: 0.5,delay: 0, ease:"easeOut"}}>
           <div className={styles.heroContent}>
             <h1 className={styles.heroHeading}>Your Everyday business management solution</h1>
             <p className={styles.heroInfo}>
               Streamline your business: invoice clients, Recieve POS payments, settle bills, execute
               bulk transfers, and reclaim precious time for other pursuits.
             </p>
-            <Link href="" className={styles.heroLink}>
+            <Link href="/business/create-account" className={styles.heroLink}>
               <button type="button" className={styles.heroButton}>
                 Open Cashmatrix Business Account
                 <span className={styles.arrowRight}>
@@ -47,12 +47,12 @@ const page = ():ReactNode => {
           <div className={styles.heroImageBox}>
             <Image src={businessHero} alt="hero image" className={styles.heroImage} />
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* feature section */}
       <section className={styles.featuresSection}>
-        <div className={styles.featuresBox}>{features1.map((val,i) => {
+        <div className={styles.featuresBox} >{features1.map((val,i) => {
           return(
             <FeatureCard key={i} feat1={val}/>
           );
@@ -62,30 +62,48 @@ const page = ():ReactNode => {
 
       {/* testimonial section */}
       <section className={styles.testimonialSection}>
-        <h2 className={styles.testimonialHeading}>Don{"'"}t just take our word for it</h2>
-        <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-          slidesPerView={4}
-          speed={2000}
-          loop={true}
-          freeMode={true}
-          className={styles.swiper}
-          spaceBetween={50}
-          centeredSlides={true}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}>
-          <div className={styles.testimonialBox}>
-            {testimonials.map((val, i) => (
-              <SwiperSlide key={i}>
-                <TestimonialsCard key={i} customers={val} />
-              </SwiperSlide>
-            ))}
-          </div>
+        <motion.h2 className={styles.testimonialHeading} initial={{scale: 0.8}} whileInView={{scale: 1}} transition={{duration: 2,delay: 0, ease:"easeOut"}}>Don{"'"}t just take our word for it</motion.h2>
+        <motion.div  initial={{scale: 0.8}} whileInView={{scale: 1}} transition={{duration: 2,delay: 0, ease:"easeOut"}}>
+          <Swiper
+            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+            slidesPerView={4}
+            speed={2000}
+            loop={true}
+            breakpoints = {{
+              1000: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+              },
+              700: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              0:{
+                slidesPerView: 1,
+                spaceBetween: 10,
+              } 
+            }}
+            freeMode={true}
+            className={styles.swiper}
+            spaceBetween={50}
+            centeredSlides={true}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}>
+            <div className={styles.testimonialBox}>
+              {testimonials.map((val, i) => (
+                <SwiperSlide key={i}>
+                  <TestimonialsCard key={i} customers={val} />
+                </SwiperSlide>
+              ))}
+            </div>
         </Swiper>
+        </motion.div>
       </section>
 
       {/* call to action */}
       <section className={styles.ctaSection}>
-        <Cta />
+        <motion.div initial={{scale: 0.8}} whileInView={{scale: 1}} transition={{duration: 1.5,delay: 0, ease:"easeOut"}}>
+          <Cta />
+        </motion.div>
       </section>
     </main>
   );

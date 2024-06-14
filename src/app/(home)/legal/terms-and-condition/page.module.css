@@ -1,6 +1,7 @@
 .main {
     color: var(--blue-color);
     background-color: #eeeeee;
+    max-width: 100%;
     > .section {
       width: 100%;
       > .hero {
@@ -22,13 +23,14 @@
       > .tcLists{
         padding: 50px 100px;
         > .tcList{
-            padding-bottom: 20PX;
+            padding-bottom: 20px;
             > .tcHeading{
                 padding-bottom: 15px;
                 font-size: 20px;
+                line-height: 25px;
             }
             > .tcContent{
-                padding-bottom: 5PX;
+                padding-bottom: 5px;
             }
             > .tcSubLists{
                 padding-left: 20px;
@@ -41,4 +43,20 @@
         }
       }
     }
+}
+
+@media screen and (max-width:1000px) {
+  .main{
+    > .section{
+      > .hero{
+        padding-inline: 30px;
+        > .heroHeading2{
+          width: 100%;
+        }
+      }
+      > .tcLists{
+        padding-inline: 30px;
+      }
+    }
+  }
 }

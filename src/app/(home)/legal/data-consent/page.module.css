@@ -1,4 +1,5 @@
 .main {
+    max-width: 100%;
     color: var(--blue-color);
     background-color: #eeeeee;
     > .section {
@@ -34,6 +35,7 @@
             > .listHeading{
                 padding-bottom: 10px;
                 font-size: 20px;
+                line-height: 25px;
             }
             > .paragraph{
                 padding-bottom: 5px;
@@ -53,4 +55,17 @@
         }
       }
     }
+}
+
+@media screen and (max-width:1000px) {
+  .main{
+    > .section{
+      > .hero{
+        padding-inline: 30px;
+      }
+      > .lists{
+        padding-inline: 30px;
+      }
+    }
+  }
 }

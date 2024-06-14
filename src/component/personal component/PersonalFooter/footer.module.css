@@ -1,0 +1,103 @@
+.footer{
+    background-color: white;
+    border-top: 1px solid rgba(22, 59, 80, 0.12);
+
+    > .section{
+        width: 100%;
+        padding-inline: 30px;
+
+        > .container{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            margin-bottom: 25px;
+
+            > .imageBox{
+                > .logo{
+                    width: 200px;
+                    height: 50px;
+                    object-fit: cover;
+                    object-position: center;
+                }
+
+                > .socials{
+                    display: flex;
+                    gap: 10px;
+                    padding-left: 20px;
+                    > .social{
+                        font-size: 25px;
+                        color: var(--blue-color);
+                        > .socialLink{
+                            color: var(--blue-color)
+                        }
+                        > .socialLink:hover{
+                            color: var(--orange-color);
+                        }
+                    }
+                }
+            }
+
+            > .content{
+                display: flex;
+                flex-direction: column;
+                padding: 5px;
+                > .Heading{
+                    padding: 5px;
+                    color: var(--blue-color);
+                    font-size: 18px;
+                }
+                > .listItems{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    padding: 5px;
+                    > .listLink{
+                        color: var(--blue-color);
+                    }
+                    > .listLink:hover{
+                        color: var(--orange-color);
+                        transition: 0.3s all ease-in-out;
+                    }
+                }
+            }
+        }
+        > .horizontal{
+            border: 1px solid var(--blue-color);
+            margin-bottom: 25px;
+        }
+        > .paragraph{
+            text-align: center;
+            color: var(--blue-color);
+            width: 90%;
+            margin-inline: auto;
+        }
+        > .paragraph:last-child{
+            padding-bottom: 20px;
+        }
+    }
+
+}
+
+@media screen and (max-width:700px) {
+    .footer{
+        > .section{
+            padding-inline: 12px;
+            > .container{
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                > .imageBox{
+                    grid-column: 1 / 3;
+
+                    > .logo{
+                    }
+                }
+                > .content{
+                    > .Heading{
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,9 +1,7 @@
 import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import PlayStore from "../../../../../public/icons/PlayStore";
-import AppleStore from "../../../../../public/icons/AppleStore";
-import Cta from "@/component/PersonalCallToAction/cta";
+import Cta from "@/component/personal component/PersonalCallToAction/cta";
 
 const Page = () => {
   return (

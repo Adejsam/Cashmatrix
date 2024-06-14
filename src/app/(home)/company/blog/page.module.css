@@ -43,41 +43,49 @@
      /* call to action section*/
   > .ctaSection{
     padding:0 100px 75px;
-    color: rgb(228, 228, 228);
-    > .ctaBox{
-        background-image: url("../../../../../public/images/business\ backg\ Image.png");
-        background-position: center;
-        background-size: cover;
-        border: 1px solid hsla(228, 7%, 87%, .5);
-        box-shadow: 15px 30px 40px rgba(0, 0, 0, .07);
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        width: 80%;
-        padding: 30px 60px;
-        border-radius: 5px;
-        > .ctaContent{
-            width: 50%;
-            > .ctaHeading{
-                font-size: 30px;
-                line-height: 35px;
-                padding-bottom: 20px;
-            }
-            > .ctaInfo{
-                padding-bottom: 30px;
-            }
-            > .licenses{
-                display: flex;
-                gap: 10px;
-            }
+  }
+}
+
+
+@media screen and (max-width:1000px) {
+  .main{
+    > .section{
+      > .hero{
+        padding-inline: 30px;
+      }
+    }
+    > .blogSection{
+      padding-inline: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .main{
+    > .section{
+      > .hero{
+        > .heroHeading2{
+          font-size: 30px;
+          line-height: 35px;
+          width: 100%;
         }
-        > .ctaImageBox{
-            width: 50%;
-            > .ctaImage{
-                width: 100%;
-                height: auto;
-            }
+        > .heroDesc{
+          width: 90%;
+          width: 100%;
         }
+      }
+    }
+
+    > .blogSection{
+      padding-inline: 10px;
+      > .blogsBox{
+        width: 100%;
+        display: block;
+      }
+    }
+
+    > .ctaSection{
+      padding-inline: 30px;
     }
   }
 }

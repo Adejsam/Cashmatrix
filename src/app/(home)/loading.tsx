@@ -3,7 +3,6 @@ import Image from "next/image";
 import LoadingImage from "../../../public/images/website icon.png";
 
 export default async function Loading() {
-//   await new Promise(resolve => setTimeout(resolve, 3000));
 
   return (
     <main className={styles.main}>

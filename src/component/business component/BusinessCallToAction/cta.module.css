@@ -1,0 +1,57 @@
+/* call to action section*/
+.main{
+  color: rgb(228, 228, 228);
+  > .ctaBox {
+    background-image: url("../../../../public/images/business\ backg\ Image.png");
+    background-position: center;
+    background-size: cover;
+    border: 1px solid hsla(228, 7%, 87%, 0.5);
+    box-shadow: 15px 30px 40px rgba(0, 0, 0, 0.07);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    padding: 30px 60px;
+    border-radius: 5px;
+    > .ctaContent {
+      width: 50%;
+      > .ctaHeading {
+        font-size: 30px;
+        line-height: 35px;
+        padding-bottom: 20px;
+      }
+      > .ctaInfo {
+        padding-bottom: 30px;
+      }
+      > .licenses {
+        display: flex;
+        gap: 10px;
+      }
+    }
+    > .ctaImageBox {
+      width: 50%;
+      > .ctaImage {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media  screen and (max-width: 1000px) {
+  .main{
+    > .ctaBox{
+      width: 90%;
+      > .ctaContent{
+        width: 100%;
+        text-align: center;
+        > .licenses{
+          justify-content: center;
+        }
+      }
+      > .ctaImageBox{
+        display: none;
+      }
+    }
+  }
+}

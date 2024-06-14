@@ -123,3 +123,68 @@
     }
   }
 }
+
+
+@media screen and (max-width: 1000px) {
+  .main{
+    > .section{
+      > .hero{
+        padding-inline: 30px;
+      }
+
+      > .getHelpBoxes{
+        padding-inline: 30px;
+        flex-wrap: wrap;
+        > .getHelpBox{
+          width: 48%;
+          margin-bottom: 50px;
+        }
+        > .getHelpBox:last-of-type{
+          margin-inline: auto;
+          width: 50%;
+        }
+      }
+
+      > .otherHelpLink{
+        > .otherHelpBox{
+          margin-inline: 30px;
+        }
+        > .getHelpBox:hover{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .main{
+    > .section{
+      > .hero{
+        > .heroHeading2{
+          width: 100%;
+          font-size: 35px;
+          line-height: 40px;
+        }
+        > .heroDesc{
+          width: 100%;
+        }
+      }
+
+      > .getHelpBoxes{
+        > .getHelpBox{
+          width: 100%;
+        }
+        > .getHelpBox:last-of-type{
+          width: 100%;
+        }
+      }
+
+      > .otherHelpLink{
+        > .otherHelpBox{
+          width: 80%;
+        }
+      }
+    }
+  }
+}

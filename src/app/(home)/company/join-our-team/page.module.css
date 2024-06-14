@@ -1,0 +1,335 @@
+.main {
+  max-width: 100%;
+  color: var(--blue-color);
+  > .section {
+    background-color: var(--light-orange);
+    padding-inline: 100px;
+    > .hero {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      gap: 20px;
+      height: calc(100vh - 60px);
+
+      > .heroContent {
+        width: 50%;
+        padding: 20px;
+
+        /* add animation */
+        animation-name: fadeInUp;
+        animation-duration: 1.5s;
+        animation-fill-mode: backwards;
+        animation-direction: normal;
+        animation-timing-function: ease;
+        > .heroHeading {
+          font-size: 48px;
+          line-height: 53px;
+          padding-block: 20px;
+          font-weight: 900;
+        }
+        > .heroInfo {
+          font-size: 24px;
+          line-height: 23px;
+          padding-bottom: 20px;
+          width: 90%;
+          color: black;
+        }
+        > .heroLink {
+          > .heroButton {
+            padding: 10px;
+            background-color: var(--blue-color);
+            color: white;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+          }
+          > .heroButton:hover {
+            background-color: var(--orange-color);
+          }
+        }
+      }
+
+      > .heroImageBox {
+        width: 50%;
+        height: 100%;
+        > .heroImage {
+          padding-top: 50px;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+
+          /* add animation */
+          animation-name: fadeIn;
+          animation-duration: 3s;
+          animation-timing-function: ease;
+          animation-fill-mode: forwards;
+        }
+      }
+    }
+  }
+
+  /* benefit scetion */
+  > .benfitsSection {
+    padding: 75px 100px 75px;
+    background-color: var(--light-orange);
+    > .benefitsHeading {
+      text-align: center;
+      font-size: 36px;
+      line-height: 40px;
+      padding-bottom: 10px;
+    }
+    > .benefitsInfo {
+      text-align: center;
+      width: 60%;
+      margin: 0 auto;
+      padding-bottom: 50px;
+    }
+    > .benefitsBox {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      width: 100%;
+      > .benefit {
+        flex-basis: 40%;
+        padding: 15px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.06);
+        border-radius: 5px;
+        > .benefitInfo {
+          width: 90%;
+          padding-left: 15px;
+          > .benefitHeading {
+            font-size: 18px;
+            padding-bottom: 5px;
+          }
+          > .benefitContent {
+            width: 90%;
+          }
+        }
+        > .iconBox {
+          border-radius: 50%;
+          width: 10%;
+          > .icon {
+            border-radius: 50%;
+            padding: 10px;
+            width: 45px;
+            height: 45px;
+          }
+          > #icon1 {
+            background-color: #f0fff0;
+          }
+          > #icon2 {
+            background-color: #fff8dc;
+          }
+          > #icon3 {
+            background-color: #f0ffff;
+          }
+          > #icon4 {
+            background-color: #edab94;
+          }
+        }
+      }
+    }
+  }
+
+  /* Values section */
+  > .valuesSection {
+    padding: 75px 100px 25px;
+    > .valuesHeading {
+      text-align: center;
+      font-size: 36px;
+      line-height: 40px;
+      padding-bottom: 10px;
+    }
+    > .valuesInfo {
+      text-align: center;
+      margin: 0 auto;
+      width: 60%;
+      padding-bottom: 50px;
+    }
+    > .valuesBox {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+      > .value {
+        height: 350px;
+        flex-basis: 32%;
+        padding: 20px;
+        margin-bottom: 50px;
+        border-radius: 5px;
+        > .valueHeading {
+          font-size: 20px;
+          padding-bottom: 10px;
+          height: 10%;
+        }
+        > .valueContent {
+          color: black;
+          padding-bottom: 10px;
+          height: 15%;
+        }
+        > .valueImage {
+          height: 75%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      > #value1 {
+        background-color: cornsilk;
+      }
+      > #value2 {
+        background-color: aliceblue;
+        > .valueImage {
+          object-fit: contain;
+        }
+      }
+      > #value3 {
+        background-color: beige;
+      }
+      > #value4 {
+        background-color: honeydew;
+      }
+      > #value5 {
+        background-color: rgba(233, 150, 122, 0.507);
+        > .valueImage {
+          object-fit: contain;
+        }
+      }
+      > #value6 {
+        background-color: azure;
+      }
+    }
+  }
+}
+
+/* animation fadeinUp */
+@keyframes fadeInUp {
+  0% {
+    transform: translate(0px, 100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px, 0);
+    opacity: 1;
+  }
+}
+
+/* animation fade in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .main {
+    > .section {
+      padding-inline: 30px;
+      > .hero {
+        flex-direction: column;
+        gap: 0;
+        > .heroContent {
+          text-align: center;
+          width: 100%;
+          > .heroHeading {
+            margin: 0 auto;
+          }
+          > .heroDesc {
+            width: 100%;
+          }
+          > .heroLink {
+            > .heroButton {
+              margin-inline: auto;
+            }
+          }
+        }
+        > .heroImageBox {
+          width: 100%;
+          height: 350px;
+          > .heroImage {
+            width: 100%;
+            padding-top: 10px;
+          }
+        }
+      }
+    }
+
+    > .benfitsSection {
+      padding-inline: 30px;
+      > .benefitsInfo {    
+        width: 80%;
+      }
+      > .benefitsBox{
+        justify-content: space-between;
+        > .benefit {
+          gap: 5px;
+          padding: 10px;
+          flex-basis: 48%;
+        }
+      }  
+    }
+
+    > .valuesSection{
+      padding-inline: 30px;
+      > .valuesInfo{
+        width: 80%;
+      }
+      > .valuesBox{
+        > .value{
+          flex-basis: 48%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .main {
+    > .section {
+      > .hero {
+        gap: 30px;
+        > .heroContent {
+          padding: 0;
+          > .heroDesc {
+            width: 100%;
+          }
+        }
+        > .heroImageBox {
+          width: 100%;
+          height: 300px;
+          > .heroImage {
+          }
+        }
+      }
+    }
+
+    > .benfitsSection {
+      > .benefitInfo{
+        width: 100%;
+      }
+      > .benefitsBox {
+        > .benefit {
+          flex-basis: 100%;
+        }
+      }
+    }
+
+    > .valuesSection{
+      > .valuesInfo{
+        width: 100%;
+      }
+      > .valuesBox{
+        > .value{
+          flex-basis: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,250 @@
+.header {
+  max-width: 100%;
+  background-color: white;
+  padding-bottom: 60px;
+
+  > .section {
+    padding-inline: 30px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 13px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    z-index: 999;
+    animation: slideDown 1s ease-in-out;
+
+    > .container {
+      width: inherit;
+      display: flex;
+      justify-content: space-between;
+
+      > .content {
+        display: flex;
+        gap: 60px;
+
+          .logo {
+          width: 200px;
+          height: 60px;
+          object-fit: cover;
+          object-position: center;
+          padding-top: 10px;
+          cursor: pointer;
+        }
+
+        > .navItems {
+          display: flex;
+          gap: 40px;
+          align-items: center;
+
+          > .navItem {
+            padding: 5px;
+            position: relative;
+            color: var(--blue-color);
+            /* > .icon{
+              display: flex;
+              align-items: center;
+              gap: 5px;
+            } */
+
+            > .dropDown {
+              position: absolute;
+              top: 100%;
+              box-shadow: 0 4px 13px rgba(0, 0, 0, 0.05);
+              width: 200px;
+              border-radius: 5px;
+              display: none;
+              animation: slideDown 0.3s ease-in-out;
+              background-color: white;
+              z-index: 2;
+
+              > .dropDownLink {
+                color: var(--blue-color);
+
+                > .dropDownItem {
+                  padding-block: 7px;
+                  padding-inline: 10px;
+                  display: flex;
+                  gap: 10px;
+                  align-items: center;
+                  > .listSpan {
+                    gap: 5px;
+                    color: black;
+                    border-radius: 50%;
+                    padding: 3px 6px;
+                    font-size: 13px;
+                    > .image {
+                      width: 14px;
+                      height: 14px;
+                    }
+                  }
+                  > #icon1 {
+                    background-color: rgb(210, 255, 240);
+                  }
+                  > #icon2 {
+                    background-color: rgb(255, 241, 220);
+                  }
+                  > #icon3 {
+                    background-color: rgb(219, 238, 255);
+                  }
+                }
+                > .dropDownItem:hover {
+                  color: var(--orange-color);
+                  transition: 0.3s all ease-in-out;
+                }
+              }
+            }
+            > .navLink {
+              color: var(--blue-color);
+            }
+            > .icon {
+              padding-left: 5px;
+              color: var(--blue-color);
+            }
+            > .navLink:hover {
+              transition: 0.3s all ease-in-out;
+              color: var(--orange-color);
+            }
+            > .navLink:hover + .icon {
+              transition: 0.3s all ease-in-out;
+              color: var(--orange-color);
+            }
+          }
+          > .navItem:hover .dropDown {
+            display: block;
+          }
+        }
+      }
+
+      > .buttonBox {
+        display: flex;
+        align-items: center;
+        flex-shrink: 1;
+        gap: 10px;
+
+        > .buttonLink {
+          > .button {
+            border-radius: 5px;
+            border: none;
+          }
+          > #signIn {
+            padding: 12px;
+            color: var(--blue-color);
+          }
+          > #signIn:hover {
+            background-color: var(--blue-color);
+            color: white;
+          }
+          > #signUp {
+            background-color: var(--orange-color);
+            color: #ffffff;
+            font-size: 16px;
+            padding: 10px;
+          }
+          > #signUp:hover {
+            color: white;
+            background-color: var(--blue-color);
+          }
+        }
+      }
+      > .barsIcon{
+        display: none;
+      }
+    }
+  }
+}
+
+/* Slide down animation */
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+
+
+@media  screen and (max-width: 1000px) {
+.header{
+    > .section{
+      padding-inline: 10px;
+        > .container{
+            position: relative;
+            > .content{
+              gap: 0;
+              > .navItems{
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background-color: white;
+                flex-direction: column;
+                top: 60px;
+                align-items: flex-start;
+                padding: 100px 10px;
+                gap: 10px;
+                left: 0;
+                right: 0;
+          
+                > .navItem{
+                  border-bottom: 1px solid hsla(240, 6%, 87%, 0.537);
+                  padding-block: 12px;
+                  width: 100%;
+                  margin: 0 auto;
+                  font-size: 16px;
+                  
+                  > .icon{
+                    float: inline-end;
+                  }
+
+                  > .dropDown{
+                    position: relative;
+                    top: 0;
+                    z-index: 2;
+                    background-color: white;
+                    box-shadow: none;
+                  }
+                }
+                > .navItem:hover .dropDown{
+                  
+                }
+              }
+            }
+            > .buttonBox{
+                position: fixed;
+                width: 100%;
+                top: 60px;
+                padding: 20px 0;
+                > .buttonLink{
+                    > #signIn{
+                      padding: 12px 20px;
+                      font-size: 16px;
+                    }
+                    > #signUp{
+                      margin-right: 20px;
+                      padding: 12px 20px;
+                    }
+                }
+            }
+            > .barsIcon{
+                display: flex;
+                height: 60px;
+                align-items: center;
+                padding-top: 10px;
+                cursor: pointer;
+                > .bars{
+                    display: flex;
+                    justify-content: center;
+                    font-size: 30px;
+                    color: var(--blue-color);
+                }
+            }
+        }
+    }
+  }
+}
+@media  screen and (max-width: 700px) {
+    
+}

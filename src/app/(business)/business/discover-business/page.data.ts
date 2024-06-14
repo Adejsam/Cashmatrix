@@ -1,4 +1,8 @@
 import { StaticImageData } from "next/image";
+import azureBackg from "../../../../../public/images/azure backg.png";
+import brownBackg from "../../../../../public/images/brown backg.png";
+import cornsmilkBackg from "../../../../../public/images/cornsmilk backg.png";
+import honeydexBackg from "../../../../../public/images/hoveydew backg.png";
 
 export interface feature1{
     heading: string;
@@ -7,7 +11,7 @@ export interface feature1{
     link2: string
     buttonName1 : string;
     buttonName2: string;
-    src: StaticImageData | string;
+    src: StaticImageData ;
     checkIcon : string;
     arrowIcon: string;
     featureButton1: string;
@@ -19,11 +23,11 @@ const features1: feature1[] = [
     {
         heading: "Open a Cashmatrix Business account with no paperwork",
         content: "Setup an account anytime and anywhere. All you need in your:",
-        link1: "",
+        link1: "/business/create-account",
         link2: "",
         buttonName1: "Open Cashmatrix Business Account",
         buttonName2: "",
-        src: "",
+        src: azureBackg,
         listData: ["CAC (Customer acquisition cost)", "CAC (Customer acquisition cost)","CAC (Customer acquisition cost)"],
         checkIcon: "fa-solid fa-check",
         arrowIcon: "fa-solid fa-angle-right",
@@ -33,11 +37,11 @@ const features1: feature1[] = [
     {
         heading: "Manage all your business expenses conveniently in a single place.",
         content: "Effortlessly handle bill payments and airtime purchases without switching platforms,ensuring seamless organization and smooth business operations.",
-        link1: "",
+        link1: "/business/create-account",
         link2: "",
         buttonName1: "Explore Bill Payment",
         buttonName2: "",
-        src: "",
+        src: brownBackg,
         checkIcon: "",
         arrowIcon: "fa-solid fa-angle-right",
         featureButton1: "button1",
@@ -47,11 +51,11 @@ const features1: feature1[] = [
     {
         heading: "Boost your earnings with the Cashmatrix POS",
         content: "Effortlessly accept card and transfers payment using a dependable point-of-saleterminal. Experience instant settlements, instant dispute resolution, and immediate payments every time.",
-        link1: "",
-        link2: "",
+        link1: "business/create-account",
+        link2: "/business/pos",
         buttonName1: "Request for POS",
         buttonName2: "Learn More",
-        src: "",
+        src: cornsmilkBackg,
         checkIcon: "",
         arrowIcon: "fa-solid fa-angle-right",
         featureButton1:"button1" ,
@@ -65,7 +69,7 @@ const features1: feature1[] = [
         link2: "",
         buttonName1: "",
         buttonName2: "",
-        src: "",
+        src: honeydexBackg,
         checkIcon: "",
         arrowIcon: "",
         featureButton1: "button1",
@@ -79,7 +83,7 @@ const features1: feature1[] = [
         link2: "",
         buttonName1: "Get Help",
         buttonName2: "",
-        src: "",
+        src: azureBackg,
         checkIcon: "",
         arrowIcon: "fa-solid fa-angle-right",
         featureButton1: "button1",

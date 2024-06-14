@@ -2,7 +2,7 @@
 import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import ServicesCard from "@/component/ServiceCard/page";
+import ServicesCard from "@/component/personal component/ServiceCard/page";
 import PlayStore from "../../../../public/icons/PlayStore";
 import AppleStore from "../../../../public/icons/AppleStore";
 import Cbn from "../../../../public/icons/Cbn";
@@ -34,15 +34,19 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
 import security from "../../../../public/images/security.png";
-import Cta from "@/component/PersonalCallToAction/cta";
-import {motion} from "framer-motion";
+import Cta from "@/component/personal component/PersonalCallToAction/cta";
+import { motion } from "framer-motion";
 
 const Home = (): ReactNode => {
   return (
     <main className={styles.main}>
       {/* HERO SECTION */}
       <section className={styles.heroSection}>
-        <motion.div className={styles.hero} initial={{scale: 0.8}} whileInView={{scale: 1}} transition={{duration: 0.5,delay: 0, ease:"easeOut"}}>
+        <motion.div
+          className={styles.hero}
+          initial={{ scale: 0.8 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 0.5, delay: 0, ease: "easeOut" }}>
           <div className={styles.content}>
             <h1 className={styles.heading}>Digital Banking At Ease</h1>
             <p className={styles.description}>
@@ -76,8 +80,16 @@ const Home = (): ReactNode => {
 
       {/* FEATURES SECTION */}
       <section className={styles.featureSection}>
-        <motion.div className={styles.featureBox} initial={{scale: 0.8}} whileInView={{scale: 1}} transition={{duration: 1.5,delay: 0, ease:"easeOut"}}>
-          <motion.div className={styles.features} initial={{x: -100}} whileInView={{x:0}} transition={{duration: 1.5,delay: 0, ease:"easeOut"}} >
+        <motion.div
+          className={styles.featureBox}
+          initial={{ scale: 0.8 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 1.5, delay: 0, ease: "easeOut" }}>
+          <motion.div
+            className={styles.features}
+            initial={{ x: -100 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: 1.5, delay: 0, ease: "easeOut" }}>
             <div className={styles.feature}>
               <Image src={transfer} alt="transfer icon" className={styles.featureIcon} />
               <div className={styles.featureInfo}>
@@ -113,7 +125,11 @@ const Home = (): ReactNode => {
               className={styles.featureImage}
             />
           </div>
-          <motion.div className={styles.features}  initial={{x: 100}} whileInView={{x:0}} transition={{duration: 1.5,delay: 0, ease:"easeOut"}} >
+          <motion.div
+            className={styles.features}
+            initial={{ x: 100 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: 1.5, delay: 0, ease: "easeOut" }}>
             <div className={styles.feature}>
               <Image
                 src={transactHist}
@@ -152,7 +168,10 @@ const Home = (): ReactNode => {
       {/* SERCVICES SECTION */}
       <section className={styles.servicesSection}>
         {/* <h2 className={styles.servicesHeading}></h2> */}
-        <motion.div initial={{scale: 0.8}} whileInView={{scale: 1}} transition={{duration: 1,delay: 0, ease:"easeOut"}}>
+        <motion.div
+          initial={{ scale: 0.8 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 1, delay: 0, ease: "easeOut" }}>
           <ServicesCard
             title="Open an Account in Minutes"
             content="Account Opening has never been more seamless. With the Cashmatrix app you can open an account in minutes. All you need is your Bank Verification Number (BVN) or National Identification Number (NIN)"
@@ -160,9 +179,13 @@ const Home = (): ReactNode => {
             link="https://play.google.com/store/apps/details?id=com.assetcashmatrix.mfb"
             linkCont="Open an Account"
             arrow="fa-solid fa-angle-right"
+            id="account"
           />
         </motion.div>
-        <motion.div initial={{scale: 0.8}} whileInView={{scale: 1}} transition={{duration: 1,delay: 0, ease:"easeOut"}}>
+        <motion.div
+          initial={{ scale: 0.8 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 1, delay: 0, ease: "easeOut" }}>
           <ServicesCard
             title="Save for the future with Matrix Save"
             content="The Cashmatrix app offer the Matrix Save feature that lets you save money automatically on a weekly, bi-weekly, monthly, quarterly, annually and bi-annually basis. 
@@ -171,9 +194,13 @@ const Home = (): ReactNode => {
             link="https://play.google.com/store/apps/details?id=com.assetcashmatrix.mfb"
             linkCont="Save with Savematrix"
             arrow="fa-solid fa-angle-right"
+            id="matrix save"
           />
         </motion.div>
-        <motion.div initial={{scale: 0.8}} whileInView={{scale: 1}} transition={{duration: 1,delay: 0, ease:"easeOut"}}>
+        <motion.div
+          initial={{ scale: 0.8 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 1, delay: 0, ease: "easeOut" }}>
           <ServicesCard
             title="Your privacy and security is our top priority"
             content="Cashmatrix is fully licensed as a Mobile Money Operator by CBN, and insured by NDIC. We manage customers' funds in compliance with all application regulations. This means that all our users are protected "
@@ -181,9 +208,13 @@ const Home = (): ReactNode => {
             link=""
             linkCont=""
             arrow=""
+            id="security"
           />
         </motion.div>
-        <motion.div initial={{scale: 0.8}} whileInView={{scale: 1}} transition={{duration: 1,delay: 0, ease:"easeOut"}}>
+        <motion.div
+          initial={{ scale: 0.8 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 1, delay: 0, ease: "easeOut" }}>
           <ServicesCard
             title="We are always here to help you"
             content="You can chat with us on the app, slide into our DMs, tweet, leave an Instagram, twitter or facebook comment, send an email or call. However you choose to reach out, we are always available to make your user expierience seamless"
@@ -191,24 +222,46 @@ const Home = (): ReactNode => {
             link="/help"
             linkCont="Get Help"
             arrow="fa-solid fa-angle-right"
+            id="customer service"
           />
         </motion.div>
       </section>
 
       {/* TESTIMONIAL SECTION */}
       <section className={styles.testimonialSection}>
-        <motion.h2 className={styles.testimonialHeading}  initial={{scale: 0.8}} whileInView={{scale: 1}} transition={{duration: 2,delay: 0, ease:"easeOut"}}>Don{"'"}t just take our word for it</motion.h2>
-        <motion.div initial={{scale: 0.8}} whileInView={{scale: 1}} transition={{duration: 2,delay: 0, ease:"easeOut"}}>
+        <motion.h2
+          className={styles.testimonialHeading}
+          initial={{ scale: 0.8 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 2, delay: 0, ease: "easeOut" }}>
+          Don{"'"}t just take our word for it
+        </motion.h2>
+        <motion.div
+          initial={{ scale: 0.8 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 2, delay: 0, ease: "easeOut" }}>
           <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-            slidesPerView={4}
             speed={2000}
             loop={true}
-            freeMode={true}
+            cssMode={true}
+            breakpoints={{
+              1000: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+              },
+              700: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              0: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+            }}
             className={styles.swiper}
-            spaceBetween={50}
             centeredSlides={true}
-            autoplay={{ delay: 3000, disableOnInteraction: false }}>
+            autoplay={{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }}>
             <div className={styles.testimonialBox}>
               {testimonials.map((val, i) => (
                 <SwiperSlide key={i}>
@@ -222,8 +275,18 @@ const Home = (): ReactNode => {
 
       {/* PARTNERS SECTION */}
       <section className={styles.partnersSection}>
-        <motion.h2 className={styles.partnersHeading}  initial={{scale: 0.8}} whileInView={{scale: 1}} transition={{duration: 2,delay: 0, ease:"easeOut"}}>Partners</motion.h2>
-        <motion.div className={styles.partnersBoxDiv}  initial={{scale: 0.8}} whileInView={{scale: 1}} transition={{duration: 2,delay: 0, ease:"easeOut"}}>
+        <motion.h2
+          className={styles.partnersHeading}
+          initial={{ scale: 0.8 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 2, delay: 0, ease: "easeOut" }}>
+          Partners
+        </motion.h2>
+        <motion.div
+          className={styles.partnersBoxDiv}
+          initial={{ scale: 0.8 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 2, delay: 0, ease: "easeOut" }}>
           <div className={styles.partnersBox}>
             <div className={styles.partnersLogoBox1}>
               <Image src={cbnLogo} alt="CBN logo" className={styles.partnersLogo1} />
@@ -273,7 +336,10 @@ const Home = (): ReactNode => {
 
       {/* call to action section */}
       <section className={styles.actionSection}>
-        <motion.div initial={{scale: 0.8}} whileInView={{scale: 1}} transition={{duration: 1.5,delay: 0, ease:"easeOut"}}>
+        <motion.div
+          initial={{ scale: 0.8 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 1.5, delay: 0, ease: "easeOut" }}>
           <Cta />
         </motion.div>
       </section>
