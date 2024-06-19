@@ -161,84 +161,37 @@
     }
 }
 
-@media  screen and (max-width: 1000px) {
-    .header{
-        > .section{
-          padding-inline: 15px;
-            > .container{
-                position: relative;
-                > .content{
-                  gap: 0;
-                  > .navItems{
-                    position: fixed;
-                    width: 100%;
-                    height: 100vh;
-                    background-color: white;
-                    flex-direction: column;
-                    top: 60px;
-                    align-items: flex-start;
-                    padding: 100px 10px;
-                    gap: 10px;
-                    left: 0;
-                    right: 0;
-              
-                    > .navItem{
-                      border-bottom: 1px solid hsla(240, 6%, 87%, 0.537);
-                      padding-block: 12px;
-                      width: 100%;
-                      margin: 0 auto;
-                      font-size: 16px;
-                      
-                      > .icon{
-                        float: inline-end;
-                      }
-    
-                      > .dropDown{
-                        position: relative;
-                        top: 0;
-                        z-index: 2;
-                        background-color: white;
-                        box-shadow: none;
-                      }
-                    }
-                    > .navItem:hover .dropDown{
-                      
-                    }
-                  }
-                }
-                > .buttonBox{
-                    position: fixed;
-                    width: 100%;
-                    top: 60px;
-                    padding: 20px 0;
-                    > .buttonLink{
-                        > #signIn{
-                          padding: 12px 20px;
-                          font-size: 16px;
-                        }
-                        > #signUp{
-                          margin-right: 20px;
-                          padding: 12px 20px;
-                        }
-                    }
-                }
-                > .barsIcon{
-                    display: flex;
-                    height: 60px;
-                    align-items: center;
-                    padding-top: 10px;
-                    cursor: pointer;
-                    > .bars{
-                        display: flex;
-                        justify-content: center;
-                        font-size: 30px;
-                        color: var(--blue-color);
-                    }
-                }
+
+@media screen and (max-width: 1000px) {
+    .header {
+      > .section {
+        padding-inline: 10px;
+        > .container {
+          > .content{
+            > .navItems{
+              display: none;
             }
+          }
+          > .buttonBox{
+            display: none;
+          }
+        > .barsIcon {
+            display: flex;
+            height: 60px;
+            align-items: center;
+            cursor: pointer;
+            padding-top: 7px;
+            margin-left: auto;
+          > .bars {
+            font-size: 30px;
+            color: var(--blue-color);
+          }
+        }
         }
       }
     }
-    @media  screen and (max-width: 700px) {
-        
-    }
+  }
+  
+  @media screen and (max-width: 700px) {
+  }
+  

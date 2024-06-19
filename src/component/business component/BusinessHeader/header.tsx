@@ -5,14 +5,17 @@ import Image from "next/image";
 import logo from "../../../../public/images/Business logo.png";
 import Link from "next/link";
 import posIcon from "../../../../public/icons/pos icon.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import SideBar from "../business sidebar/page";
 
-export default function BusinessHeader() {
+const BusinessHeader:React.FC = () => {
   const [menuOpen, isMenuOpen] = useState(false);
 
   const toggleMenu = () =>{
     isMenuOpen(!menuOpen)
   }
+
+
   return (
     <header className={styles.header}>
       <section className={styles.section}>
@@ -21,7 +24,6 @@ export default function BusinessHeader() {
             <Link href="/business/discover-business">
               <Image src={logo} alt="cashmatrix logo" className={styles.logo} />
             </Link>
-            {menuOpen && (
             <ul className={styles.navItems}>
               <li className={styles.navItem}>
                 <Link href="/personal" className={styles.navLink}>
@@ -88,9 +90,7 @@ export default function BusinessHeader() {
                 </ul>
               </li>
             </ul>
-            )}
           </div>
-          {menuOpen && (
           <div className={styles.buttonBox}>
             <Link href="/business/create-account"  className={styles.buttonLink}>
               <button className={styles.button} id={styles.signUp}>
@@ -103,7 +103,6 @@ export default function BusinessHeader() {
               </button>
             </Link>
           </div>
-          )}
           <div className={styles.barsIcon} onClick={toggleMenu}>
             {menuOpen ? (
               <span className={styles.bars}>
@@ -115,8 +114,11 @@ export default function BusinessHeader() {
               </span>
             )}
           </div>
+          {menuOpen && (<SideBar/>)}
         </div>
       </section>
     </header>
   );
 }
+
+export default BusinessHeader;

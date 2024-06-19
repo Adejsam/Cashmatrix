@@ -176,7 +176,7 @@ const Home = (): ReactNode => {
             title="Open an Account in Minutes"
             content="Account Opening has never been more seamless. With the Cashmatrix app you can open an account in minutes. All you need is your Bank Verification Number (BVN) or National Identification Number (NIN)"
             imagesrc={createAccount}
-            link="https://play.google.com/store/apps/details?id=com.assetcashmatrix.mfb"
+            link="/join-cashmatrix"
             linkCont="Open an Account"
             arrow="fa-solid fa-angle-right"
             id="account"
@@ -191,8 +191,8 @@ const Home = (): ReactNode => {
             content="The Cashmatrix app offer the matrix save feature that lets you save money automatically on a weekly, bi-weekly, monthly, quarterly, annually and bi-annually basis. 
               Get 16% annual interest on your savings and withdraw your money anytime with no penalty."
             imagesrc={saveMatrix}
-            link="https://play.google.com/store/apps/details?id=com.assetcashmatrix.mfb"
-            linkCont="Save with Savematrix"
+            link="/join-cashmatrix"
+            linkCont="Save with Matrix Save"
             arrow="fa-solid fa-angle-right"
             id="save"
           />
@@ -219,7 +219,7 @@ const Home = (): ReactNode => {
             title="We are always here to help you"
             content="You can chat with us on the app, slide into our DMs, tweet, leave an Instagram, twitter or facebook comment, send an email or call. However you choose to reach out, we are always available to make your user expierience seamless"
             imagesrc={customerService}
-            link="/get-help"
+            link="/help/get-help"
             linkCont="Get Help"
             arrow="fa-solid fa-angle-right"
             id="customer service"

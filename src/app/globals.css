@@ -54,3 +54,11 @@ button{
 button:active{
   transform: scale(0.68);
 }
+
+@media screen and (max-width:1000px) {
+  body::-webkit-scrollbar{
+    display: none;
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+  }
+}

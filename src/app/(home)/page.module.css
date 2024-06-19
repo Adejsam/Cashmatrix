@@ -1,6 +1,7 @@
 .main {
   max-width: 100%;
   color: var(--blue-color);
+  overflow-x: hidden;
 
   > .heroSection {
     > .hero {
@@ -37,7 +38,7 @@
         > .download {
           display: flex;
           gap: 10px;
-          margin-bottom: 10px;
+          margin-bottom: 20px;
         }
         > .licenses {
           display: flex;
@@ -246,7 +247,7 @@
   }
 
   > .actionSection {
-    padding: 0 50px 50px;
+    padding: 0 50px 100px;
   }
 }
 
@@ -323,6 +324,16 @@
           width: 100%;
           align-items: center;
           text-align: center;
+          > .licenses{
+            flex-direction: column;
+            gap: 10px;
+          }
+          > .heading{
+            width: 100%;
+          }
+          > .description{
+            width: 100%;
+          }
       }
       > .imageBox{
         margin: 0 auto;
@@ -335,9 +346,6 @@
         flex-direction: column;
         > .featureImageBox{
           width: 100%;
-          > .featureImage{
-
-          }
         }
       }
     }
@@ -345,16 +353,6 @@
       > .partnersBoxDiv{
         > .partnersBox{
           gap: 20px;
-          > .partnersLogoBox1{
-            > .partnersLogo1{
-
-            }
-            > .partnersOtherLogoBox{
-              > .partnersOtherLogo{
-
-              }
-            }
-          }
         }
         > .partnersBox1{
           gap: 20px;

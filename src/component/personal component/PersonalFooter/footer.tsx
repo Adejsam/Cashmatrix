@@ -4,6 +4,9 @@ import logo from "../../../../public/images/Personal logo.png";
 import styles from "./footer.module.css";
 
 export default function PersonalFooter() {
+  const date = new Date;
+  const currentYear = date.getFullYear()
+
   return (
     <footer className={styles.footer}>
       <section className={styles.section}>
@@ -99,7 +102,7 @@ export default function PersonalFooter() {
         <hr className={styles.horizontal}/>
         <p className={styles.paragraph}>CashMatrix is the digital product of Asset Matrix Microfinance Bank Limited (RC 836197).</p>
         <p className={styles.paragraph}>AssetMatrix Microfinance Bank Limited is Licensed by Central Bank of Nigeria, and all deposits are insured by Nigeria Deposit Insurance Corporation (NDIC).</p>
-        <p className={styles.paragraph}>©2024 Cashmatrix Banking App | All Rights Reserved. </p>
+        <p className={styles.paragraph}>©{currentYear} Cashmatrix Banking App | All Rights Reserved. </p>
       </section>
     </footer>
   );

@@ -1,6 +1,7 @@
 .main {
-  width: 100%;
+  max-width: 100%;
   color: var(--blue-color);
+  overflow-x: hidden;
 
   > .heroSection {
     > .hero {
@@ -37,7 +38,7 @@
         > .download {
           display: flex;
           gap: 10px;
-          margin-bottom: 10px;
+          margin-bottom: 20px;
         }
         > .licenses {
           display: flex;
@@ -128,6 +129,7 @@
     > .testimonialHeading {
       text-align: center;
       font-size: 40px;
+      line-height: 45px;
       padding: 100px 0 50px;
     }
   }
@@ -242,7 +244,7 @@
   }
 
   > .actionSection {
-    padding: 0 30px 50px;
+    padding: 0 30px 100px;
   }
 }
 
@@ -319,10 +321,20 @@
           width: 100%;
           align-items: center;
           text-align: center;
+          > .licenses{
+            flex-direction: column;
+            gap: 10px;
+          }
+          > .heading{
+            width: 100%;
+          }
+          > .description{
+            width: 100%;
+          }
       }
       > .imageBox{
         margin: 0 auto;
-        width: 80%;
+        width: 100%;
       }
     }
   }
