@@ -42,6 +42,7 @@
                         padding: 5px;
                         position: relative;
                         color: var(--blue-color);
+                        font-size: 16px;
 
                         > .dropDown{
                             position: absolute;
@@ -165,12 +166,14 @@
 @media screen and (max-width: 1000px) {
     .header {
       > .section {
-        padding-inline: 10px;
+        padding-left: 5px;
+        padding-right: 10px;
         > .container {
           > .content{
             > .navItems{
               display: none;
             }
+
           }
           > .buttonBox{
             display: none;

@@ -1,0 +1,143 @@
+.main{
+    max-width: 100%;
+    color: var(--blue-color);
+    > .section{
+        padding-block: 100px;
+        > .postBox{
+            padding-inline: 100px;
+            width: 100%;
+            gap: 20px;
+            > .postContent{
+                width: 100%;
+                color: var(--blue-color);
+                > .postHeading{
+                    text-transform: capitalize;
+                    padding-bottom: 30px;
+                    font-size: 36px;
+                    line-height: 41px;
+                }
+                > .postSmall{
+                    padding-bottom: 30px ;
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 14px;
+                    /* > .postAuthor{
+
+                    }
+                    > .postDate{
+
+                    } */
+                }
+                > .content{
+                    padding-bottom: 20px;
+                }
+                > .listHeading{
+                    padding-bottom: 20px;
+                    font-size: 24px;
+                    line-height: 29px;
+                    text-decoration: underline;
+                }
+                > .listDesc{
+                    padding-inline: 20px;
+                    padding-bottom: 20px;
+                }
+                > .listItems{
+                    padding-inline: 60px;
+                    padding-bottom: 20px;
+                    > .listItem{
+                        list-style: disc;
+                        padding-bottom: 3px;
+                        > .listContent{
+                            padding-block: 20px;
+                        }
+                    }
+                }
+
+                > .postImage{
+                    margin-bottom: 30px;
+                    width: 100%;
+                    height: 500px;
+                    object-fit: cover;
+                }
+                > .content{
+                    color: var(--blue-color);
+                    padding-bottom: 30px;
+                }
+                > .share{
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+                > .socials{
+                    display: flex;
+                    gap: 7px;
+                    margin-block: 5px;
+                    > .icon{
+                        color: var(--blue-color);
+                        font-size: 20px;
+                        cursor: pointer;
+                    }
+                    > .icon:hover, .icon:active{
+                        color: var(--orange-color);
+                    }
+                }
+            }
+        }
+        > .latestPost{
+            margin-top: 100px;
+            padding-inline: 100px;
+            background-color: var(--light-orange);
+            > .latestHeading{
+                font-size: 30px;
+                padding: 50px 10px 30px;
+            }
+            > .latestBox{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                flex-basis: 30%;
+                flex-wrap: wrap;
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .main{
+        > .section{
+            padding-block: 50px;
+            > .latestPost{
+                padding-inline: 30px;
+                > .latestBox{
+                    flex-basis: 48%;
+                }
+            }
+            > .postBox{
+                padding-inline: 30px;
+                > .postContent{
+                    > .listItems{
+                        padding-inline:0 ;
+                        padding-left: 30px;
+                    }
+                    > .listDesc{
+                        padding-inline: 0;
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:700px) {
+    .main{
+        > .section{
+            > .latestPost{
+                padding-inline: 10px;
+                > .latestBox{
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

@@ -2,6 +2,7 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import Cta from "@/component/personal component/PersonalCallToAction/cta";
+import aboutImage from "../../../../../public/images/who are we.png"
 
 const Page = () => {
   return (
@@ -24,12 +25,12 @@ const Page = () => {
               Banking at ease{'"'} encapsulates this goal, and we{"'"}re committed to delivering on
               it everyday.
             </p>
-            <Link href="#cta" className={styles.buttonLink}>
+            <Link href="/join-cashamtrix" className={styles.buttonLink}>
               <button className={styles.joinButton}>Join Cashmatrix</button>
             </Link>
           </div>
           <div className={styles.introImage}>
-            <Image src="" alt="intro Image" className={styles.introImage} />
+            <Image src={aboutImage} alt="intro Image" className={styles.image} width={500} height={500}/>
           </div>
         </div>
         <div className={styles.otherAbout}>
@@ -52,7 +53,7 @@ const Page = () => {
             contributing to the growth and prosperity of our neighbors. So no matter who you are or where you live in Nigeria, we’re here because of you.
           </p>
         </div>
-        <div className={styles.foundersBox}>
+        {/* <div className={styles.foundersBox}>
           <div className={styles.founder}>
             <Image src="" alt="founders Image" className={styles.founderImage} />
             <h5 className={styles.name}>lorem Ipsum</h5>
@@ -63,7 +64,7 @@ const Page = () => {
             <h5 className={styles.name}>lorem Ipsum</h5>
             <h5 className={styles.title}>CTO & Co-Founder</h5>
           </div>
-        </div>
+        </div> */}
         <div className={styles.mvBox}>
           <div className={styles.missionBox}>
             <h4 className={styles.missionHeading}>Mission</h4>
@@ -100,7 +101,9 @@ const Page = () => {
           </div>
         </div>
         {/* call to action */}
-        <Cta />         
+        <div className={styles.ctaSection}>
+          <Cta />  
+        </div>
       </section>
     </main>
   );

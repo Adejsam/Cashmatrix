@@ -10,6 +10,7 @@ export default async function Loading() {
       <section className={styles.section}>
         <div className={styles.loadingBox}>
           <Image src={LoadingImage} alt="Loading icom" className={styles.image} />
+          <div className={styles.loader}></div>
         </div>
       </section>
     </main>

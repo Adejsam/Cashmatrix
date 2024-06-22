@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
-import azureBackg from "../../../../../public/images/azure backg.png";
-import brownBackg from "../../../../../public/images/brown backg.png";
-import cornsmilkBackg from "../../../../../public/images/cornsmilk backg.png";
+import api from "../../../../../public/images/API.png"
+import apiSpeed from "../../../../../public/images/API speed.png";
+import apiInstant from "../../../../../public/images/API instant.png"
 
 export interface apiFeature{
     heading: string;
@@ -17,21 +17,21 @@ const apiFeatures: apiFeature[] = [
         content:"Cashmatrix payout APIs empower developers to explore, test, and create innovative solutions for seamless financial transactions",
         link: "/business/create-account",
         buttonName: "Get Cashmatrix Business",
-        src: azureBackg
+        src: api
     },
     {
         heading: "Accelerate development using Cashmatrix payment services.",
         content: "By integrating with Cashmatrix payout APIs, businesses can enhance their transfer processes and offer a more convenient experience to their users.",
         link: "/business/create-account",
         buttonName: "Get Cashmatrix Business",
-        src: brownBackg
+        src: apiSpeed
     },
     {
         heading: "Achieve instant settlement within your agent network.",
         content: "Our payout API enables instant settlement for agency banking aggregators within their agent network after every POS transaction therefore, eliminating delays and enhancing cash flow.",
         link: "/business/create-account",
         buttonName: "Get Cashmatrix Business",
-        src: cornsmilkBackg
+        src: apiInstant
     }
 ];
 

@@ -16,8 +16,10 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
+          align-items: flex-end;
           width: 50%;
           padding: 30px;
+
           > .ctaHeading {
             font-size: 40px;
             line-height: 45px;
@@ -26,9 +28,12 @@
           }
           > .ctaInfo {
             padding-bottom: 30px;
+            width: 90%;
           }
           > .iconBox {
+            width: 90%;
             display: flex;
+            align-items: flex-start;
             gap: 10px;
           }
         }
@@ -61,9 +66,25 @@
         > .ctaInfo{
           text-align: center;
         }
+        > .iconBox{
+          justify-content: center;
+        }
       }
       > .ctaImage{
         display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:700px) {
+  .main{
+    > .cta{
+      > .ctaContent{
+        > .iconBox{
+          flex-direction: column;
+          align-items: center;
+        }
       }
     }
   }

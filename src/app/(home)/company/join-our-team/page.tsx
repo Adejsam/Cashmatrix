@@ -20,7 +20,7 @@ const page = () => {
           <div className={styles.heroContent}>
             <h1 className={styles.heroHeading}>Join Our Team...</h1>
             <p className={styles.heroInfo}>Digital Banking @ Ease</p>
-            <Link href="" className={styles.heroLink}>
+            <Link href="/company/join-our-team/all-openings" className={styles.heroLink}>
               <button type="button" className={styles.heroButton}>
                 View All Openings
               </button>

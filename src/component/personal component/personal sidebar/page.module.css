@@ -14,30 +14,32 @@
     right: 0;
 
     > .navItem {
-      display: flex;
       width: 100%;
       padding: 12px 5px;
       position: relative;
       color: var(--blue-color);
-
-      > .navLink {
-        color: var(--blue-color);
-        width: 90%;
-      }
-      > .navLink:active {
-        color: var(--orange-color);
-      }
-      > .icon {
+      > .navHead{
         display: flex;
-        width: 10%;
-        justify-content: flex-end;
+        width: 100%;
+        > .navLink {
+          color: var(--blue-color);
+          width: 90%;
+        }
+        > .navLink:active {
+          color: var(--orange-color);
+        }
+        > .icon {
+          display: flex;
+          width: 10%;
+          justify-content: flex-end;
+        }
       }
 
       > .dropDown {
-        position: absolute;
-        top: 100%;
         width: 100%;
         animation: slideDown 0.3s ease-in-out;
+        background-color: white;
+        z-index: 2;
 
         > .dropDownLink {
           color: var(--blue-color);
@@ -55,22 +57,14 @@
               border-radius: 50%;
               padding: 3px 6px;
               font-size: 13px;
-              > .image {
-                width: 14px;
-                height: 14px;
+              background-color: var(--light-orange);
+              > .iconImage {
+                object-fit: contain;
+                margin-top: 5px;
               }
             }
-            > #icon1 {
-              background-color: rgb(210, 255, 240);
-            }
-            > #icon2 {
-              background-color: rgb(255, 241, 220);
-            }
-            > #icon3 {
-              background-color: rgb(219, 238, 255);
-            }
           }
-          > .dropDownItem:hover {
+          > .dropDownItem:active {
             color: var(--orange-color);
             transition: 0.3s all ease-in-out;
           }
@@ -85,7 +79,7 @@
       }
     }
 
-    > .navItem:active {
+    > .navItem:active , .navItem:focus{
       color: var(--orange-color);
     }
 
@@ -138,7 +132,6 @@
         font-size: 16px;
         border-bottom: 1px solid hsla(240, 6%, 87%, 0.537);
         margin: 0 auto;
-        
       }
     }
   }

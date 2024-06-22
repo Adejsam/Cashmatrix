@@ -3,6 +3,7 @@ import PlayStore from "../../../../public/icons/PlayStore";
 import AppleStore from "../../../../public/icons/AppleStore";
 import Link from "next/link";
 import Image from "next/image";
+import posImage from "../../../../public/images/pos Image.png"
 
 const Cta = () => {
   return (
@@ -14,7 +15,7 @@ const Cta = () => {
             Download the cashmatrix business app, request for a POS, recieve your POS and and
             expierience easy going business.
           </p>
-          <div className={styles.licenses}>
+          <div className={styles.ctaIcon}>
             <Link href="https://play.google.com/store/apps/details?id=com.assetmatrix.cashmatrixBusiness">
               <PlayStore />
             </Link>
@@ -24,7 +25,7 @@ const Cta = () => {
           </div>
         </div>
         <div className={styles.ctaImageBox}>
-          <Image src="" alt="call to action images" className={styles.ctaImage} />
+          <Image src={posImage} alt="call to action images" className={styles.ctaImage} />
         </div>
       </div>
     </main>

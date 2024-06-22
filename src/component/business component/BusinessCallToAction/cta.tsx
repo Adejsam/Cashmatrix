@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import PlayStore from '../../../../public/icons/PlayStore'
 import AppleStore from '../../../../public/icons/AppleStore'
+import businessCta from "../../../../public/images/business cta.png"
 
 const Cta = () => {
   return (
@@ -18,13 +19,13 @@ const Cta = () => {
               reconcile transactions, monitor sales performance, customize reports, and easily
               export and share statements—all conveniently available where you need them
             </p>
-            <div className={styles.licenses}>
+            <div className={styles.ctaIcon}>
               <Link href="https://play.google.com/store/apps/details?id=com.assetmatrix.cashmatrixBusiness"><PlayStore /></Link>
               <Link href="https://apps.apple.com/ng/app/cashmatrix-business/id6471409545"><AppleStore /></Link>
             </div>
           </div>
           <div className={styles.ctaImageBox}>
-            <Image src="" alt="call to action images" className={styles.ctaImage} />
+            <Image src={businessCta} alt="call to action images" className={styles.ctaImage} />
           </div>
         </div>
     </main>

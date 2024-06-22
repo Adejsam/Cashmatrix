@@ -1,8 +1,10 @@
 import { StaticImageData } from "next/image";
-import azureBackg from "../../../../../public/images/azure backg.png";
-import brownBackg from "../../../../../public/images/brown backg.png";
-import cornsmilkBackg from "../../../../../public/images/cornsmilk backg.png";
-import honeydexBackg from "../../../../../public/images/hoveydew backg.png";
+
+import openBusiness from "../../../../../public/images/open business.png";
+import manageBusiness from "../../../../../public/images/manage business.png"
+import boostBusiness from "../../../../../public/images/boost business.png"
+import protectBusiness from "../../../../../public/images/protect business.png";
+import helpBusiness from "../../../../../public/images/help business.png";
 
 export interface feature1{
     heading: string;
@@ -27,7 +29,7 @@ const features1: feature1[] = [
         link2: "",
         buttonName1: "Open Cashmatrix Business Account",
         buttonName2: "",
-        src: azureBackg,
+        src: openBusiness,
         listData: ["CAC (Customer acquisition cost)", "CAC (Customer acquisition cost)","CAC (Customer acquisition cost)"],
         checkIcon: "fa-solid fa-check",
         arrowIcon: "fa-solid fa-angle-right",
@@ -41,7 +43,7 @@ const features1: feature1[] = [
         link2: "",
         buttonName1: "Explore Bill Payment",
         buttonName2: "",
-        src: brownBackg,
+        src: manageBusiness,
         checkIcon: "",
         arrowIcon: "fa-solid fa-angle-right",
         featureButton1: "button1",
@@ -51,11 +53,11 @@ const features1: feature1[] = [
     {
         heading: "Boost your earnings with the Cashmatrix POS",
         content: "Effortlessly accept card and transfers payment using a dependable point-of-saleterminal. Experience instant settlements, instant dispute resolution, and immediate payments every time.",
-        link1: "business/create-account",
+        link1: "/business/create-account",
         link2: "/business/pos",
         buttonName1: "Request for POS",
         buttonName2: "Learn More",
-        src: cornsmilkBackg,
+        src: boostBusiness,
         checkIcon: "",
         arrowIcon: "fa-solid fa-angle-right",
         featureButton1:"button1" ,
@@ -69,7 +71,7 @@ const features1: feature1[] = [
         link2: "",
         buttonName1: "",
         buttonName2: "",
-        src: honeydexBackg,
+        src: protectBusiness,
         checkIcon: "",
         arrowIcon: "",
         featureButton1: "button1",
@@ -83,7 +85,7 @@ const features1: feature1[] = [
         link2: "",
         buttonName1: "Get Help",
         buttonName2: "",
-        src: azureBackg,
+        src: helpBusiness,
         checkIcon: "",
         arrowIcon: "fa-solid fa-angle-right",
         featureButton1: "button1",

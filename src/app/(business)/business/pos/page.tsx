@@ -8,6 +8,7 @@ import PosFeatureCard from "@/component/POS component/PosFeatureCard/page";
 import features from "./page.data";
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
+import posImage from "../../../../../public/images/pos Image.png"
 
 const page = (): ReactNode => {
   return (
@@ -34,7 +35,7 @@ const page = (): ReactNode => {
             </Link>
           </div>
           <div className={styles.heroImage}>
-            <Image src="" alt="POS manchine" className={styles.image} />
+            <Image src={posImage} alt="POS manchine" className={styles.image} />
           </div>
         </motion.div>
       </section>
@@ -45,7 +46,7 @@ const page = (): ReactNode => {
           ))}
         </div>
       </section>
-      <section className={styles.getPosSection}>
+      {/* <section className={styles.getPosSection}>
         <motion.h2
           className={styles.getPosHeading}
           initial={{ scale: 0.8 }}
@@ -144,7 +145,7 @@ const page = (): ReactNode => {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section className={styles.ctaSection}>
         <motion.div
           initial={{ scale: 0.8 }}

@@ -6,6 +6,7 @@ import AppleStore from "../../../../../../public/icons/AppleStore";
 import Cbn from "../../../../../../public/icons/Cbn";
 import Ndic from "../../../../../../public/icons/Ndic";
 import 'animate.css';
+import posImage from "../../../../../../public/images/pos Image.png"
 
 const page = () => {
   return (
@@ -38,7 +39,7 @@ const page = () => {
             </div>
           </div>
           <div className={`${styles.imageBox} animate__animated animate__backInRight`}>
-            <Image src="" alt="Hero Image" className={styles.image} />
+            <Image src={posImage} alt="Hero Image" className={styles.image} />
           </div>
         </div>
       </section>

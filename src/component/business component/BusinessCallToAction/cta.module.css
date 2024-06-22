@@ -10,6 +10,7 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
+    gap: 30px;
     width: 80%;
     padding: 30px 60px;
     border-radius: 5px;
@@ -23,7 +24,7 @@
       > .ctaInfo {
         padding-bottom: 30px;
       }
-      > .licenses {
+      > .ctaIcon {
         display: flex;
         gap: 10px;
       }
@@ -45,12 +46,24 @@
       > .ctaContent{
         width: 100%;
         text-align: center;
-        > .licenses{
+        > .ctaIcon{
           justify-content: center;
         }
       }
       > .ctaImageBox{
         display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:700px){
+  .main{
+    > .ctaBox{
+      > .ctaContent{
+        > .ctaIcon{
+          flex-direction: column;
+        }
       }
     }
   }

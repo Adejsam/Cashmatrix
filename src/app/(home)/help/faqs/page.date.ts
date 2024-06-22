@@ -94,4 +94,80 @@ const faqs: faq[] = [
   },
 ];
 
-export default faqs;
+const posFaqs: faq[] = [
+    {
+        heading: "How much do I pay for a Cashmatrix POS terminal?",
+        content: "",
+        content1: "",
+        content2: "",
+        id: "0"
+    },
+    {
+        heading: "How long does it take to get Cashmatrix POS terminal?",
+        content: "You will get your POS within 48 hours of request",
+        content1: "",
+        content2: "",
+        id: "1"
+    },
+    {
+        heading: "What card can Cashmatix POS Terminal accept?",
+        content: "Cashmatrix POS can accept any card",
+        content1: "",
+        content2: "",
+        id: "2"
+    },
+    {
+        heading: "Can I accept transfer with my Cashmatrix POS terminal?",
+        content: "Yes you can",
+        content1: "",
+        content2: "",
+        id: "3"
+    },
+    {
+        heading: "Do I need special training to use Cashmatrix POS terminal?",
+        content: "No, but you can always contact customer support if you need any help",
+        content1: "",
+        content2: "",
+        id: "4"
+    },
+];
+
+const businessFaqs: faq[] =[
+    {
+        heading: "Can I open multiple Cashmatrix Business accounts?",
+        content: "Yes, you can.",
+        content1: "",
+        content2: "",
+        id: "0"
+    },
+    {
+        heading: " Does Cashmatrix charge an account maintenance fee on business accounts?",
+        content: "No, we don't",
+        content1: "",
+        content2: "",
+        id: "1"
+    },
+    {
+        heading: "Does Cashmatrix Business assign account officers to customers?",
+        content: "No, we don’t assign account officers to customers but our support team is always available to attend to you.",
+        content1: "",
+        content2: "",
+        id: "2"
+    },
+    {
+        heading: " Can I make foreign transactions with my Kuda Business account?",
+        content: "No, you can only make local transaction",
+        content1: "",
+        content2: "",
+        id: "3"
+    },
+    // {
+    //     heading: "",
+    //     content: "",
+    //     content1: "",
+    //     content2: "",
+    //     id: ""
+    // },
+];
+
+export {faqs, posFaqs, businessFaqs};

@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import apiImage from "../../../../../public/images/payout api image.png";
-import Cta from "@/component/POS component/BlackCallToAction/cta";
+import Cta from "@/component/business component/BusinessCallToAction/cta";
 import { motion } from "framer-motion";
 import apiFeatures from "./page.data";
 import ApiFeatureCard from "@/component/Api component/ApiFeatureCard/page";

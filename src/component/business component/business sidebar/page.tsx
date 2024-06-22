@@ -2,16 +2,16 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import posIcon from "../../../../public/icons/pos icon.png";
-import { useState} from "react";
-import 'animate.css';
-import HeaderLinks from "../BusinessHeader/header_data";
+import { useState } from "react";
+import "animate.css";
+import HeaderLinks from "@/component/personal component/PersonalHeader/header_data";
 
 const SideBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<string | null>(null);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  }
+  const toggleMenu = (label: string) => {
+    setIsOpen(isOpen === label ? null : label);
+  };
 
   return (
     <main className={styles.main}>
@@ -31,35 +31,36 @@ const SideBar = () => {
         {HeaderLinks.map((val) => {
           return (
             <li className={styles.navItem} key={val.label}>
-              <Link href={val.link} className={styles.navLink}>            
-                {val.label}
-              </Link>
-              <span className={styles.icon} onClick={toggleMenu}>
-                <i className={val.icon}></i>
-              </span>
+              <div className={styles.navHead}>
+                <Link href={val.link} className={styles.navLink}>
+                  {val.label}
+                </Link>
+                <span className={styles.icon} onClick={() => toggleMenu(val.label)}>
+                  <i className={val.icon}></i>
+                </span>
+              </div>
 
               {/*Drop Down Menu */}
-              {val.children.length == 0 && isOpen && (
-                <ul className={styles.dropDown}>
-                {val.children.map((val1) => {
-                  return(
-                    <Link
-                    key={val1.label}
-                    href={val1.link}
-                    className={styles.dropDownLink}>
-                    <li className={styles.dropDownItem}>
-                      <span className={styles.listSpan} id={`styles.${val1.iconId}`}>
-                        <i className={val1.icon}></i>
-                      </span>
-                      {val1.label}
-                    </li>
-                  </Link>
-                  )  
-                })}
-                </ul>
-              )}
+              {val.children.length == 0 ||
+                (isOpen === val.label && (
+                  <ul className={styles.dropDown}>
+                    {val.children.map((val1) => {
+                      return (
+                        <Link key={val1.label} href={val1.link} className={styles.dropDownLink}>
+                          <li className={styles.dropDownItem}>
+                            <span className={styles.listSpan}>
+                              { val1.icon && <i className={val1.icon}></i>}
+                              { val1.iconPath && <Image src={val1.iconPath} alt={val1.label} width={16} height={16} className={styles.iconImage}/>}
+                            </span>
+                            {val1.label}
+                          </li>
+                        </Link>
+                      );
+                    })}
+                  </ul>
+                ))}
             </li>
-          )
+          );
         })}
       </ul>
     </main>

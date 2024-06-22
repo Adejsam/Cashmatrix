@@ -1,8 +1,10 @@
 import styles from "./page.module.css";
 import BlogCard from "@/component/BlogCard/BlogCard";
 import Cta from "@/component/personal component/PersonalCallToAction/cta";
+import { ReactNode } from "react";
+import posts from "./page.data";
 
-const page = () => {
+const page = (): ReactNode => {
   return (
     <main className={styles.main}>
       <section className={styles.section}>
@@ -20,12 +22,9 @@ const page = () => {
       {/* blog card display section */}
       <section className={styles.blogSection}>
         <div className={styles.blogsBox}>
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
+          {posts.map((val, i) => {
+            return <BlogCard key={i} blog={val} />;
+          })}
         </div>
       </section>
 

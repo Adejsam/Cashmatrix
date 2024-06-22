@@ -192,8 +192,8 @@ const Home = (): ReactNode => {
             Get 16% annual interest on your savings and withdraw your money anytime with no penalty."
             imagesrc={saveMatrix}
             link="/join-cashmatrix"
-            linkCont="Save with Matrix Save"
-            arrow="fa-solid fa-angle-right"
+            linkCont=""
+            arrow=""
             id="matrix save"
           />
         </motion.div>

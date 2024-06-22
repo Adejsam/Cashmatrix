@@ -6,6 +6,7 @@ import PlayStore from "../../../../../public/icons/PlayStore";
 import AppleStore from "../../../../../public/icons/AppleStore";
 import Cbn from "../../../../../public/icons/Cbn";
 import Ndic from "../../../../../public/icons/Ndic";
+import businessImage from "../../../../../public/images/business cta.png"
 import 'animate.css';
 
 const page = () => {
@@ -39,7 +40,7 @@ const page = () => {
             </div>
           </div>
           <div className={`${styles.imageBox} animate__animated animate__backInRight`}>
-            <Image src="" alt="Hero Image" className={styles.image} />
+            <Image src={businessImage} alt="Hero Image" className={styles.image} />
           </div>
         </div>
       </section>
