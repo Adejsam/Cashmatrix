@@ -91,6 +91,15 @@
       > .getHelpBox:hover{
         transform: scale(1.1);
       }
+      > .getHelpBox:first-child{
+        background-color: cornsilk;
+      }
+      > .getHelpBox:nth-child(2){
+        background-color: honeydew;
+      }
+      > .getHelpBox:last-child{
+        background-color: azure;
+      }
     }
 
     > .otherHelpLink {

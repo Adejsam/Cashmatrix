@@ -22,7 +22,7 @@ const BusinessHeader:React.FC = () => {
         <div className={styles.container}>
           <div className={styles.content}>
             <Link href="/business/discover-business">
-              <Image src={logo} alt="cashmatrix logo" className={styles.logo} />
+              <Image src={logo} alt="cashmatrix logo" className={styles.logo} priority={true}/>
             </Link>
             <ul className={styles.navItems}>
               <li className={styles.navItem}>
@@ -114,7 +114,9 @@ const BusinessHeader:React.FC = () => {
               </span>
             )}
           </div>
-          {menuOpen && (<SideBar/>)}
+          <div className={styles.sidebar}>
+            <SideBar displayNavBar={menuOpen} callBank={() => toggleMenu()} />
+          </div>
         </div>
       </section>
     </header>

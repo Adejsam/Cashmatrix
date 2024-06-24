@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./cta.module.css";
 import PlayStore from "../../../../public/icons/PlayStore";
 import AppleStore from "../../../../public/icons/AppleStore";

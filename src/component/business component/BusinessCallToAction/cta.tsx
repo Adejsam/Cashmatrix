@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react'
 import styles from "./cta.module.css"
 import Link from 'next/link'

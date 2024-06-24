@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -37,6 +39,7 @@ const FeatureCard = ({ feat1 }: { feat1: feature1 }): ReactNode => {
                 </button>
               )}
             </Link>
+            {feat1.link2 && (
             <Link href={feat1.link2} className={styles.featureLink2}>
               {feat1.buttonName2 != "" && (
                 <button type="button" className={styles.featureButton2}>
@@ -44,6 +47,7 @@ const FeatureCard = ({ feat1 }: { feat1: feature1 }): ReactNode => {
                 </button>
               )}
             </Link>
+            )}
           </div>
         </div>
         <div className={styles.featureImageBox}>

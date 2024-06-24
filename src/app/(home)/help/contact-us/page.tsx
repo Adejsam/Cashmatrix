@@ -2,39 +2,68 @@
 
 import Link from "next/link";
 import styles from "./page.module.css";
-// import { ReCAPTCHA } from "next-recaptcha";
-// import { useState, ChangeEvent } from "react";
+import { useState, ChangeEvent } from "react";
+
 
 export default function Page() {
-//   const [formData, setFormData] = useState({
-//     name: "",
-//     email: "",
-//     password: "",
-//     phone: "",
-//     subject: "",
-//     message: "",
-//   });
+  const [submitted, setSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+  const [submitting, setSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
-//   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-//     const { name, value } = e.target;
-//     setFormData({
-//       ...formData,
-//       [name]: value,
-//     });
-//   };
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
 
-//   const handleChangeText = (e: ChangeEvent<HTMLTextAreaElement>) => {
-//     const { name, value } = e.target;
-//     setFormData({
-//       ...formData,
-//       [name]: value,
-//     });
-//   };
+  const handleChangeText = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
 
-//   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-//     e.preventDefault();
-//     console.log("Form data:", formData);
-//   };
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSubmitting(true);
+    setErrorMessage('');
+    console.log("Form data:", formData);
+    try {
+      const response = await fetch('/help/contact-us/api/contact.ts', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        // Handle success, e.g., show a success message
+        setSubmitted(true);
+        console.log('Form submitted successfully');
+        return response.json();
+      } 
+      else {
+        // Handle error, e.g., show an error message
+        const errorData = await response.json();
+        setErrorMessage(errorData.message);
+        console.error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setErrorMessage('Failed to submit form. Please try again later.');
+    }finally{
+      setSubmitting(false);
+    }
+  };
 
   return (
     <main className={styles.main}>
@@ -86,53 +115,61 @@ export default function Page() {
               Kindly fill the form below and we will respond as soon as possible. For more
               information, You can also contact us on other platforms.
             </p>
-            <form action="" className={styles.form}>
+            <form action="" className={styles.form} onSubmit={handleSubmit}>
+              {submitted ? (
+                <p style={{color:"green"}}>Form Submitted Successfully</p>
+              ): (
               <div className={styles.inputBox}>
                 <input
                   name="name"
                   type="text"
                   placeholder="Name"
                   className={styles.input}
-                  // onChange={handleChange}
-                  // value={formData.name}
+                  onChange={handleChange}
+                  value={formData.name}
+                  autoComplete="on"
+                  required
                 />
                 <input
                   name="email"
                   type="email"
                   placeholder="Email"
                   className={styles.input}
-                  // onChange={handleChange}
-                  // value={formData.email}
+                  onChange={handleChange}
+                  value={formData.email}
+                  autoComplete="on"
+                  required
                 />
                 <input
                   name="subject"
                   type="text"
                   placeholder="Subject"
                   className={styles.input}
-                  // onChange={handleChange}
-                  // value={formData.subject}
+                  onChange={handleChange}
+                  value={formData.subject}
+                  autoComplete="on"
+                  required
                 />
                 <textarea
                   name="message"
                   placeholder="Message"
                   className={styles.textArea}
-                  // onChange={handleChangeText}
-                  // value={formData.message}
+                  onChange={handleChangeText}
+                  value={formData.message}
+                  autoComplete="on"
+                  autoCorrect="on"
+                  required
                   >
                 </textarea>
               </div>
+              )}
               <div
                 className="g-recaptcha"
                 data-sitekey="6LfgNuYpAAAAAL_CklptBZG1rVtOpzIvWPL2Yo2G"></div>
-              {/* <ReCAPTCHA
-                data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-                onVerify={function (token: string): void | Promise<void> {
-                  throw new Error("Function not implemented.");
-                }}
-              /> */}
-              <button type="submit" className={styles.formButton}>
-                Send Message
+              <button type="submit" className={styles.formButton} onClick={() => (handleSubmit)} disabled={submitting}>
+               {submitting ? 'Sending...' : 'Send Message'}
               </button>
+              {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
             </form>
           </div>
         </div>

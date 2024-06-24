@@ -10,11 +10,11 @@ export interface post {
   listHeading: string;
   listDesc: string;
   listItem: string[];
-  listContent: string[];
   content2: string[];
   listHeading2: string;
   listDesc2: string;
   listItem2: string[];
+  listsInfo: string[]
 }
 
 const posts: post[] = [
@@ -30,8 +30,7 @@ const posts: post[] = [
     author: "By Cashmatrix",
     date: " April 26, 2023",
     listHeading: "How to fund your bet account with Cashmatrix",
-    listDesc:
-      "To start funding your betting account and enjoy seamless transactions, download the CashMatrix app from your Google Playstore or App Store and create a Cashmatrix account. Once you have set up your account, follow these simple steps:",
+    listDesc: "To start funding your betting account and enjoy seamless transactions, download the CashMatrix app from your Google Playstore or App Store and create a Cashmatrix account. Once you have set up your account, follow these simple steps:",
     listItem: [
       "Log into your Cashmatrix account on mobile or the web.",
       "After logging in, you can view your account number on the home page.",
@@ -44,15 +43,18 @@ const posts: post[] = [
       "Click on ‘Fund Bet Wallet’",
       "Your Betting Account will be funded immediately.",
     ],
-    listContent:[],
     content2: [
       "Apart from the easy and seamless funding of betting accounts, you can also use CashMatrix to send money to any bank account in Nigeria, make instant payments, and top-up your airtime and data.",
       "In addition, Cashmatrix pays you a commission each time you refer a friend to join the convenient and easy digital banking.",
       "Download the CashMatrix app today, fund your betting account, and enjoy super-fast & safe transactions.",
     ],
-    listHeading2: "",
-    listDesc2: "",
-    listItem2: [],
+    listHeading2: "Advantages of using Cashmatrix to Fund Your Betting Account",
+    listDesc2: "There are plenty of advantages to using Cashmatrix to fund your betting account. Here are some of them;",
+    listItem2: ["No Charges: There are no charges when you use Cashmatrix to fund your betting account directly. This service is free of charge. ",
+      "Safe & Secure: CashMatrix offers a seamless and secure payment experience, allowing you to fund your betting account without worrying about security issues. You can rest assured that your funds are safe and secure, as CashMatrix employs the latest encryption and security measures to protect your transactions.",
+      "Fast Transactions: Transactions are instant with Cashmatrix. You can expect your betting account to be funded immediately."
+    ],
+    listsInfo: []
   },
   // {
   //   slug: "cashmatrix-watsapp-banking",
@@ -94,7 +96,6 @@ const posts: post[] = [
       "The more people you refer, the more money you can mak",
       "If you already have a Cashmatrix account, log into your account to get your referral code. Then you can start sharing it with your network and start earning.",
     ],
-    listContent:[],
     listHeading2: "How do I get my referral code?",
     listDesc2: "To get your referral code on the mobile app, follow these steps;",
     listItem2: [
@@ -108,6 +109,7 @@ const posts: post[] = [
       "CashMatrix also offers a range of other features such as; Real-time transaction updates, alerts, and notifications to help you stay on top of your finances. And with the app’s 24/7 customer support, you can rest assured that any issues you encounter will be swiftly resolved.",
       "So, spread the word about CashMatrix today, and get rewarded for every successful referral you make to Cashmatrix! It’s a great way to make some extra cash and also help those around you discover the amazing benefits of our digital banking a",
     ],
+    listsInfo: []
   },
   {
     slug: "feature-of-the-cashmatrix-app",
@@ -122,13 +124,12 @@ const posts: post[] = [
     date: "March 8, 2023",
     listHeading: "",
     listDesc: "",
-    listItem: ["Instant Money Transfers:"," Bill Payments:","Data/Airtime Top-Up:","Transaction Reports:", "Hide Your Account Balance:"],
-    listContent:[
-      "Gone are the days when you had to visit the bank to send money. With Cashmatrix, you can transfer money easily to any Nigerian bank account in just a few seconds. The best part is that the transfer fees are low, making it an affordable option for everyone.",
-      "Pay your bills instantly directly from the app. Whether it’s your electricity or cable subscription, you can make payments in just a few clicks.",
-      "Running out of data or airtime can be frustrating, especially when you need it the most. With the Cashmatrix app, you can easily top up your phone or data from anywhere, at any time. Whether you need to make an important call or send an urgent message or access the internet, Cashmatrix got you covered.",
-      "If you’ve ever needed your transaction history, you know how much of a hassle it can be to get it. With the Cashmatrix app, you can access your transaction history with just a few clicks. Simply click on the “transaction history” button on the app, and you’ll get your transaction reports directly in your email.",
-      "Privacy is essential, and that’s why the Cashmatrix app allows you to hide your account balance from prying eyes. With just a click of a button, you can hide your balance from anyone who might be looking over your shoulder."
+    listItem: [],
+    listsInfo:["Instant Money Transfers:", "Gone are the days when you had to visit the bank to send money. With Cashmatrix, you can transfer money easily to any Nigerian bank account in just a few seconds. The best part is that the transfer fees are low, making it an affordable option for everyone.",
+      " Bill Payments:","Pay your bills instantly directly from the app. Whether it’s your electricity or cable subscription, you can make payments in just a few clicks.",
+      "Data/Airtime Top-Up", "Running out of data or airtime can be frustrating, especially when you need it the most. With the Cashmatrix app, you can easily top up your phone or data from anywhere, at any time. Whether you need to make an important call or send an urgent message or access the internet, Cashmatrix got you covered.",
+      "Transaction Reports:", "If you’ve ever needed your transaction history, you know how much of a hassle it can be to get it. With the Cashmatrix app, you can access your transaction history with just a few clicks. Simply click on the “transaction history” button on the app, and you’ll get your transaction reports directly in your email.",
+      "Hide Your Account Balance:", "Privacy is essential, and that’s why the Cashmatrix app allows you to hide your account balance from prying eyes. With just a click of a button, you can hide your balance from anyone who might be looking over your shoulder.",
     ],
     content2: [
       "In conclusion, the Cashmatrix app is a convenient and user-friendly way to access financial services. With its user-friendly interface and innovative features, it’s no surprise that it’s becoming increasingly popular. Whether you’re looking to send money, pay bills, or top up your phone, the Cashmatrix app has got you covered. So why not try it out today and experience the convenience for yourself?",

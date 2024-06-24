@@ -151,6 +151,9 @@
       > .barsIcon {
         display: none;
       }
+      > .sidebar{
+        display: none;
+      }
     }
   }
 }
@@ -191,6 +194,9 @@
           font-size: 30px;
           color: var(--blue-color);
         }
+      }
+      > .sidebar{
+        display: block;
       }
       }
     }

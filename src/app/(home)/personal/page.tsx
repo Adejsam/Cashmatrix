@@ -1,4 +1,5 @@
 "use client";
+
 import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
@@ -36,6 +37,7 @@ import "swiper/css/autoplay";
 import security from "../../../../public/images/security.png";
 import Cta from "@/component/personal component/PersonalCallToAction/cta";
 import { motion } from "framer-motion";
+import VideoComponent from "@/component/video component/page";
 
 const Home = (): ReactNode => {
   return (
@@ -73,7 +75,7 @@ const Home = (): ReactNode => {
             </div>
           </div>
           <div className={styles.imageBox}>
-            <Image src={HeroImage} alt="Hero Image" className={styles.image} />
+            <VideoComponent />
           </div>
         </motion.div>
       </section>

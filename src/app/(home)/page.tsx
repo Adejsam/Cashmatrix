@@ -8,7 +8,6 @@ import PlayStore from "../../../public/icons/PlayStore";
 import AppleStore from "../../../public/icons/AppleStore";
 import Cbn from "../../../public/icons/Cbn";
 import Ndic from "../../../public/icons/Ndic";
-import HeroImage from "../../../public/images/Hero Image.png";
 import FeatureImage from "../../../public/images/Feature Image.png";
 import airtimeData from "../../../public/icons/airtime-data.png";
 import cableTv from "../../../public/icons/cable-tv.png";
@@ -37,6 +36,7 @@ import "swiper/css/autoplay";
 import security from "../../../public/images/security.png";
 import { motion } from "framer-motion";
 import Cta from "@/component/personal component/PersonalCallToAction/cta";
+import VideoComponent from "@/component/video component/page";
 
 const Home = (): ReactNode => {
   return (
@@ -74,7 +74,7 @@ const Home = (): ReactNode => {
             </div>
           </div>
           <div className={styles.imageBox}>
-            <Image src={HeroImage} alt="Hero Image" className={styles.image} />
+            <VideoComponent />
           </div>
         </motion.div>
       </section>

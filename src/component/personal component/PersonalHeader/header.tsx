@@ -21,7 +21,7 @@ const PersonalHeader: React.FC = () => {
         <div className={styles.container}>
           <div className={styles.content}>
             <Link href="/">
-              <Image src={logo} alt="cashmatrix logo" className={styles.logo} />
+              <Image src={logo} alt="cashmatrix logo" className={styles.logo} priority={true} />
             </Link>
             <ul className={styles.navItems}>
               <li className={styles.navItem}>
@@ -37,10 +37,7 @@ const PersonalHeader: React.FC = () => {
                 </span>
                 {/* Business Drop Down Menu */}
                 <ul className={styles.dropDown}>
-                  <Link
-                    href="/business/discover-business"
-                    target="_blank"
-                    className={styles.dropDownLink}>
+                  <Link href="/business/discover-business" className={styles.dropDownLink}>
                     <li className={styles.dropDownItem}>
                       <span className={styles.listSpan} id={styles.icon1}>
                         <i className="fa-solid fa-building-columns"></i>
@@ -48,7 +45,7 @@ const PersonalHeader: React.FC = () => {
                       Discover Business
                     </li>
                   </Link>
-                  <Link href="/business/payout-API" target="_blank" className={styles.dropDownLink}>
+                  <Link href="/business/payout-API" className={styles.dropDownLink}>
                     <li className={styles.dropDownItem}>
                       <span className={styles.listSpan} id={styles.icon2}>
                         <i className="fa-solid fa-wallet"></i>
@@ -56,7 +53,7 @@ const PersonalHeader: React.FC = () => {
                       Payout API
                     </li>
                   </Link>
-                  <Link href="/business/pos" target="_blank" className={styles.dropDownLink}>
+                  <Link href="/business/pos" className={styles.dropDownLink}>
                     <li className={styles.dropDownItem}>
                       <span className={styles.listSpan} id={styles.icon3}>
                         <Image src={posIcon} alt="pos icon" className={styles.image} />
@@ -157,7 +154,9 @@ const PersonalHeader: React.FC = () => {
               </span>
             )}
           </div>
-          {menuOpen && <SideBar />}
+          <div className={styles.sidebar}>
+            <SideBar displayNavBar={menuOpen} callBank={() => toggleMenu()} />
+          </div>
         </div>
       </section>
     </header>

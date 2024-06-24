@@ -1,3 +1,4 @@
+"use client"
 import styles from "./page.module.css";
 import Link from "next/link";
 import liveChat from "../../../../../public/icons/live-chat.png"
@@ -48,7 +49,7 @@ const Page = () => {
             <h4 className={styles.getHelpHeading}>Chat with us</h4>
             <p className={styles.getHelpContent}>
               If you have any inquiries or need assistance with Customer Service, feel free to text
-              us on watsapp or use the Cashmatrix live chat feature
+              us on watsapp or use the in app Cashmatrix live chat feature
             </p>
             <div className={styles.getHelpLinkBox}>
               <span className={styles.icon}>
@@ -66,7 +67,7 @@ const Page = () => {
               </span>
               <Link
                 className={styles.getHelpLink}
-                href="https://play.google.com/store/apps/details?id=com.assetcashmatrix.mfb" target="_blank">
+                href="/join-cashmatrix" >
                 live Chat with us
               </Link>
             </div>

@@ -1,141 +1,138 @@
-.main {
-  max-width: 100%;
-  > .navItems {
-    display: flex;
-    align-items: center;
-    height: calc(100vh - 60px);
-    position: fixed;
-    background-color: white;
-    flex-direction: column;
-    top: 60px;
-    padding: 10px;
-    gap: 10px;
-    left: 0;
-    right: 0;
-
-    > .navItem {
-      width: 100%;
-      padding: 12px 5px;
-      position: relative;
-      color: var(--blue-color);
-      > .navHead{
-        display: flex;
-        width: 100%;
-        > .navLink {
-          color: var(--blue-color);
-          width: 90%;
-        }
-        > .navLink:active {
-          color: var(--orange-color);
-        }
-        > .icon {
-          display: flex;
-          width: 10%;
-          justify-content: flex-end;
-        }
-      }
-
-      > .dropDown {
-        width: 100%;
-        animation: slideDown 0.3s ease-in-out;
-        background-color: white;
-        z-index: 2;
-
-        > .dropDownLink {
-          color: var(--blue-color);
-
-          > .dropDownItem {
-            padding-block: 7px;
-            padding-inline: 10px;
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            
-            > .listSpan {
-              gap: 5px;
-              color: black;
-              border-radius: 50%;
-              padding: 3px 6px;
-              font-size: 13px;
-              background-color: var(--light-orange);
-              > .iconImage {
-                object-fit: contain;
-                margin-top: 5px;
-              }
-            }
-          }
-          > .dropDownItem:active {
-            color: var(--orange-color);
-            transition: 0.3s all ease-in-out;
-          }
-        }
-      }
-      > .navLink {
-        color: var(--blue-color);
-      }
-      > .icon {
-        padding-left: 5px;
-        color: var(--blue-color);
-      }
-    }
-
-    > .navItem:active , .navItem:focus{
-      color: var(--orange-color);
-    }
-
-    > .buttonBox {
-      margin: 20px 0 50px;
-      > .buttonLink {
-        > .button {
-          border-radius: 5px;
-          border: none;
-          margin-right: 20px;
-        }
-        > #signIn {
-          padding: 12px;
-          color: var(--blue-color);
-        }
-        > #signIn:active {
-          background-color: var(--blue-color);
-          color: white;
-          scale: 0.8;
-        }
-        > #signUp {
-          background-color: var(--orange-color);
-          color: #ffffff;
-          font-size: 16px;
-          padding: 10px;
-        }
-        > #signUp:active {
-          color: white;
-          background-color: var(--blue-color);
-          scale: 0.8;
-        }
-      }
-    }
-  }
-}
-
-@keyframes slideDown {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translate(0);
-  }
-}
-
-@media screen and (max-width: 1000px) {
+@media screen and (max-width:1000px) {
   .main {
+    max-width: 100%;
     > .navItems {
+      display: flex;
+      align-items: center;
+      height: calc(100vh - 60px);
+      position: fixed;
+      background-color: white;
+      flex-direction: column;
+      top: 60px;
+      padding: 10px;
+      gap: 10px;
+      left: 0;
+      right: 0;
+  
       > .navItem {
+        width: 100%;
+        padding: 12px 5px;
+        position: relative;
         font-size: 16px;
         border-bottom: 1px solid hsla(240, 6%, 87%, 0.537);
         margin: 0 auto;
+        color: var(--blue-color);
+        > .navHead{
+          display: flex;
+          width: 100%;
+          > .navLink {
+            color: var(--blue-color);
+            width: 90%;
+            cursor: pointer;
+          }
+          > .navLink:active {
+            color: var(--orange-color);
+          }
+          > .icon {
+            display: flex;
+            width: 10%;
+            justify-content: flex-end;
+          }
+        }
+  
+        > .dropDown {
+          width: 100%;
+          animation: growDown 0.3s ease-in-out forwards;
+          transform-origin: top center;
+          background-color: white;
+          z-index: 2;
+  
+          > .dropDownLink {
+            color: var(--blue-color);
+  
+            > .dropDownItem {
+              padding-block: 7px;
+              padding-inline: 10px;
+              display: flex;
+              gap: 10px;
+              align-items: center;
+              
+              > .listSpan {
+                gap: 5px;
+                color: black;
+                border-radius: 50%;
+                padding: 3px 6px;
+                font-size: 13px;
+                background-color: var(--light-orange);
+                > .iconImage {
+                  object-fit: contain;
+                  margin-top: 5px;
+                }
+              }
+            }
+            > .dropDownItem:active, .dropDownItem:focus {
+              color: var(--orange-color);
+              transition: 0.3s all ease-in-out;
+            }
+          }
+        }
+        > .navLink {
+          color: var(--blue-color);
+        }
+        > .icon {
+          padding-left: 5px;
+          color: var(--blue-color);
+        }
+      }
+  
+      > .navItem:active , .navItem:focus{
+        color: var(--orange-color);
+      }
+  
+      > .buttonBox {
+        margin: 20px 0 50px;
+        > .buttonLink {
+          > .button {
+            border-radius: 5px;
+            border: none;
+            margin-right: 20px;
+          }
+          > #signIn {
+            padding: 12px;
+            color: var(--blue-color);
+          }
+          > #signIn:active {
+            background-color: var(--blue-color);
+            color: white;
+            scale: 0.8;
+          }
+          > #signUp {
+            background-color: var(--orange-color);
+            color: #ffffff;
+            font-size: 16px;
+            padding: 10px;
+          }
+          > #signUp:active {
+            color: white;
+            background-color: var(--blue-color);
+            scale: 0.8;
+          }
+        }
       }
     }
   }
+  
 }
 
-@media screen and (max-width: 700px) {
+@keyframes growDown {
+  0% {
+      transform: scaleY(0)
+  }
+  80% {
+      transform: scaleY(1.1)
+  }
+  100% {
+      transform: scaleY(1)
+  }
 }
+

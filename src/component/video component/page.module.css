@@ -1,0 +1,21 @@
+.image{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding-bottom: 50px;
+
+    /* add animation  */
+    animation-name: fadeIn;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

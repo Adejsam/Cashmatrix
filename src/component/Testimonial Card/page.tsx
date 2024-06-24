@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./page.module.css";
 import Image, { StaticImageData } from "next/image";
 import { testimaonial } from "@/app/(home)/personal/page.data";
@@ -16,6 +18,7 @@ const TestimonialsCard = ({ customers }: { customers: testimaonial }): ReactNode
                 fill={true}
                 alt={customers.name}
                 className={styles.image}
+                sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 33vw"
               />
             </div>
             <h5 className={styles.testimonialNames}>{customers.name}</h5>

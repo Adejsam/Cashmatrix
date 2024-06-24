@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./page.module.css";
 import BlogCard from "@/component/BlogCard/BlogCard";
 import Cta from "@/component/personal component/PersonalCallToAction/cta";

@@ -5,10 +5,10 @@ const HeaderLinks: Array<HeaderLinksInterface> = [
         children: [],
         icon: "",
         iconPath: "",
-        iconId: ""
+        iconId: "",
     },
     {
-        link: "/business/discover-business",
+        link: "",
         label: "Business",
         children: [
             {
@@ -32,7 +32,7 @@ const HeaderLinks: Array<HeaderLinksInterface> = [
         iconPath: ""
     },
     {
-        link: "/company/about-us",
+        link: "",
         label: "Company",
         children: [
             {
@@ -56,7 +56,7 @@ const HeaderLinks: Array<HeaderLinksInterface> = [
         iconPath: ""
     },
     {
-        link: "help/get-help",
+        link: "",
         label: "Help",
         children: [
             {

@@ -51,6 +51,15 @@
                             padding-block: 20px;
                         }
                     }
+                    > .even{
+                        padding-bottom: 20px;
+                        font-weight: 600;
+                        font-size: 15px;
+                        list-style: disc;
+                    }
+                    > .odd{
+                        padding:0 0 20px
+                    }
                 }
 
                 > .postImage{
@@ -64,16 +73,17 @@
                     padding-bottom: 30px;
                 }
                 > .share{
-                    font-size: 18px;
+                    font-size: 20px;
                     font-weight: bold;
                 }
                 > .socials{
                     display: flex;
-                    gap: 7px;
+                    gap: 10px;
                     margin-block: 5px;
-                    > .icon{
+                      .icon{
                         color: var(--blue-color);
-                        font-size: 20px;
+                        font-size: 30px;
+                        line-height: 35px;
                         cursor: pointer;
                     }
                     > .icon:hover, .icon:active{

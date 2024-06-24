@@ -26,7 +26,7 @@ const page = ():ReactNode => {
       <section className={styles.section}>
         <motion.div className={styles.hero} initial={{scale: 0.8}} whileInView={{scale: 1}} transition={{duration: 0.5,delay: 0, ease:"easeOut"}}>
           <div className={styles.heroContent}>
-            <h1 className={styles.heroHeading}>Your Everyday business management solution</h1>
+            <h1 className={styles.heroHeading}>Your Everyday Business Management Solution</h1>
             <p className={styles.heroInfo}>
               Streamline your business: invoice clients, Recieve POS payments, settle bills, execute
               bulk transfers, and reclaim precious time for other pursuits.
@@ -45,7 +45,7 @@ const page = ():ReactNode => {
             </div>
           </div>
           <div className={styles.heroImageBox}>
-            <Image src={businessHero} alt="hero image" className={styles.heroImage} />
+            <Image src={businessHero} alt="hero image" className={styles.heroImage} priority={true}/>
           </div>
         </motion.div>
       </section>
