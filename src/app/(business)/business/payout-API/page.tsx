@@ -25,7 +25,7 @@ const page = (): ReactNode => {
               Drive your business toward success using the Cashmatrix Payout API.
             </h1>
             <p className={styles.heroInfo}>
-              Access sub accounts, full Cashmatrix payment APIs, and enjoy instant settlement for
+              Access full Cashmatrix payment APIs, and enjoy instant settlement for
               agents, plus more!
             </p>
             <Link href="/business/create-account" className={styles.heroLink}>

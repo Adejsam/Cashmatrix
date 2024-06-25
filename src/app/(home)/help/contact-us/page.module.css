@@ -117,6 +117,7 @@
               border: 0;
               padding: 10px;
               color: var(--blue-color);
+              font-size: 15px;
             }
             > .input:nth-of-type(3) {
               grid-column: 1 / span 2;
@@ -147,19 +148,18 @@
   }
 }
 
-
 @media screen and (max-width: 1000px) {
-  .main{
-    > .section{
-      > .hero{
+  .main {
+    > .section {
+      > .hero {
         padding-inline: 30px;
       }
-      > .contactSection{
+      > .contactSection {
         padding-inline: 30px;
-        > .otherContactBox{
+        > .otherContactBox {
           display: none;
         }
-        > .contactForm{
+        > .contactForm {
           width: 100%;
         }
       }
@@ -168,28 +168,29 @@
 }
 
 @media screen and (max-width: 700px) {
-  .main{
-    > .section{
-      > .hero{
-        > .heroHeading2{
+  .main {
+    > .section {
+      > .hero {
+        > .heroHeading2 {
           width: 100%;
           font-size: 40px;
           line-height: 45px;
         }
-        > .heroDesc{
+        > .heroDesc {
           width: 100%;
         }
       }
 
-      > .contactSection{
-        > .contactForm{
-          > .form{
-            > .inputBox{
+      > .contactSection {
+        > .contactForm {
+          > .form {
+            > .inputBox {
               grid-template-columns: 1fr;
               gap: 0;
               row-gap: 20px;
             }
-            > .input:first-of-type, .input:nth-of-type(2){
+            > .input:first-of-type,
+            .input:nth-of-type(2) {
               grid-column: 1 / span 2;
             }
           }
@@ -197,4 +198,51 @@
       }
     }
   }
+}
+
+.success, .errors {
+  max-width: 100%;
+  height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > .box{
+    display: flex;
+    padding: 30px 0;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+    border-radius: 5px;
+    flex-direction: column;
+    align-items: center;
+    > .emoji {
+      font-size: 50px;
+      line-height: 55px;
+      padding-bottom: 10px;
+    }
+    > .message {
+      font-size: 20px;
+      text-align: center;
+      padding: 0 0 20px;
+      width: 80%;
+
+    }
+    .button {
+      outline: none;
+      border: none;
+      background-color: var(--blue-color);
+      padding: 10px 15px;
+      color: white;
+      border-radius: 5px;
+    }
+    .button:hover {
+      background-color: var(--orange-color);
+    }
+  }
+}
+  .errors{
+    > .box{
+      > .emoji{
+        color: red;
+      }
+    }
 }

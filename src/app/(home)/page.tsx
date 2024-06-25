@@ -51,7 +51,7 @@ const Home = (): ReactNode => {
           <div className={styles.content}>
             <h1 className={styles.heading}>Digital Banking At Ease</h1>
             <p className={styles.description}>
-              Enjoy seamless Banking when you download the cashmatrix app. Enjoy cashless payment
+              Enjoy seamless banking when you download the cashmatrix app. Enjoy cashless payment
               options and earn interest on your saving with cashmatrix.
             </p>
             <div className={styles.download}>
@@ -65,10 +65,10 @@ const Home = (): ReactNode => {
               </Link>
             </div>
             <div className={styles.licenses}>
-              <span className={styles.cbn}>
+              <span className={styles.cbn} aria-label="CBN logo">
                 <Cbn />
               </span>
-              <span className={styles.ndic}>
+              <span className={styles.ndic} aria-label="NDIC logo">
                 <Ndic />
               </span>
             </div>
@@ -96,7 +96,7 @@ const Home = (): ReactNode => {
               <div className={styles.featureInfo}>
                 <h3 className={styles.featureHeading}>Free Instant Transfer</h3>
                 <p className={styles.featureDesc}>
-                  Cashmatrix Allows you to transfer fund to any bank account in Nigeria.
+                  Cashmatrix allows you to transfer fund to any bank account in Nigeria.
                 </p>
               </div>
             </div>
@@ -158,7 +158,7 @@ const Home = (): ReactNode => {
               <div className={styles.featureInfo}>
                 <h3 className={styles.featureHeading}>Savings</h3>
                 <p className={styles.featureDesc}>
-                  Save at your Convinence and withdraw anytime with no penalty on the Cashmatrix app
+                  Save at your convinence and withdraw anytime with no penalty on the Cashmatrix app
                 </p>
               </div>
             </div>
@@ -335,7 +335,7 @@ const Home = (): ReactNode => {
       </section>
 
       {/* call to action section */}
-      <section className={styles.actionSection}>
+      <section className={styles.actionSection} >
         <motion.div
           initial={{ scale: 0.8 }}
           whileInView={{ scale: 1 }}

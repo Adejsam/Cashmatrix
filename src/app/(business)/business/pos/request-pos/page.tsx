@@ -40,7 +40,7 @@ const page = () => {
             </div>
           </div>
           <div className={`${styles.imageBox} animate__animated animate__backInRight`}>
-            <Image src={posImage} alt="Hero Image" className={styles.image} />
+            <Image src={posImage} alt="Hero Image" className={styles.image} priority={true}/>
           </div>
         </div>
       </section>

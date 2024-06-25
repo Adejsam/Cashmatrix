@@ -1,6 +1,6 @@
 .header {
+  max-width: 100%;
   background-color: white;
-  width: 100%;
   padding-bottom: 60px;
 
   > .section {
@@ -42,17 +42,17 @@
             padding: 5px;
             position: relative;
             color: var(--blue-color);
-            font-size: 15px;
 
             > .dropDown {
               position: absolute;
               top: 100%;
-              background-color: white;
               box-shadow: 0 4px 13px rgba(0, 0, 0, 0.05);
               width: 200px;
               border-radius: 5px;
               display: none;
               animation: slideDown 0.3s ease-in-out;
+              background-color: white;
+              z-index: 2;
 
               > .dropDownLink {
                 color: var(--blue-color);
@@ -61,8 +61,8 @@
                   padding-block: 7px;
                   padding-inline: 10px;
                   display: flex;
-                  align-items: center;
                   gap: 10px;
+                  align-items: center;
                   > .listSpan {
                     gap: 5px;
                     color: black;
@@ -72,6 +72,7 @@
                     > .image {
                       width: 14px;
                       height: 14px;
+                      margin-bottom: -3px;
                     }
                   }
                   > #icon1 {
@@ -105,9 +106,6 @@
               transition: 0.3s all ease-in-out;
               color: var(--orange-color);
             }
-            > .navLink:active {
-              color: var(--orange-color);
-            }
           }
           > .navItem:hover .dropDown {
             display: block;
@@ -136,11 +134,10 @@
           > #signUp {
             background-color: var(--blue-color);
             color: #ffffff;
-            font-size: 16px;
+            font-size: 15px;
             padding: 10px;
           }
           > #signUp:hover {
-            color: white;
             background-color: var(--orange-color);
           }
         }
@@ -171,29 +168,30 @@
       padding-left: 5px;
       padding-right: 10px;
       > .container {
-        > .content {
-          > .navItems {
+        max-width: 100%;
+        > .content{
+          > .navItems{
             display: none;
           }
         }
-        > .buttonBox {
+        > .buttonBox{
           display: none;
         }
-        > .barsIcon {
-          display: flex;
-          height: 60px;
-          align-items: center;
-          cursor: pointer;
-          padding-top: 7px;
-          margin-left: auto;
-          > .bars {
-            font-size: 30px;
-            color: var(--blue-color);
-          }
+      > .barsIcon {
+        display: flex;
+        height: 60px;
+        align-items: center;
+        cursor: pointer;
+        padding-top: 7px;
+        margin-left: auto;
+        > .bars {
+          font-size: 30px;
+          color: var(--blue-color);
         }
-        > .sidebar{
-          display: block;
-        }
+      }
+      > .sidebar{
+        display: block;
+      }
       }
     }
   }

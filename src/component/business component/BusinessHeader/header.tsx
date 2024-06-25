@@ -5,7 +5,7 @@ import Image from "next/image";
 import logo from "../../../../public/images/Business logo.png";
 import Link from "next/link";
 import posIcon from "../../../../public/icons/pos icon.png";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import SideBar from "../business sidebar/page";
 
 const BusinessHeader:React.FC = () => {

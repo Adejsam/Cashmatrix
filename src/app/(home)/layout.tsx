@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local"
 import "../globals.css";
 import Header from "@/component/personal component/PersonalHeader/header";
 import Footer from "@/component/personal component/PersonalFooter/footer";
 
-const inter = Inter({ subsets: ["latin"], display: "swap", adjustFontFallback: false });
+const myFont = localFont({ src: '../../../public/fonts/object-sans/ObjectSansRegular.otf'})
 
 export const metadata: Metadata = {
   title: "Cashmatrix - Digital Banking at Ease",
@@ -21,12 +21,12 @@ export default function RootLayout({
       <head>
         <link
           rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></link>
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" media="all"></link>
           <link rel="shortcut icon" href="/images/favicon-32x32.png" /> 
           <link rel="apple-touch-icon" sizes="180x180" href="/public/images/apple-touch-icon.png" /> 
           <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png"/> 
       </head>
-      <body className={inter.className}>
+      <body className={myFont.className}>
         <Header />
         {children}
         <Footer />

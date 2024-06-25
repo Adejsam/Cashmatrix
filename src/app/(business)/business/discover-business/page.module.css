@@ -20,9 +20,10 @@
         animation-timing-function: ease;
 
         > .heroHeading {
-          font-size: 48px;
-          line-height: 50px;
+          font-size: 60px;
+          line-height: 65px;
           padding-bottom: 20px;
+          width: 80%;
         }
         > .heroInfo {
           padding-bottom: 20px;

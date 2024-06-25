@@ -44,7 +44,7 @@
                 > .Heading{
                     padding: 5px;
                     color: var(--blue-color);
-                    font-size: 18px;
+                    font-size: 15px;
                 }
                 > .listItems{
                     display: flex;
@@ -88,9 +88,6 @@
                 grid-template-rows: 1fr 1fr 1fr 1fr;
                 > .imageBox{
                     grid-column: 1 / 3;
-
-                    > .logo{
-                    }
                 }
                 > .content{
                     > .Heading{

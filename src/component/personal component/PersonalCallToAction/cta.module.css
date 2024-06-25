@@ -81,6 +81,7 @@
   .main{
     > .cta{
       > .ctaContent{
+        padding: 10px;
         > .iconBox{
           flex-direction: column;
           align-items: center;

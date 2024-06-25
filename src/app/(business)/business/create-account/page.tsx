@@ -2,7 +2,6 @@
 import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import PlayStore from "../../../../../public/icons/PlayStore";
 import AppleStore from "../../../../../public/icons/AppleStore";
 import Cbn from "../../../../../public/icons/Cbn";
@@ -41,7 +40,7 @@ const page = () => {
             </div>
           </div>
           <div className={`${styles.imageBox} animate__animated animate__backInRight`}>
-            <Image src={businessImage} alt="Hero Image" className={styles.image} />
+            <Image src={businessImage} alt="Hero Image" className={styles.image} priority={true}/>
           </div>
         </div>
       </section>

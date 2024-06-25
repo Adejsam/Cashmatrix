@@ -27,7 +27,7 @@ const Page = () => {
               Banking at ease{'"'} encapsulates this goal, and we{"'"}re committed to delivering on
               it everyday.
             </p>
-            <Link href="/join-cashamtrix" className={styles.buttonLink}>
+            <Link href="/join-cashmatrix" className={styles.buttonLink}>
               <button className={styles.joinButton}>Join Cashmatrix</button>
             </Link>
           </div>

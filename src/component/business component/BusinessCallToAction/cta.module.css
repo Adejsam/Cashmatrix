@@ -42,7 +42,7 @@
 @media  screen and (max-width: 1000px) {
   .main{
     > .ctaBox{
-      width: 90%;
+      width: 100%;
       > .ctaContent{
         width: 100%;
         text-align: center;
@@ -60,6 +60,7 @@
 @media screen and (max-width:700px){
   .main{
     > .ctaBox{
+      padding: 10px;
       > .ctaContent{
         > .ctaIcon{
           flex-direction: column;

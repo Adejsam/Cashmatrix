@@ -20,7 +20,7 @@ function SideBar({ displayNavBar, callBank }: { displayNavBar: boolean; callBank
 
   function toggleDropdown(label: string) {
     setIsOpen(label);
-  }
+  };
 
   return (
     displayNav && (

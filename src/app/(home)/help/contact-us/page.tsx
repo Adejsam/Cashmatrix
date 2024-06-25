@@ -2,77 +2,54 @@
 
 import Link from "next/link";
 import styles from "./page.module.css";
-import { useState, ChangeEvent } from "react";
-
+import { useForm, ValidationError } from "@formspree/react";
 
 export default function Page() {
-  const [submitted, setSubmitted] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('');
-  const [submitting, setSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
+  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM!);
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleChangeText = (e: ChangeEvent<HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setSubmitting(true);
-    setErrorMessage('');
-    console.log("Form data:", formData);
-    try {
-      const response = await fetch('/help/contact-us/api/contact.ts', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-      if (response.ok) {
-        // Handle success, e.g., show a success message
-        setSubmitted(true);
-        console.log('Form submitted successfully');
-        return response.json();
-      } 
-      else {
-        // Handle error, e.g., show an error message
-        const errorData = await response.json();
-        setErrorMessage(errorData.message);
-        console.error('Form submission failed');
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      setErrorMessage('Failed to submit form. Please try again later.');
-    }finally{
-      setSubmitting(false);
-    }
-  };
+  if (state.succeeded) {
+    return (
+      <div className={styles.success}>
+        <div className={styles.box}>
+          <p className={styles.emoji}>&#128512;</p>
+          <p className={styles.message}>
+            Thanks for your submission. We will make sure we get back to you
+          </p>
+          <Link href="/">
+            <button type="button" className={styles.button}>
+              Back Home
+            </button>
+          </Link>
+        </div>
+      </div>
+    );
+  }
+  if (state.errors) {
+    return (
+      <div className={styles.errors}>
+        <div className={styles.box}>
+          <p className={styles.emoji}>&#9888;</p>
+          <p className={styles.message}>Oops! There was an error, please try again</p>
+          <Link href="" >
+            <button type="button" className={styles.button} onClick={() => {location.reload()}}>
+              Refresh page to try again
+            </button>
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <main className={styles.main}>
       <section className={styles.section}>
         <div className={styles.hero}>
           <h1 className={styles.heroHeading2}>Get in touch with Cashmatrix</h1>
-          <p className={styles.heroDesc}>We love our customers and don{"'"}t like to leave them hanging. Tell us how we can help
-            you and we will be sure to get back to you in time.</p>
-        </div>  
+          <p className={styles.heroDesc}>
+            We love our customers and don{"'"}t like to leave them hanging. Tell us how we can help
+            you and we will be sure to get back to you in time.
+          </p>
+        </div>
         <div className={styles.contactSection}>
           <div className={styles.otherContactBox}>
             <div className={styles.otherContact}>
@@ -115,61 +92,51 @@ export default function Page() {
               Kindly fill the form below and we will respond as soon as possible. For more
               information, You can also contact us on other platforms.
             </p>
-            <form action="" className={styles.form} onSubmit={handleSubmit}>
-              {submitted ? (
-                <p style={{color:"green"}}>Form Submitted Successfully</p>
-              ): (
+            <form method="refresh" className={styles.form} onSubmit={handleSubmit}>
               <div className={styles.inputBox}>
                 <input
                   name="name"
                   type="text"
                   placeholder="Name"
                   className={styles.input}
-                  onChange={handleChange}
-                  value={formData.name}
                   autoComplete="on"
                   required
                 />
+                <ValidationError prefix="name" field="name" errors={state.errors} />
                 <input
                   name="email"
                   type="email"
                   placeholder="Email"
                   className={styles.input}
-                  onChange={handleChange}
-                  value={formData.email}
                   autoComplete="on"
                   required
                 />
+                <ValidationError prefix="Email" field="email" errors={state.errors} />
                 <input
                   name="subject"
                   type="text"
                   placeholder="Subject"
                   className={styles.input}
-                  onChange={handleChange}
-                  value={formData.subject}
                   autoComplete="on"
                   required
                 />
+                <ValidationError prefix="subject" field="subject" errors={state.errors} />
                 <textarea
                   name="message"
                   placeholder="Message"
                   className={styles.textArea}
-                  onChange={handleChangeText}
-                  value={formData.message}
                   autoComplete="on"
                   autoCorrect="on"
-                  required
-                  >
-                </textarea>
+                  required></textarea>
+                <ValidationError prefix="message" field="message" errors={state.errors} />
               </div>
-              )}
               <div
                 className="g-recaptcha"
                 data-sitekey="6LfgNuYpAAAAAL_CklptBZG1rVtOpzIvWPL2Yo2G"></div>
-              <button type="submit" className={styles.formButton} onClick={() => (handleSubmit)} disabled={submitting}>
-               {submitting ? 'Sending...' : 'Send Message'}
+              <button type="submit" className={styles.formButton} disabled={state.submitting}>
+                Send Message
               </button>
-              {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+              <ValidationError errors={state.errors} />
             </form>
           </div>
         </div>

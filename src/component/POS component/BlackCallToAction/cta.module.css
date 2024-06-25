@@ -44,7 +44,7 @@
 @media  screen and (max-width: 1000px) {
   .main{
     > .ctaBox{
-      width: 90%;
+      width: 100%;
       height: fit-content;
       > .ctaContent{
         width: 100%;
@@ -63,6 +63,7 @@
 @media screen and (max-width:700px) {
   .main{
     > .ctaBox{
+      padding: 10px;
       > .ctaContent{
          > .ctaIcon{
           flex-direction: column;

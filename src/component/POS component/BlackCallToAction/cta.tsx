@@ -27,7 +27,7 @@ const Cta = () => {
           </div>
         </div>
         <div className={styles.ctaImageBox}>
-          <Image src={posImage} alt="call to action images" className={styles.ctaImage} />
+          <Image src={posImage} alt="call to action images" className={styles.ctaImage} loading="lazy"/>
         </div>
       </div>
     </main>

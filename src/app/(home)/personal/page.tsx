@@ -8,7 +8,6 @@ import PlayStore from "../../../../public/icons/PlayStore";
 import AppleStore from "../../../../public/icons/AppleStore";
 import Cbn from "../../../../public/icons/Cbn";
 import Ndic from "../../../../public/icons/Ndic";
-import HeroImage from "../../../../public/images/Hero Image.png";
 import FeatureImage from "../../../../public/images/Feature Image.png";
 import airtimeData from "../../../../public/icons/airtime-data.png";
 import cableTv from "../../../../public/icons/cable-tv.png";
@@ -52,7 +51,7 @@ const Home = (): ReactNode => {
           <div className={styles.content}>
             <h1 className={styles.heading}>Digital Banking At Ease</h1>
             <p className={styles.description}>
-              Enjoy seamless Banking when you download the cashmatrix app. Enjoy cashless payment
+              Enjoy seamless banking when you download the cashmatrix app. Enjoy cashless payment
               options and earn interest on your saving with cashmatrix.
             </p>
             <div className={styles.download}>
@@ -97,7 +96,7 @@ const Home = (): ReactNode => {
               <div className={styles.featureInfo}>
                 <h3 className={styles.featureHeading}>Free Instant Transfer</h3>
                 <p className={styles.featureDesc}>
-                  Cashmatrix Allows you to transfer fund to any bank account in Nigeria.
+                  Cashmatrix allows you to transfer fund to any bank account in Nigeria.
                 </p>
               </div>
             </div>
@@ -159,7 +158,7 @@ const Home = (): ReactNode => {
               <div className={styles.featureInfo}>
                 <h3 className={styles.featureHeading}>Savings</h3>
                 <p className={styles.featureDesc}>
-                  Save at your Convinence and withdraw anytime with no penalty on the Cashmatrix app
+                  Save at your convinence and withdraw anytime with no penalty on the Cashmatrix app
                 </p>
               </div>
             </div>

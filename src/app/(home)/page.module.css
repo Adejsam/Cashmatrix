@@ -25,9 +25,9 @@
 
         > .heading {
           width: 85%;
-          font-size: 50px;
+          font-size: 55px;
           padding-bottom: 20px;
-          line-height: 50px;
+          line-height: 60px;
         }
         > .description {
           width: 85%;
@@ -324,6 +324,9 @@
           > .licenses{
             flex-direction: column;
             gap: 10px;
+          }
+          > .download{
+            flex-direction: column;
           }
           > .heading{
             width: 100%;

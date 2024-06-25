@@ -152,12 +152,6 @@ const Page = (): ReactNode => {
                     </span>
                   </Link>
                   
-                  <Link href={`https://www.facebook.com/sharer.php?u=`+facebooklink}>
-                    <span className={styles.icon}>
-                      <i className="fa-brands fa-square-instagram" onClick={shareOnFacebook}></i>
-                    </span>
-                  </Link>
-                  
                 </div>
               </div>
             </div>

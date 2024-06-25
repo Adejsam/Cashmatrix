@@ -27,7 +27,7 @@
           width: 85%;
           font-size: 50px;
           padding-bottom: 20px;
-          line-height: 50px;
+          line-height: 55px;
         }
         > .description {
           width: 85%;
@@ -327,6 +327,9 @@
             flex-direction: column;
             gap: 10px;
           }
+          > .download{
+            flex-direction: column;
+          }
           > .heading{
             width: 100%;
           }
@@ -343,26 +346,6 @@
     > .featureSection{
       > .featureBox{
         flex-direction: column;
-      }
-    }
-    > .partnersSection{
-      > .partnersBoxDiv{
-        > .partnersBox{
-          gap: 20px;
-          > .partnersLogoBox1{
-            > .partnersLogo1{
-
-            }
-            > .partnersOtherLogoBox{
-              > .partnersOtherLogo{
-
-              }
-            }
-          }
-        }
-        > .partnersBox1{
-          gap: 20px;
-        }
       }
     }
 }

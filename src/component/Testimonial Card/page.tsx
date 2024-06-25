@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./page.module.css";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { testimaonial } from "@/app/(home)/personal/page.data";
 import { ReactNode } from "react";
 

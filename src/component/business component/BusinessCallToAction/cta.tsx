@@ -1,6 +1,5 @@
 "use client";
 
-import React from 'react'
 import styles from "./cta.module.css"
 import Link from 'next/link'
 import Image from 'next/image'
@@ -27,7 +26,7 @@ const Cta = () => {
             </div>
           </div>
           <div className={styles.ctaImageBox}>
-            <Image src={businessCta} alt="call to action images" className={styles.ctaImage} />
+            <Image src={businessCta} alt="call to action images" className={styles.ctaImage} loading="lazy"/>
           </div>
         </div>
     </main>

@@ -30,7 +30,7 @@ const features1: feature1[] = [
         buttonName1: "Open Cashmatrix Business Account",
         buttonName2: "",
         src: openBusiness,
-        listData: ["CAC (Customer acquisition cost)", "CAC (Customer acquisition cost)","CAC (Customer acquisition cost)"],
+        listData: ["CAC (Customer acquisition cost)", "Valid BVN(Bank Verification Number)", "Valid phone number", "Utility Bill"],
         checkIcon: "fa-solid fa-check",
         arrowIcon: "fa-solid fa-angle-right",
         featureButton1: "button1",
@@ -65,7 +65,7 @@ const features1: feature1[] = [
         listData: []
     },
     {
-        heading: "Protect your business form fraud",
+        heading: "Protect your business from fraud",
         content: "We protect your business againt fraud through User Authentication and Verification, Transaction Monitoring, Secure Payment Processing and Fraud Detection Algorithms. Benefit from round-the-clock anti-fraud vigilance, ensuring your operations staysecure at all times",
         link1: "",
         link2: "",
