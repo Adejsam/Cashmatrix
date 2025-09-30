@@ -37,10 +37,10 @@ export default function PersonalFooter() {
               <Link href="/personal" className={styles.listLink}>
                 <li className={styles.listItem}>Discover Personal</li>
               </Link>
-              <Link href="" className={styles.listLink}>
+              <Link href="/" className={styles.listLink}>
                 <li className={styles.listItem}>Transfer</li>
               </Link>
-              <Link href="/#matrix save" className={styles.listLink}>
+              <Link href="/" className={styles.listLink}>
                 <li className={styles.listItem}>Matrix Save</li>
               </Link>
             </ul>

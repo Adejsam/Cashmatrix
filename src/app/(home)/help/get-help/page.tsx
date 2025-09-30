@@ -25,8 +25,8 @@ const Page = () => {
               <span className={styles.icon}>
                 <i className="fa-solid fa-phone-volume"></i>
               </span>
-              <Link className={styles.getHelpLink} href="tel:+234(0)81 7947 0991 ">
-                +234(0)81 7947 0991
+              <Link className={styles.getHelpLink} href="tel:+2347046488013">
+                +234 704 648 8013
               </Link>{" "}
             </div>
           </div>
@@ -56,8 +56,9 @@ const Page = () => {
                 <i className="fa-brands fa-whatsapp"></i>
               </span>
               <Link
+              target="_blank"
                 className={styles.getHelpLink}
-                href="https://api.whatsapp.com/send?phone=08179470991">
+                href=" https://wa.me/+2347046488013">
                 Watsapp us
               </Link>
             </div>

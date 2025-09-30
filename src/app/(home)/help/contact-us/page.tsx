@@ -2,43 +2,43 @@
 
 import Link from "next/link";
 import styles from "./page.module.css";
-import { useForm, ValidationError } from "@formspree/react";
+// import { useForm, ValidationError } from "@formspree/react";
 
 export default function Page() {
-  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM!);
+  // const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM!);
 
-  if (state.succeeded) {
-    return (
-      <div className={styles.success}>
-        <div className={styles.box}>
-          <p className={styles.emoji}>&#128512;</p>
-          <p className={styles.message}>
-            Thanks for your submission. We will make sure we get back to you
-          </p>
-          <Link href="/">
-            <button type="button" className={styles.button}>
-              Back Home
-            </button>
-          </Link>
-        </div>
-      </div>
-    );
-  }
-  if (state.errors) {
-    return (
-      <div className={styles.errors}>
-        <div className={styles.box}>
-          <p className={styles.emoji}>&#9888;</p>
-          <p className={styles.message}>Oops! There was an error, please try again</p>
-          <Link href="" >
-            <button type="button" className={styles.button} onClick={() => {location.reload()}}>
-              Refresh page to try again
-            </button>
-          </Link>
-        </div>
-      </div>
-    );
-  }
+  // if (state.succeeded) {
+  //   return (
+  //     <div className={styles.success}>
+  //       <div className={styles.box}>
+  //         <p className={styles.emoji}>&#128512;</p>
+  //         <p className={styles.message}>
+  //           Thanks for your submission. We will make sure we get back to you
+  //         </p>
+  //         <Link href="/">
+  //           <button type="button" className={styles.button}>
+  //             Back Home
+  //           </button>
+  //         </Link>
+  //       </div>
+  //     </div>
+  //   );
+  // }
+  // if (state.errors) {
+  //   return (
+  //     <div className={styles.errors}>
+  //       <div className={styles.box}>
+  //         <p className={styles.emoji}>&#9888;</p>
+  //         <p className={styles.message}>Oops! There was an error, please try again</p>
+  //         <Link href="" >
+  //           <button type="button" className={styles.button} onClick={() => {location.reload()}}>
+  //             Refresh page to try again
+  //           </button>
+  //         </Link>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   return (
     <main className={styles.main}>
@@ -61,8 +61,8 @@ export default function Page() {
                 <span className={styles.otherContactDay}>Monday - Friday</span>
                 <span className={styles.otherContactTime}>9:00am - 5:00pm</span>
                 <span className={styles.otherContactContact}>
-                  <Link className={styles.otherContactLink} href="tel:+234(0)81 7947 0991 ">
-                    +234(0)81 7947 0991
+                  <Link className={styles.otherContactLink} href="tel:+2347046488013">
+                  +234 704 648 8013
                   </Link>
                 </span>
               </div>
@@ -92,7 +92,7 @@ export default function Page() {
               Kindly fill the form below and we will respond as soon as possible. For more
               information, You can also contact us on other platforms.
             </p>
-            <form method="refresh" className={styles.form} onSubmit={handleSubmit}>
+            <form className={styles.form}>
               <div className={styles.inputBox}>
                 <input
                   name="name"
@@ -102,7 +102,6 @@ export default function Page() {
                   autoComplete="on"
                   required
                 />
-                <ValidationError prefix="name" field="name" errors={state.errors} />
                 <input
                   name="email"
                   type="email"
@@ -111,7 +110,6 @@ export default function Page() {
                   autoComplete="on"
                   required
                 />
-                <ValidationError prefix="Email" field="email" errors={state.errors} />
                 <input
                   name="subject"
                   type="text"
@@ -120,7 +118,6 @@ export default function Page() {
                   autoComplete="on"
                   required
                 />
-                <ValidationError prefix="subject" field="subject" errors={state.errors} />
                 <textarea
                   name="message"
                   placeholder="Message"
@@ -128,15 +125,11 @@ export default function Page() {
                   autoComplete="on"
                   autoCorrect="on"
                   required></textarea>
-                <ValidationError prefix="message" field="message" errors={state.errors} />
+                  
               </div>
-              <div
-                className="g-recaptcha"
-                data-sitekey="6LfgNuYpAAAAAL_CklptBZG1rVtOpzIvWPL2Yo2G"></div>
-              <button type="submit" className={styles.formButton} disabled={state.submitting}>
+              <button type="submit" className={styles.formButton}>
                 Send Message
               </button>
-              <ValidationError errors={state.errors} />
             </form>
           </div>
         </div>
