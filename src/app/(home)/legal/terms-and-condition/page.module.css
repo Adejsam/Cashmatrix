@@ -1,60 +1,61 @@
 .main {
-    color: var(--blue-color);
-    background-color: #eeeeee;
-    max-width: 100%;
-    > .section {
+  color: var(--blue-color);
+  background-color: #eeeeee;
+  max-width: 100%;
+  > .section {
+    width: 100%;
+    padding-block: 60px;
+    > .hero {
       width: 100%;
-      > .hero {
-        width: 100%;
-        background-image: url("../../../../../public/images/personal\ backg\ image.png");
-        background-size: contain;
-        padding: 120px 100px 120px;
-        margin-bottom: 75px;
-        border-radius: 0 0 50% 50% / 50px;
-        > .heroHeading2 {
-          text-align: center;
-          margin: 0 auto;
-          font-size: 60px;
-          line-height: 65px;
-          width: 80%;
-          padding-block: 15px;
-        }
+      background-image: url("../../../../../public/images/personal\ backg\ image.png");
+      background-size: contain;
+      padding: 120px 100px 120px;
+      margin-bottom: 75px;
+      border-radius: 0 0 50% 50% / 50px;
+      > .heroHeading2 {
+        text-align: center;
+        margin: 0 auto;
+        font-size: 60px;
+        line-height: 65px;
+        width: 80%;
+        padding-block: 15px;
       }
-      > .tcLists{
-        padding: 50px 100px;
-        > .tcList{
-            padding-bottom: 20px;
-            > .tcHeading{
-                padding-bottom: 15px;
-                font-size: 20px;
-                line-height: 25px;
-            }
-            > .tcContent{
-                padding-bottom: 5px;
-            }
-            > .tcSubLists{
-                padding-left: 20px;
-                padding-block: 10px;
-                > .tcSubList{
-                    list-style-type: square;
-                    padding-bottom: 3px;
-                }
-            }
+    }
+    > .tcLists {
+      padding: 50px 100px;
+      > .tcList {
+        padding-bottom: 20px;
+        > .tcHeading {
+          padding-bottom: 15px;
+          font-size: 20px;
+          line-height: 25px;
+        }
+        > .tcContent {
+          padding-bottom: 5px;
+        }
+        > .tcSubLists {
+          padding-left: 20px;
+          padding-block: 10px;
+          > .tcSubList {
+            list-style-type: square;
+            padding-bottom: 3px;
+          }
         }
       }
     }
+  }
 }
 
-@media screen and (max-width:1000px) {
-  .main{
-    > .section{
-      > .hero{
+@media screen and (max-width: 1000px) {
+  .main {
+    > .section {
+      > .hero {
         padding-inline: 30px;
-        > .heroHeading2{
+        > .heroHeading2 {
           width: 100%;
         }
       }
-      > .tcLists{
+      > .tcLists {
         padding-inline: 30px;
       }
     }

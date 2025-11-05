@@ -4,6 +4,7 @@
   > .section {
     background-color: var(--light-orange);
     padding-inline: 100px;
+    padding-top: 60px;
     > .hero {
       display: flex;
       align-items: center;

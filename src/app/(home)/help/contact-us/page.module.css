@@ -4,6 +4,8 @@
   max-width: 100%;
   > .section {
     width: 100%;
+
+    padding-block: 60px;
     > .hero {
       width: 100%;
       background-image: url("../../../../../public/images/personal\ backg\ image.png");
@@ -200,13 +202,14 @@
   }
 }
 
-.success, .errors {
+.success,
+.errors {
   max-width: 100%;
   height: calc(100vh - 60px);
   display: flex;
   justify-content: center;
   align-items: center;
-  > .box{
+  > .box {
     display: flex;
     padding: 30px 0;
     background-color: white;
@@ -224,7 +227,6 @@
       text-align: center;
       padding: 0 0 20px;
       width: 80%;
-
     }
     .button {
       outline: none;
@@ -239,10 +241,10 @@
     }
   }
 }
-  .errors{
-    > .box{
-      > .emoji{
-        color: red;
-      }
+.errors {
+  > .box {
+    > .emoji {
+      color: red;
     }
+  }
 }

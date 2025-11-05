@@ -4,6 +4,7 @@
     background-color: var(--light-orange);
   
     > .section {
+    padding-block: 60px;
       > .hero {
         display: flex;
         padding: 20px 150px 0;

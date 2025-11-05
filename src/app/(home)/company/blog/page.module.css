@@ -4,6 +4,7 @@
     background-color: var(--grey-color);
     padding-bottom: 100px;
     > .section {
+    padding-block: 60px;
       > .hero{
         width: 100%;
         background-image: url("../../../../../public/images/personal\ backg\ image.png");
@@ -21,7 +22,6 @@
           letter-spacing: 2px;
         }
         > .heroDesc{
-          font-size: 14px;
           line-height: 23px;
           text-align: center;
           margin: 0 auto;
