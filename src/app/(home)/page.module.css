@@ -4,11 +4,13 @@
   overflow-x: hidden;
 
   > .heroSection {
-    height: calc(100vh - 60px);
+    height: calc(100vh);
     padding-top: 60px;
+    
     > .hero {
       display: flex;
       padding: 20px 150px 0;
+      
 
       > .content {
         width: 50%;
