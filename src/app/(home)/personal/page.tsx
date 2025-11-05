@@ -38,6 +38,7 @@ import Cta from "@/component/personal component/PersonalCallToAction/cta";
 import { motion } from "framer-motion";
 import VideoComponent from "@/component/video component/page";
 
+
 const Home = (): ReactNode => {
   return (
     <main className={styles.main}>
@@ -311,13 +312,6 @@ const Home = (): ReactNode => {
             </div>
           </div>
           <div className={styles.partnersBox1}>
-            <div className={styles.partnersLogoBox1}>
-              <Image src={cbnLogo} alt="CBN logo" className={styles.partnersLogo1} />
-              <span className={styles.partnersSpan}>CBN</span>
-            </div>
-            <div className={styles.partnersOtherLogoBox}>
-              <Image src={ndicLogo} alt="NDIC Logo" className={styles.partnersOtherLogo} />
-            </div>
             <div className={styles.partnersOtherLogoBox}>
               <Image src={wemaBank} alt="wema bank logo" className={styles.partnersOtherLogo} />
             </div>

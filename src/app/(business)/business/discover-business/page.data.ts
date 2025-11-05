@@ -6,6 +6,7 @@ import boostBusiness from "../../../../../public/images/boost business.png"
 import protectBusiness from "../../../../../public/images/protect business.png";
 import helpBusiness from "../../../../../public/images/help business.png";
 
+
 export interface feature1{
     heading: string;
     content: string;

@@ -78,8 +78,11 @@
   > .featuresSection {
     margin-block: 100px;
     padding-inline: 100px;
-   
+
+    > .featuresBox > .featureCard:nth-of-type(even) {
+      flex-direction: row;
     }
+  }
   /* testimonial section */
   > .testimonialSection {
     background-color: white;
@@ -93,8 +96,8 @@
   }
 
   /* call to action section*/
-  > .ctaSection{
-    padding:0 100px 75px;
+  > .ctaSection {
+    padding: 0 100px 75px;
   }
 }
 
@@ -120,64 +123,63 @@
   }
 }
 
-
 @media screen and (max-width: 1000px) {
-  .main{
-    > .section{
+  .main {
+    > .section {
       padding-inline: 30px;
-      > .hero{
+      > .hero {
         flex-direction: column;
-        > .heroContent{
+        > .heroContent {
           text-align: center;
           width: 100%;
           margin: 30px 0 50px;
-          > .heroHeading{
+          > .heroHeading {
             width: 70%;
             margin: 0 auto;
           }
-          > .heroInfo{
+          > .heroInfo {
             margin: 0 auto;
           }
-          > .heroLink{
-            > .heroButton{
+          > .heroLink {
+            > .heroButton {
               margin: 0 auto;
             }
           }
-          > .licenses{
+          > .licenses {
             justify-content: center;
             margin: 20px 0;
           }
         }
-        > .heroImageBox{
+        > .heroImageBox {
           width: 100%;
         }
       }
     }
-    > .featuresSection{
+    > .featuresSection {
       padding-inline: 30px;
     }
-    > .ctaSection{
+    > .ctaSection {
       padding-inline: 30px;
     }
   }
 }
 
-@media screen and (max-width:700px) {
-  .main{
-    > .section{
-      > .hero{
-        > .heroContent{
-          > .heroHeading{
+@media screen and (max-width: 700px) {
+  .main {
+    > .section {
+      > .hero {
+        > .heroContent {
+          > .heroHeading {
             width: 100%;
             padding: 0;
             font-size: 40px;
             line-height: 45px;
           }
-          > .heroInfo{
+          > .heroInfo {
             margin: 0 auto;
           }
-          > .heroLink{
-            > .heroButton{
+          > .heroLink {
+            > .heroButton {
               margin: 0 auto;
             }
           }

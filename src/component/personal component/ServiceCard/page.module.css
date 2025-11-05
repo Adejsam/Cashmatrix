@@ -19,6 +19,7 @@
     > .serviceInfo{
         width: 50%;
         padding: 30px;
+        
         > .heading{
             width: 90%;
             font-size: 30px;
@@ -41,10 +42,9 @@
     }
 }
 
-.serviceBox:nth-of-type(even){
-    flex-direction: row-reverse;
+.serviceBox:nth-child(even) {
+  flex-direction: row-reverse;
 }
-
 
 @media screen and (max-width:700px) {
     .serviceBox{

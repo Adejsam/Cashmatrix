@@ -66,9 +66,9 @@
             margin-bottom: 25px;
         }
         > .paragraph{
-            text-align: center;
+            text-align: left;
             color: var(--blue-color);
-            width: 90%;
+            width: 100%;
             margin-inline: auto;
         }
         > .paragraph:last-child{

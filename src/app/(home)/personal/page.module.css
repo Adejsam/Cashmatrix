@@ -2,6 +2,7 @@
   max-width: 100%;
   color: var(--blue-color);
   overflow-x: hidden;
+  padding-top: 60px;
 
   > .heroSection {
     height: calc(100vh - 60px);
@@ -117,12 +118,11 @@
 
   > .servicesSection {
     background-color: white;
-    padding: 25px 150px 25px; 
-    /* > .servicesHeading {
-      font-size: 40px;
-      color: var(--blue-color);
-      padding-top: 25px;
-    } */
+    padding: 25px 150px 25px;
+  }
+
+  > .servicesSection :global(div:nth-child(even) > .serviceBox) {
+    flex-direction: row-reverse;
   }
 
   > .testimonialSection {
@@ -289,64 +289,64 @@
   }
 }
 
-@media screen and (max-width:1000px) {
-  .main{
+@media screen and (max-width: 1000px) {
+  .main {
     overflow-y: hidden;
-    > .heroSection{
+    > .heroSection {
       height: fit-content;
-      > .hero{
+      > .hero {
         padding-inline: 30px;
       }
     }
-    > .featureSection{
-      > .featureBox{
+    > .featureSection {
+      > .featureBox {
         padding-inline: 30px;
       }
     }
-    > .servicesSection{
+    > .servicesSection {
       padding-inline: 30px;
     }
-    > .testimonialSection{
+    > .testimonialSection {
       padding-inline: 30px;
     }
-    > .actionSection{
+    > .actionSection {
       padding-inline: 30px;
     }
   }
 }
-@media screen and (max-width:700px) {
-  .main{
-    > .heroSection{
-      > .hero{
+@media screen and (max-width: 700px) {
+  .main {
+    > .heroSection {
+      > .hero {
         flex-direction: column;
-        > .content{
+        > .content {
           width: 100%;
           align-items: center;
           text-align: center;
-          > .licenses{
+          > .licenses {
             flex-direction: column;
             gap: 10px;
           }
-          > .download{
+          > .download {
             flex-direction: column;
           }
-          > .heading{
+          > .heading {
             width: 100%;
           }
-          > .description{
+          > .description {
             width: 100%;
           }
-      }
-      > .imageBox{
-        margin: 0 auto;
-        width: 100%;
+        }
+        > .imageBox {
+          margin: 0 auto;
+          width: 100%;
+        }
       }
     }
-  }
-    > .featureSection{
-      > .featureBox{
+    > .featureSection {
+      > .featureBox {
         flex-direction: column;
       }
     }
-}
+  }
 }

@@ -1,10 +1,9 @@
 import { StaticImageData } from "next/image";
-import azureBackg from "../../../../../public/images/azure backg.png";
 import posPayment from "../../../../../public/images/pos payment.png"
 import posSucess from "../../../../../public/images/payment success.png"
 import instantPay from "../../../../../public/images/instantPay.png"
 import posSecurity from "../../../../../public/images/pos security.png"
-import posHelp from "../../../../../public/images/pos help.png"
+import posHelp from "../../../../../public/images/pos Help.png"
 
 export interface feature{
     heading: string;

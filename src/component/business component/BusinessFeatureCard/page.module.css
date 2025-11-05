@@ -8,6 +8,10 @@
     margin-bottom: 100px;
     gap: 150px;
 
+    > .feature:nth-of-type(2n) {
+      flex-direction: row;
+    }
+
     > .featureContent {
       width: 50%;
       > .featureHeading {
@@ -78,38 +82,38 @@
       }
     }
   }
-  
-  > .feature:nth-of-type(2n){
+
+  > .feature:nth-of-type(2n) {
     flex-direction: row;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .main{
-    > .feature{
+  .main {
+    > .feature {
       flex-direction: column;
       padding-inline: 0;
       gap: 10px;
-      > .featureContent{
+      > .featureContent {
         padding: 20px;
         text-align: center;
         width: 100%;
-        > .featureHeading{
+        > .featureHeading {
           margin: 0 auto;
         }
-        > .featureInfo{
+        > .featureInfo {
           margin: 0 auto;
         }
-        > .featureLists{
-          > .featureList{
+        > .featureLists {
+          > .featureList {
             justify-content: center;
           }
         }
-        > .buttonBox{
+        > .buttonBox {
           justify-content: center;
         }
       }
-      > .featureImageBox{
+      > .featureImageBox {
         width: 100%;
       }
     }
@@ -117,19 +121,19 @@
 }
 
 @media screen and (max-width: 700px) {
-  .main{
-    > .feature{
-      > .featureContent{
-        > .featureHeading{
+  .main {
+    > .feature {
+      > .featureContent {
+        > .featureHeading {
           width: 100%;
         }
-        > .featureInfo{
+        > .featureInfo {
           width: 100%;
         }
-        > .buttonBox{
+        > .buttonBox {
           justify-content: center;
         }
       }
+    }
   }
-}
 }
