@@ -18,7 +18,7 @@ const HeaderLinks: Array<HeaderLinksInterface> = [
             },
             {
                 label: "POS", link: "/business/pos", children: [],
-                iconPath: "/icons/POS icon.png", iconId: "icon2",
+                iconPath: "/icons/pos icon.png", iconId: "icon2",
                 icon: ""
             },
             {

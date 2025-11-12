@@ -347,9 +347,6 @@
     > .featureSection{
       > .featureBox{
         flex-direction: column;
-        > .featureImageBox{
-          width: 100%;
-        }
       }
     }
     > .partnersSection{

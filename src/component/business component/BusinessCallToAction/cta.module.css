@@ -46,6 +46,10 @@
       > .ctaContent{
         width: 100%;
         text-align: center;
+        > .ctaInfo {
+        width: 90%;
+        margin-inline: auto;
+      }
         > .ctaIcon{
           justify-content: center;
         }
@@ -61,6 +65,7 @@
   .main{
     > .ctaBox{
       padding: 10px;
+      padding-block: 50px;
       > .ctaContent{
         > .ctaIcon{
           flex-direction: column;
