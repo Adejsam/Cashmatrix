@@ -12,18 +12,22 @@
     "@formspree/react": "^2.5.1",
     "animate.css": "^4.1.1",
     "framer-motion": "^11.2.10",
-    "next": "14.2.3",
-    "react": "^18",
-    "react-dom": "^18",
+    "next": "^16.0.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "sharp": "^0.33.4",
     "swiper": "^11.1.4"
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.3",
+    "@types/react": "^19.2.3",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "^16.0.1",
     "typescript": "^5"
+  },
+  "overrides": {
+    "@types/react": "19.2.3",
+    "@types/react-dom": "19.2.3"
   }
 }
